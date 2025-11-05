@@ -1,0 +1,5 @@
+bool GetFunctionNameList(ref array@string FunctionNameList);
+bool BeginProfiler(void);
+bool EndProfiler(void);
+int GetActualNumofPage(void);
+int GetActualMemorySize(void);

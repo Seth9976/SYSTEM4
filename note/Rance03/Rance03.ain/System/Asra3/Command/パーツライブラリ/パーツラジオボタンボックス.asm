@@ -1,0 +1,66 @@
+; FUNC Ｐ＿ラジオボタンボックス＿存在確認 (0x16814e-0x168176)
+/* 0016814e */ PUSHLOCALPAGE                            ; stack:  0 ->  1 (+1)
+/* 00168150 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 00168156 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 00168158 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 0016815a */ PUSH 1                                   ; stack:  2 ->  3 (+1)
+/* 00168160 */ REF                                      ; stack:  3 ->  2 (-1)
+/* 00168162 */ CALLHLL PartsEngine.IsRadioButtonBoxExistGUI (args: 2) ; stack:  2 ->  2 (0)
+/* 0016816c */ RETURN                                   ; stack:  2 ->  2 (0)
+/* 0016816e */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 00168174 */ RETURN                                   ; stack:  3 ->  3 (0)
+; ENDFUNC Ｐ＿ラジオボタンボックス＿存在確認
+
+; FUNC Ｐ＿ラジオボタンボックス＿開放 (0x168182-0x168198)
+/* 00168182 */ PUSHLOCALPAGE                            ; stack:  0 ->  1 (+1)
+/* 00168184 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 0016818a */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0016818c */ CALLHLL PartsEngine.ClearRadioButtonBoxChild (args: 1) ; stack:  1 ->  1 (0)
+/* 00168196 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC Ｐ＿ラジオボタンボックス＿開放
+
+; FUNC Ｐ＿ラジオボタンボックス＿追加 (0x1681a4-0x1681c4)
+/* 001681a4 */ PUSHLOCALPAGE                            ; stack:  0 ->  1 (+1)
+/* 001681a6 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 001681ac */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001681ae */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 001681b0 */ PUSH 1                                   ; stack:  2 ->  3 (+1)
+/* 001681b6 */ REF                                      ; stack:  3 ->  2 (-1)
+/* 001681b8 */ CALLHLL PartsEngine.AddRadioButtonBoxChild (args: 2) ; stack:  2 ->  2 (0)
+/* 001681c2 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC Ｐ＿ラジオボタンボックス＿追加
+
+; FUNC Ｐ＿ラジオボタンボックス＿削除 (0x1681d0-0x1681f0)
+/* 001681d0 */ PUSHLOCALPAGE                            ; stack:  0 ->  1 (+1)
+/* 001681d2 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 001681d8 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001681da */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 001681dc */ PUSH 1                                   ; stack:  2 ->  3 (+1)
+/* 001681e2 */ REF                                      ; stack:  3 ->  2 (-1)
+/* 001681e4 */ CALLHLL PartsEngine.RemoveRadioButtonBoxChild (args: 2) ; stack:  2 ->  2 (0)
+/* 001681ee */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC Ｐ＿ラジオボタンボックス＿削除
+
+; FUNC Ｐ＿ラジオボタンボックス＿個数取得 (0x1681fc-0x16821a)
+/* 001681fc */ PUSHLOCALPAGE                            ; stack:  0 ->  1 (+1)
+/* 001681fe */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 00168204 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 00168206 */ CALLHLL PartsEngine.NumofRadioButtonBoxChild (args: 1) ; stack:  1 ->  1 (0)
+/* 00168210 */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 00168212 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 00168218 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC Ｐ＿ラジオボタンボックス＿個数取得
+
+; FUNC Ｐ＿ラジオボタンボックス＿番号取得 (0x168226-0x16824e)
+/* 00168226 */ PUSHLOCALPAGE                            ; stack:  0 ->  1 (+1)
+/* 00168228 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 0016822e */ REF                                      ; stack:  2 ->  1 (-1)
+/* 00168230 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 00168232 */ PUSH 1                                   ; stack:  2 ->  3 (+1)
+/* 00168238 */ REF                                      ; stack:  3 ->  2 (-1)
+/* 0016823a */ CALLHLL PartsEngine.GetRadioButtonBoxChild (args: 2) ; stack:  2 ->  2 (0)
+/* 00168244 */ RETURN                                   ; stack:  2 ->  2 (0)
+/* 00168246 */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 0016824c */ RETURN                                   ; stack:  3 ->  3 (0)
+; ENDFUNC Ｐ＿ラジオボタンボックス＿番号取得
+

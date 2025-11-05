@@ -1,0 +1,265 @@
+; FUNC Place@0 (0x8f2e6-0x8f304)
+/* 0008f2e6 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 0008f2e8 */ CALLMETHOD 7279                          ; stack:  1 -> -1 (-2)
+/* 0008f2ee */ (SH_MEM_ASSIGN_IMM (10, 1l))             ; stack: -1 -> -1 (0)
+/* 0008f2f8 */ (SH_MEM_ASSIGN_IMM (11, 1l))             ; stack: -1 -> -1 (0)
+/* 0008f302 */ RETURN                                   ; stack: -1 -> -1 (0)
+; ENDFUNC Place@0
+
+; FUNC Place@reload (0x8f30a-0x8f314)
+/* 0008f30a */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 0008f30c */ CALLMETHOD 4961                          ; stack:  1 -> -1 (-2)
+/* 0008f312 */ RETURN                                   ; stack: -1 -> -1 (0)
+; ENDFUNC Place@reload
+
+; FUNC Place@loadValue (0x8f31a-0x8f4e4)
+/* 0008f31a */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 0008f31c */ S_PUSH 937 ("場所データ")           ; stack:  1 ->  2 (+1)
+/* 0008f322 */ (SH_STRUCT_S_REF 0)                      ; stack:  2 ->  2 (0)
+/* 0008f328 */ S_PUSH 938 ("mapId")                     ; stack:  2 ->  3 (+1)
+/* 0008f32e */ S_PUSH 0 ("")                            ; stack:  3 ->  4 (+1)
+/* 0008f334 */ CALLFUNC EX_SA2String (args: 4)          ; stack:  4 ->  1 (-3)
+/* 0008f33a */ CALLMETHOD 4973                          ; stack:  1 -> -1 (-2)
+/* 0008f340 */ PUSHSTRUCTPAGE                           ; stack: -1 ->  0 (+1)
+/* 0008f342 */ S_PUSH 937 ("場所データ")           ; stack:  0 ->  1 (+1)
+/* 0008f348 */ (SH_STRUCT_S_REF 0)                      ; stack:  1 ->  1 (0)
+/* 0008f34e */ S_PUSH 815 ("name")                      ; stack:  1 ->  2 (+1)
+/* 0008f354 */ S_PUSH 0 ("")                            ; stack:  2 ->  3 (+1)
+/* 0008f35a */ CALLFUNC EX_SA2String (args: 4)          ; stack:  3 ->  0 (-3)
+/* 0008f360 */ CALLMETHOD 4974                          ; stack:  0 -> -2 (-2)
+/* 0008f366 */ PUSHSTRUCTPAGE                           ; stack: -2 -> -1 (+1)
+/* 0008f368 */ S_PUSH 937 ("場所データ")           ; stack: -1 ->  0 (+1)
+/* 0008f36e */ (SH_STRUCT_S_REF 0)                      ; stack:  0 ->  0 (0)
+/* 0008f374 */ S_PUSH 939 ("eventFuncName")             ; stack:  0 ->  1 (+1)
+/* 0008f37a */ S_PUSH 0 ("")                            ; stack:  1 ->  2 (+1)
+/* 0008f380 */ CALLFUNC EX_SA2String (args: 4)          ; stack:  2 -> -1 (-3)
+/* 0008f386 */ CALLMETHOD 4975                          ; stack: -1 -> -3 (-2)
+/* 0008f38c */ PUSHSTRUCTPAGE                           ; stack: -3 -> -2 (+1)
+/* 0008f38e */ S_PUSH 937 ("場所データ")           ; stack: -2 -> -1 (+1)
+/* 0008f394 */ (SH_STRUCT_S_REF 0)                      ; stack: -1 -> -1 (0)
+/* 0008f39a */ S_PUSH 534 ("x")                         ; stack: -1 ->  0 (+1)
+/* 0008f3a0 */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 0008f3a6 */ CALLFUNC EX_SA2Int (args: 4)             ; stack:  1 -> -2 (-3)
+/* 0008f3ac */ CALLMETHOD 4976                          ; stack: -2 -> -4 (-2)
+/* 0008f3b2 */ PUSHSTRUCTPAGE                           ; stack: -4 -> -3 (+1)
+/* 0008f3b4 */ S_PUSH 937 ("場所データ")           ; stack: -3 -> -2 (+1)
+/* 0008f3ba */ (SH_STRUCT_S_REF 0)                      ; stack: -2 -> -2 (0)
+/* 0008f3c0 */ S_PUSH 535 ("y")                         ; stack: -2 -> -1 (+1)
+/* 0008f3c6 */ PUSH 0                                   ; stack: -1 ->  0 (+1)
+/* 0008f3cc */ CALLFUNC EX_SA2Int (args: 4)             ; stack:  0 -> -3 (-3)
+/* 0008f3d2 */ CALLMETHOD 4977                          ; stack: -3 -> -5 (-2)
+/* 0008f3d8 */ PUSHSTRUCTPAGE                           ; stack: -5 -> -4 (+1)
+/* 0008f3da */ S_PUSH 937 ("場所データ")           ; stack: -4 -> -3 (+1)
+/* 0008f3e0 */ (SH_STRUCT_S_REF 0)                      ; stack: -3 -> -3 (0)
+/* 0008f3e6 */ S_PUSH 940 ("areaX")                     ; stack: -3 -> -2 (+1)
+/* 0008f3ec */ PUSH 0                                   ; stack: -2 -> -1 (+1)
+/* 0008f3f2 */ CALLFUNC EX_SA2Int (args: 4)             ; stack: -1 -> -4 (-3)
+/* 0008f3f8 */ CALLMETHOD 4978                          ; stack: -4 -> -6 (-2)
+/* 0008f3fe */ PUSHSTRUCTPAGE                           ; stack: -6 -> -5 (+1)
+/* 0008f400 */ S_PUSH 937 ("場所データ")           ; stack: -5 -> -4 (+1)
+/* 0008f406 */ (SH_STRUCT_S_REF 0)                      ; stack: -4 -> -4 (0)
+/* 0008f40c */ S_PUSH 941 ("areaY")                     ; stack: -4 -> -3 (+1)
+/* 0008f412 */ PUSH 0                                   ; stack: -3 -> -2 (+1)
+/* 0008f418 */ CALLFUNC EX_SA2Int (args: 4)             ; stack: -2 -> -5 (-3)
+/* 0008f41e */ CALLMETHOD 4979                          ; stack: -5 -> -7 (-2)
+/* 0008f424 */ PUSHSTRUCTPAGE                           ; stack: -7 -> -6 (+1)
+/* 0008f426 */ S_PUSH 937 ("場所データ")           ; stack: -6 -> -5 (+1)
+/* 0008f42c */ (SH_STRUCT_S_REF 0)                      ; stack: -5 -> -5 (0)
+/* 0008f432 */ S_PUSH 826 ("imageName")                 ; stack: -5 -> -4 (+1)
+/* 0008f438 */ S_PUSH 0 ("")                            ; stack: -4 -> -3 (+1)
+/* 0008f43e */ CALLFUNC EX_SA2String (args: 4)          ; stack: -3 -> -6 (-3)
+/* 0008f444 */ CALLMETHOD 4981                          ; stack: -6 -> -8 (-2)
+/* 0008f44a */ (SH_LOCALASSIGN (0, 0l))                 ; stack: -8 -> -8 (0)
+/* 0008f454 */ (SH_LOCALASSIGN (0, 0l))                 ; stack: -8 -> -8 (0)
+/* 0008f45e */ SH_LOCALREF i                            ; stack: -8 -> -8 (0)
+/* 0008f464 */ (A_NUMOF_STRUCT_1 9)                     ; stack: -8 -> -8 (0)
+/* 0008f46a */ LT                                       ; stack: -8 -> -9 (-1)
+/* 0008f46c */ IFZ 0x8f4e2                              ; stack: -9 -> -10 (-1)
+/* 0008f472 */ JUMP 0x8f484                             ; stack: -10 -> -10 (0)
+/* 0008f478 */ (SH_LOCALINC 0)                          ; stack: -10 -> -10 (0)
+/* 0008f47e */ JUMP 0x8f45e                             ; stack: -10 -> -10 (0)
+/* 0008f484 */ PUSHLOCALPAGE                            ; stack: -10 -> -9 (+1)
+/* 0008f486 */ PUSH 1                                   ; stack: -9 -> -8 (+1)
+/* 0008f48c */ S_PUSH 937 ("場所データ")           ; stack: -8 -> -7 (+1)
+/* 0008f492 */ (SH_STRUCT_S_REF 0)                      ; stack: -7 -> -7 (0)
+/* 0008f498 */ S_PUSH 942 ("sel%d")                     ; stack: -7 -> -6 (+1)
+/* 0008f49e */ SH_LOCALREF i                            ; stack: -6 -> -6 (0)
+/* 0008f4a4 */ PUSH 2                                   ; stack: -6 -> -5 (+1)
+/* 0008f4aa */ (S_MOD -1)                               ; stack: -5 -> -5 (0)
+/* 0008f4ac */ PUSH 0                                   ; stack: -5 -> -4 (+1)
+/* 0008f4b2 */ CALLFUNC EX_SA2Int (args: 4)             ; stack: -4 -> -7 (-3)
+/* 0008f4b8 */ ASSIGN                                   ; stack: -7 -> -9 (-2)
+/* 0008f4ba */ POP                                      ; stack: -9 -> -10 (-1)
+/* 0008f4bc */ SH_STRUCTREF Place.selectable_           ; stack: -10 -> -10 (0)
+/* 0008f4c2 */ SH_LOCALREF i                            ; stack: -10 -> -10 (0)
+/* 0008f4c8 */ SH_LOCALREF n                            ; stack: -10 -> -10 (0)
+/* 0008f4ce */ PUSH 0                                   ; stack: -10 -> -9 (+1)
+/* 0008f4d4 */ NOTE                                     ; stack: -9 -> -10 (-1)
+/* 0008f4d6 */ ITOB                                     ; stack: -10 -> -10 (0)
+/* 0008f4d8 */ ASSIGN                                   ; stack: -10 -> -12 (-2)
+/* 0008f4da */ POP                                      ; stack: -12 -> -13 (-1)
+/* 0008f4dc */ JUMP 0x8f478                             ; stack: -13 -> -13 (0)
+/* 0008f4e2 */ RETURN                                   ; stack: -13 -> -13 (0)
+; ENDFUNC Place@loadValue
+
+; FUNC Place@getId (0x8f4ea-0x8f4fa)
+/* 0008f4ea */ (SH_STRUCT_S_REF 0)                      ; stack:  0 ->  0 (0)
+/* 0008f4f0 */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0008f4f2 */ S_PUSH 0 ("")                            ; stack:  0 ->  1 (+1)
+/* 0008f4f8 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC Place@getId
+
+; FUNC Place@getMapId (0x8f500-0x8f510)
+/* 0008f500 */ (SH_STRUCT_S_REF 1)                      ; stack:  0 ->  0 (0)
+/* 0008f506 */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0008f508 */ S_PUSH 0 ("")                            ; stack:  0 ->  1 (+1)
+/* 0008f50e */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC Place@getMapId
+
+; FUNC Place@getName (0x8f516-0x8f526)
+/* 0008f516 */ (SH_STRUCT_S_REF 2)                      ; stack:  0 ->  0 (0)
+/* 0008f51c */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0008f51e */ S_PUSH 0 ("")                            ; stack:  0 ->  1 (+1)
+/* 0008f524 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC Place@getName
+
+; FUNC Place@getEventFuncName (0x8f52c-0x8f53c)
+/* 0008f52c */ (SH_STRUCT_S_REF 3)                      ; stack:  0 ->  0 (0)
+/* 0008f532 */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0008f534 */ S_PUSH 0 ("")                            ; stack:  0 ->  1 (+1)
+/* 0008f53a */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC Place@getEventFuncName
+
+; FUNC Place@getX (0x8f542-0x8f552)
+/* 0008f542 */ SH_STRUCTREF Place.x_                    ; stack:  0 ->  0 (0)
+/* 0008f548 */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0008f54a */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 0008f550 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC Place@getX
+
+; FUNC Place@getY (0x8f558-0x8f568)
+/* 0008f558 */ SH_STRUCTREF Place.y_                    ; stack:  0 ->  0 (0)
+/* 0008f55e */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0008f560 */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 0008f566 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC Place@getY
+
+; FUNC Place@getAreaX (0x8f56e-0x8f57e)
+/* 0008f56e */ SH_STRUCTREF Place.areaX_                ; stack:  0 ->  0 (0)
+/* 0008f574 */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0008f576 */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 0008f57c */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC Place@getAreaX
+
+; FUNC Place@getAreaY (0x8f584-0x8f594)
+/* 0008f584 */ SH_STRUCTREF Place.areaY_                ; stack:  0 ->  0 (0)
+/* 0008f58a */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0008f58c */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 0008f592 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC Place@getAreaY
+
+; FUNC Place@isShowCurrentTime (0x8f59a-0x8f61e)
+/* 0008f59a */ (SH_IF_LOC_LT_IMM (0, 0l, 587208))       ; stack:  0 ->  0 (0)
+/* 0008f5a8 */ SH_LOCALREF index                        ; stack:  0 ->  0 (0)
+/* 0008f5ae */ (A_NUMOF_STRUCT_1 9)                     ; stack:  0 ->  0 (0)
+/* 0008f5b4 */ LT                                       ; stack:  0 -> -1 (-1)
+/* 0008f5b6 */ IFZ 0x8f5c8                              ; stack: -1 -> -2 (-1)
+/* 0008f5bc */ PUSH 1                                   ; stack: -2 -> -1 (+1)
+/* 0008f5c2 */ JUMP 0x8f5ce                             ; stack: -1 -> -1 (0)
+/* 0008f5c8 */ PUSH 0                                   ; stack: -1 ->  0 (+1)
+/* 0008f5ce */ IFZ 0x8f60e                              ; stack:  0 -> -1 (-1)
+/* 0008f5d4 */ SH_STRUCTREF Place.selectable_           ; stack: -1 -> -1 (0)
+/* 0008f5da */ SH_LOCALREF index                        ; stack: -1 -> -1 (0)
+/* 0008f5e0 */ REF                                      ; stack: -1 -> -2 (-1)
+/* 0008f5e2 */ IFZ 0x8f5fe                              ; stack: -2 -> -3 (-1)
+/* 0008f5e8 */ (SH_IF_STRUCTREF_Z (10, 587262))         ; stack: -3 -> -3 (0)
+/* 0008f5f2 */ PUSH 1                                   ; stack: -3 -> -2 (+1)
+/* 0008f5f8 */ JUMP 0x8f604                             ; stack: -2 -> -2 (0)
+/* 0008f5fe */ PUSH 0                                   ; stack: -2 -> -1 (+1)
+/* 0008f604 */ ITOB                                     ; stack: -1 -> -1 (0)
+/* 0008f606 */ RETURN                                   ; stack: -1 -> -1 (0)
+/* 0008f608 */ JUMP 0x8f60e                             ; stack: -1 -> -1 (0)
+/* 0008f60e */ PUSH 0                                   ; stack: -1 ->  0 (+1)
+/* 0008f614 */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0008f616 */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 0008f61c */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC Place@isShowCurrentTime
+
+; FUNC Place@isVisible (0x8f624-0x8f634)
+/* 0008f624 */ SH_STRUCTREF Place.isVisible_            ; stack:  0 ->  0 (0)
+/* 0008f62a */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0008f62c */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 0008f632 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC Place@isVisible
+
+; FUNC Place@setId (0x8f63a-0x8f64e)
+/* 0008f63a */ (SH_STRUCTREF_SASSIGN_LOCALSREF (0, 0))  ; stack:  0 ->  0 (0)
+/* 0008f644 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 0008f646 */ CALLMETHOD 4961                          ; stack:  1 -> -1 (-2)
+/* 0008f64c */ RETURN                                   ; stack: -1 -> -1 (0)
+; ENDFUNC Place@setId
+
+; FUNC Place@setMapId (0x8f654-0x8f660)
+/* 0008f654 */ (SH_STRUCTREF_SASSIGN_LOCALSREF (1, 0))  ; stack:  0 ->  0 (0)
+/* 0008f65e */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC Place@setMapId
+
+; FUNC Place@setName (0x8f666-0x8f672)
+/* 0008f666 */ (SH_STRUCTREF_SASSIGN_LOCALSREF (2, 0))  ; stack:  0 ->  0 (0)
+/* 0008f670 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC Place@setName
+
+; FUNC Place@setEventFuncName (0x8f678-0x8f684)
+/* 0008f678 */ (SH_STRUCTREF_SASSIGN_LOCALSREF (3, 0))  ; stack:  0 ->  0 (0)
+/* 0008f682 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC Place@setEventFuncName
+
+; FUNC Place@setX (0x8f68a-0x8f696)
+/* 0008f68a */ (SH_MEM_ASSIGN_LOCAL (5, 0))             ; stack:  0 ->  0 (0)
+/* 0008f694 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC Place@setX
+
+; FUNC Place@setY (0x8f69c-0x8f6a8)
+/* 0008f69c */ (SH_MEM_ASSIGN_LOCAL (6, 0))             ; stack:  0 ->  0 (0)
+/* 0008f6a6 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC Place@setY
+
+; FUNC Place@setAreaX (0x8f6ae-0x8f6ba)
+/* 0008f6ae */ (SH_MEM_ASSIGN_LOCAL (7, 0))             ; stack:  0 ->  0 (0)
+/* 0008f6b8 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC Place@setAreaX
+
+; FUNC Place@setAreaY (0x8f6c0-0x8f6cc)
+/* 0008f6c0 */ (SH_MEM_ASSIGN_LOCAL (8, 0))             ; stack:  0 ->  0 (0)
+/* 0008f6ca */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC Place@setAreaY
+
+; FUNC Place@setVisible (0x8f6d2-0x8f6de)
+/* 0008f6d2 */ (SH_MEM_ASSIGN_LOCAL (10, 0))            ; stack:  0 ->  0 (0)
+/* 0008f6dc */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC Place@setVisible
+
+; FUNC Place@setImageName (0x8f6e4-0x8f6f0)
+/* 0008f6e4 */ (SH_STRUCTREF_SASSIGN_LOCALSREF (4, 0))  ; stack:  0 ->  0 (0)
+/* 0008f6ee */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC Place@setImageName
+
+; FUNC Place@getImageName (0x8f6f6-0x8f706)
+/* 0008f6f6 */ (SH_STRUCT_S_REF 4)                      ; stack:  0 ->  0 (0)
+/* 0008f6fc */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0008f6fe */ S_PUSH 0 ("")                            ; stack:  0 ->  1 (+1)
+/* 0008f704 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC Place@getImageName
+
+; FUNC Place@isOpen (0x8f70c-0x8f71c)
+/* 0008f70c */ SH_STRUCTREF Place.isOpen_               ; stack:  0 ->  0 (0)
+/* 0008f712 */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0008f714 */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 0008f71a */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC Place@isOpen
+
+; FUNC Place@setOpen (0x8f722-0x8f72e)
+/* 0008f722 */ (SH_MEM_ASSIGN_LOCAL (11, 0))            ; stack:  0 ->  0 (0)
+/* 0008f72c */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC Place@setOpen
+

@@ -1,0 +1,8 @@
+bool SetFileName(int nHandle, string pIText);
+bool RegistNumber(int nHandle, int nNumber);
+bool RegistText(int nHandle, string pIText);
+bool UnregistNumber(int nHandle, int nNumber);
+bool UnregistText(int nHandle, string pIText);
+bool UnregistAll(int nHandle);
+bool ExistNumber(int nHandle, int nNumber);
+bool ExistText(int nHandle, string pIText);

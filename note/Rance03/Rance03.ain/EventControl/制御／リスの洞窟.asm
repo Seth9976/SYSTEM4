@@ -1,0 +1,16 @@
+; FUNC 制御／リスの洞窟／入口 (0x238c28-0x238c6e)
+/* 00238c28 */ S_PUSH 3243 ("ＥＶ／リスの洞窟／...") ; stack:  0 ->  1 (+1)
+/* 00238c2e */ PUSH -2147483648                         ; stack:  1 ->  2 (+1)
+/* 00238c34 */ CALLFUNC EV (args: 2)                    ; stack:  2 ->  1 (-1)
+/* 00238c3a */ NOT                                      ; stack:  1 ->  1 (0)
+/* 00238c3c */ IFZ 0x238c48                             ; stack:  1 ->  0 (-1)
+/* 00238c42 */ CALLFUNC ＥＶ／リスの洞窟／入口／初回 (args: 0) ; stack:  0 ->  0 (0)
+/* 00238c48 */ PUSH 1                                   ; stack:  0 ->  1 (+1)
+/* 00238c4e */ CALLFUNC 制御／帰り木設定 (args: 1) ; stack:  1 ->  0 (-1)
+/* 00238c54 */ S_PUSH 2467 ("リスの洞窟1F")        ; stack:  0 ->  1 (+1)
+/* 00238c5a */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 00238c60 */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 00238c66 */ CALLFUNC 制御／シーン設定／ダンジョン (args: 3) ; stack:  3 ->  0 (-3)
+/* 00238c6c */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC 制御／リスの洞窟／入口
+

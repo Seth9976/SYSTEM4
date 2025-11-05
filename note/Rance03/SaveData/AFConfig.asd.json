@@ -1,0 +1,123 @@
+{
+	"save_type":	"global_save",
+	"key":	"仮キー名",
+	"uk1":	1000,
+	"version":	7,
+	"uk2":	56,
+	"num_ain_globals":	263,
+	"group":	"コンフィグデータ",
+	"globals":	[{
+			"name":	"g_fMessageSpeedRate",
+			"value":	{
+				"float":	0.5
+			}
+		}, {
+			"name":	"g_fAutoModeWaitTimeRate",
+			"value":	{
+				"float":	0.5
+			}
+		}, {
+			"name":	"g_fReadMessageSkipWaitTimeRate",
+			"value":	{
+				"float":	1
+			}
+		}, {
+			"name":	"g_bConfigIsSpeedupForFrameSkip",
+			"value":	false
+		}, {
+			"name":	"g_ShowSampleMessage",
+			"value":	true
+		}, {
+			"name":	"g_bConfigReleaseSkipModeByClick",
+			"value":	true
+		}, {
+			"name":	"g_ReleaseMessageSkipInSelectMenu",
+			"value":	false
+		}, {
+			"name":	"g_bConfigReleaseSkipModeByReadMessage",
+			"value":	false
+		}, {
+			"name":	"g_ConfigSkipAllMessage",
+			"value":	false
+		}, {
+			"name":	"g_bConfigReleaseAutoModeByClick",
+			"value":	true
+		}, {
+			"name":	"g_ReleaseAutoModeInSelectMenu",
+			"value":	false
+		}, {
+			"name":	"g_bRestrainScreensaverWhileAutoMode",
+			"value":	false
+		}, {
+			"name":	"g_AnimateMessageWindow",
+			"value":	true
+		}, {
+			"name":	"g_既読メッセージ色番号",
+			"value":	6
+		}, {
+			"name":	"g_バックシーンメッセージ色番号",
+			"value":	5
+		}, {
+			"name":	"g_ConfigMessageWindowMulColorRate",
+			"value":	{
+				"float":	1
+			}
+		}, {
+			"name":	"g_ConfigMessageWindowAlphaRate",
+			"value":	{
+				"float":	1
+			}
+		}, {
+			"name":	"g_ConfigStopVoiceBySkipMessage",
+			"value":	true
+		}, {
+			"name":	"g_bConfigBGMFadeByVoice",
+			"value":	true
+		}, {
+			"name":	"g_ConfigSoundGlobalFocus",
+			"value":	true
+		}, {
+			"name":	"g_nKeyConfigMouseWheelForward",
+			"value":	0
+		}, {
+			"name":	"g_ConfigQuickSaveConfirm",
+			"value":	true
+		}, {
+			"name":	"g_ConfigQuickLoadConfirm",
+			"value":	true
+		}, {
+			"name":	"g_ConfigSaveConfirm",
+			"value":	true
+		}, {
+			"name":	"g_ConfigLoadConfirm",
+			"value":	true
+		}, {
+			"name":	"g_MoveMouseCursorSpeedID",
+			"value":	2
+		}, {
+			"name":	"g_JoystickButtonAssignmentTable",
+			"value":	{
+				"array_rank":	1,
+				"type":	14,
+				"dimensions":	[50],
+				"values":	[1, 2, 3, 4, 6, 7, 5, 8, 9, 3, 4, 11, 12, -1, -1, 10, 3, 4, 11, 12, 5, 6, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+			}
+		}, {
+			"name":	"g_bSleepByInactiveWindow",
+			"value":	false
+		}, {
+			"name":	"g_bConfigOverFrameRateSleep",
+			"value":	true
+		}, {
+			"name":	"g_Network_EnableConnection",
+			"value":	false
+		}, {
+			"name":	"g_common_configTimerScaling",
+			"value":	{
+				"float":	1
+			}
+		}],
+	"struct_defs":	[],
+	"encrypted":	false,
+	"compression_level":	1
+}

@@ -1,0 +1,11 @@
+bool OpenForWrite(string pIFileName);
+bool OpenForRead(string pIFileName);
+bool Close(void);
+bool WriteByte(int nData);
+bool WriteInt(int nData);
+bool WriteFloat(float fData);
+bool WriteString(string pIString);
+bool ReadByte(ref int pnData);
+bool ReadInt(ref int pnData);
+bool ReadFloat(ref float pfData);
+bool ReadString(ref string pIString);

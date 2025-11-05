@@ -1,0 +1,2 @@
+bool IsExist(string CGName);
+bool GetInfo(string CGName, ref int Width, ref int Height, ref int Bpp, ref bool ExistPixel, ref bool ExistAlpha);

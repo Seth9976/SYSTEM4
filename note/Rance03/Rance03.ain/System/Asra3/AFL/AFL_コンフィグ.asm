@@ -1,0 +1,117 @@
+; FUNC AFL_Config_SetBeginEvent (0x16a294-0x16a2b2)
+/* 0016a294 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0016a296 */ PUSH 74                                  ; stack:  1 ->  2 (+1)
+/* 0016a29c */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0016a29e */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 0016a2a0 */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 0016a2a6 */ REF                                      ; stack:  3 ->  2 (-1)
+/* 0016a2a8 */ DG_COPY                                  ; stack:  2 ->  2 (0)
+/* 0016a2aa */ CALLMETHOD 1669                          ; stack:  2 ->  0 (-2)
+/* 0016a2b0 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC AFL_Config_SetBeginEvent
+
+; FUNC AFL_Config_SetEndEvent (0x16a2be-0x16a2dc)
+/* 0016a2be */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0016a2c0 */ PUSH 74                                  ; stack:  1 ->  2 (+1)
+/* 0016a2c6 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0016a2c8 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 0016a2ca */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 0016a2d0 */ REF                                      ; stack:  3 ->  2 (-1)
+/* 0016a2d2 */ DG_COPY                                  ; stack:  2 ->  2 (0)
+/* 0016a2d4 */ CALLMETHOD 1670                          ; stack:  2 ->  0 (-2)
+/* 0016a2da */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC AFL_Config_SetEndEvent
+
+; FUNC AFL_Config_SetLoadedActivityEvent (0x16a2e8-0x16a306)
+/* 0016a2e8 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0016a2ea */ PUSH 74                                  ; stack:  1 ->  2 (+1)
+/* 0016a2f0 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0016a2f2 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 0016a2f4 */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 0016a2fa */ REF                                      ; stack:  3 ->  2 (-1)
+/* 0016a2fc */ DG_COPY                                  ; stack:  2 ->  2 (0)
+/* 0016a2fe */ CALLMETHOD 1671                          ; stack:  2 ->  0 (-2)
+/* 0016a304 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC AFL_Config_SetLoadedActivityEvent
+
+; FUNC AFL_Config_SetReleasingActivityEvent (0x16a312-0x16a330)
+/* 0016a312 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0016a314 */ PUSH 74                                  ; stack:  1 ->  2 (+1)
+/* 0016a31a */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0016a31c */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 0016a31e */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 0016a324 */ REF                                      ; stack:  3 ->  2 (-1)
+/* 0016a326 */ DG_COPY                                  ; stack:  2 ->  2 (0)
+/* 0016a328 */ CALLMETHOD 1672                          ; stack:  2 ->  0 (-2)
+/* 0016a32e */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC AFL_Config_SetReleasingActivityEvent
+
+; FUNC AFL_Config_SetAsraDataForPartsEvent (0x16a33c-0x16a35a)
+/* 0016a33c */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0016a33e */ PUSH 74                                  ; stack:  1 ->  2 (+1)
+/* 0016a344 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0016a346 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 0016a348 */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 0016a34e */ REF                                      ; stack:  3 ->  2 (-1)
+/* 0016a350 */ DG_COPY                                  ; stack:  2 ->  2 (0)
+/* 0016a352 */ CALLMETHOD 1673                          ; stack:  2 ->  0 (-2)
+/* 0016a358 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC AFL_Config_SetAsraDataForPartsEvent
+
+; FUNC AFL_Config_SetPartsDataForAsraEvent (0x16a366-0x16a384)
+/* 0016a366 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0016a368 */ PUSH 74                                  ; stack:  1 ->  2 (+1)
+/* 0016a36e */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0016a370 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 0016a372 */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 0016a378 */ REF                                      ; stack:  3 ->  2 (-1)
+/* 0016a37a */ DG_COPY                                  ; stack:  2 ->  2 (0)
+/* 0016a37c */ CALLMETHOD 1674                          ; stack:  2 ->  0 (-2)
+/* 0016a382 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC AFL_Config_SetPartsDataForAsraEvent
+
+; FUNC AFL_GetKeyConfigMouseWheelForwardMode (0x16a390-0x16a3a4)
+/* 0016a390 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0016a392 */ PUSH 143                                 ; stack:  1 ->  2 (+1)
+/* 0016a398 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0016a39a */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 0016a39c */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 0016a3a2 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC AFL_GetKeyConfigMouseWheelForwardMode
+
+; FUNC AFL_GetConfigQuickSaveConfirm (0x16a3b0-0x16a3c4)
+/* 0016a3b0 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0016a3b2 */ PUSH 144                                 ; stack:  1 ->  2 (+1)
+/* 0016a3b8 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0016a3ba */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 0016a3bc */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 0016a3c2 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC AFL_GetConfigQuickSaveConfirm
+
+; FUNC AFL_GetConfigQuickLoadConfirm (0x16a3d0-0x16a3e4)
+/* 0016a3d0 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0016a3d2 */ PUSH 145                                 ; stack:  1 ->  2 (+1)
+/* 0016a3d8 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0016a3da */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 0016a3dc */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 0016a3e2 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC AFL_GetConfigQuickLoadConfirm
+
+; FUNC AFL_GetConfigSaveConfirm (0x16a3f0-0x16a404)
+/* 0016a3f0 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0016a3f2 */ PUSH 146                                 ; stack:  1 ->  2 (+1)
+/* 0016a3f8 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0016a3fa */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 0016a3fc */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 0016a402 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC AFL_GetConfigSaveConfirm
+
+; FUNC AFL_GetConfigLoadConfirm (0x16a410-0x16a424)
+/* 0016a410 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0016a412 */ PUSH 147                                 ; stack:  1 ->  2 (+1)
+/* 0016a418 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0016a41a */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 0016a41c */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 0016a422 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC AFL_GetConfigLoadConfirm
+

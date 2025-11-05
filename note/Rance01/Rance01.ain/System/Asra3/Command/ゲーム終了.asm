@@ -1,0 +1,48 @@
+; FUNC ゲーム終了 (0x4e110-0x4e15e)
+/* 0004e110 */ CALLFUNC AFL_Config_GetCloseGameConfirm (args: 0) ; stack:  0 ->  1 (+1)
+/* 0004e116 */ IFZ 0x4e144                              ; stack:  1 ->  0 (-1)
+/* 0004e11c */ S_PUSH 445 ("ゲームを終了します...") ; stack:  0 ->  1 (+1)
+/* 0004e122 */ CALLSYS system.MsgBoxOkCancel (args: 1)  ; stack:  1 ->  1 (0)
+/* 0004e128 */ NOT                                      ; stack:  1 ->  1 (0)
+/* 0004e12a */ IFZ 0x4e13e                              ; stack:  1 ->  0 (-1)
+/* 0004e130 */ CALLFUNC SYS_WaitToKeyUpFromMessageBox (args: 0) ; stack:  0 ->  0 (0)
+/* 0004e136 */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0004e138 */ JUMP 0x4e13e                             ; stack:  0 ->  0 (0)
+/* 0004e13e */ JUMP 0x4e144                             ; stack:  0 ->  0 (0)
+/* 0004e144 */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 0004e14a */ CALLSYS system.Exit (args: 1)            ; stack:  1 ->  0 (-1)
+/* 0004e150 */ CALLSYS system.Peek (args: 0)            ; stack:  0 ->  0 (0)
+/* 0004e156 */ JUMP 0x4e150                             ; stack:  0 ->  0 (0)
+/* 0004e15c */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC ゲーム終了
+
+; FUNC タイトルに戻る (0x4e16a-0x4e1a6)
+/* 0004e16a */ CALLFUNC AFL_Config_GetBackToTitleConfirm (args: 0) ; stack:  0 ->  1 (+1)
+/* 0004e170 */ IFZ 0x4e19e                              ; stack:  1 ->  0 (-1)
+/* 0004e176 */ S_PUSH 446 ("タイトル画面に戻り...") ; stack:  0 ->  1 (+1)
+/* 0004e17c */ CALLSYS system.MsgBoxOkCancel (args: 1)  ; stack:  1 ->  1 (0)
+/* 0004e182 */ NOT                                      ; stack:  1 ->  1 (0)
+/* 0004e184 */ IFZ 0x4e198                              ; stack:  1 ->  0 (-1)
+/* 0004e18a */ CALLFUNC SYS_WaitToKeyUpFromMessageBox (args: 0) ; stack:  0 ->  0 (0)
+/* 0004e190 */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0004e192 */ JUMP 0x4e198                             ; stack:  0 ->  0 (0)
+/* 0004e198 */ JUMP 0x4e19e                             ; stack:  0 ->  0 (0)
+/* 0004e19e */ CALLFUNC Ａ＿タイトルに戻る＿確認なし (args: 0) ; stack:  0 ->  0 (0)
+/* 0004e1a4 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC タイトルに戻る
+
+; FUNC Ａ＿タイトルに戻る＿確認なし (0x4e1b2-0x4e1cc)
+/* 0004e1b2 */ CALLFUNC SYS_システム共通セーブ (args: 0) ; stack:  0 ->  0 (0)
+/* 0004e1b8 */ CALLSYS system.Reset (args: 0)           ; stack:  0 ->  0 (0)
+/* 0004e1be */ CALLSYS system.Peek (args: 0)            ; stack:  0 ->  0 (0)
+/* 0004e1c4 */ JUMP 0x4e1be                             ; stack:  0 ->  0 (0)
+/* 0004e1ca */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC Ａ＿タイトルに戻る＿確認なし
+
+; FUNC 再起動後確認 (0x4e1d8-0x4e1ec)
+/* 0004e1d8 */ CALLHLL SystemService.IsResetOnce (args: 0) ; stack:  0 ->  0 (0)
+/* 0004e1e2 */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0004e1e4 */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 0004e1ea */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC 再起動後確認
+

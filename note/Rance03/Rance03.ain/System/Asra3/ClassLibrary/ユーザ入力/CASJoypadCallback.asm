@@ -1,0 +1,35 @@
+; FUNC CASJoypadCallback@Empty (0x1042-0x1060)
+/* 00001042 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 00001044 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 0000104a */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0000104c */ DG_NUMOF                                 ; stack:  1 ->  1 (0)
+/* 0000104e */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 00001054 */ EQUALE                                   ; stack:  2 ->  1 (-1)
+/* 00001056 */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 00001058 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 0000105e */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC CASJoypadCallback@Empty
+
+; FUNC CASJoypadCallback@SetCallback (0x1066-0x1082)
+/* 00001066 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 00001068 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 0000106e */ REF                                      ; stack:  2 ->  1 (-1)
+/* 00001070 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 00001072 */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 00001078 */ REF                                      ; stack:  3 ->  2 (-1)
+/* 0000107a */ DG_COPY                                  ; stack:  2 ->  2 (0)
+/* 0000107c */ DG_ASSIGN                                ; stack:  2 ->  2 (0)
+/* 0000107e */ DG_POP                                   ; stack:  2 ->  2 (0)
+/* 00001080 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC CASJoypadCallback@SetCallback
+
+; FUNC CASJoypadCallback@GetCallback (0x1088-0x109e)
+/* 00001088 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 0000108a */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 00001090 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 00001092 */ DG_COPY                                  ; stack:  1 ->  1 (0)
+/* 00001094 */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 00001096 */ PUSH -1                                  ; stack:  1 ->  2 (+1)
+/* 0000109c */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC CASJoypadCallback@GetCallback
+

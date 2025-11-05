@@ -1,0 +1,22 @@
+// Project Environment File
+Encoding = "UTF-8"
+ProjectName = "Rance01"
+
+CodeName = "Rance01.ain"
+
+#define _AINVERSION 6
+#define _AINMINORVERSION 10
+#define _KEYCODE 0x00000000
+#define _ISAI2FILE true
+
+GameVersion = 100
+
+// Settings for each directory
+SourceDir = "."
+HLLDir = "HLL"
+ObjDir = "OBJ"
+OutputDir = "E:\alice-tools-0.13.2"
+
+Source = {
+	"main.inc",
+}

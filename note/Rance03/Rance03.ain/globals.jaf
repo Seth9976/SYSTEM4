@@ -1,0 +1,293 @@
+CASTimerManager g_ASTimerManager;
+CPartsMessageManager g_PartsMessageManager;
+int g_ADVEngine_UIPanel_PosX = -2147483648;
+int g_ADVEngine_UIPanel_PosY = -2147483648;
+bool g_ADVEngine_EnableOutputLog = false;
+int _Ｍフォント;
+int _Ｍサイズ;
+int _g_Ｍ太さ;
+int _ＭＲ;
+int _ＭＧ;
+int _ＭＢ;
+int _Ｍ速度;
+int _Ｍ配置;
+float g_MessageTextEdgeWeight;
+int _Ｍ飾Ｒ;
+int _Ｍ飾Ｇ;
+int _Ｍ飾Ｂ;
+sys_btn_fnc_t _g_rbutton_callback_fnc;
+sys_btn_fnc_t _g_spacekey_callback_fnc;
+sys_btn_fnc_t _g_escapekey_callback_fnc;
+CMessageWindowModelManager g_MessageWindowModelManager;
+CMessageWindowStatusManager g_MessageWindowStatusManager;
+CMessageWindowManager g_MessageWindowManager;
+CMessageTextModel g_MessageTextModel;
+CMessageTextView g_MessageTextView;
+_CMsgKeyWait _g_MsgKeyWait;
+_CMsgKeyWaitAnime _g_MsgKeyWaitAnime;
+FTShowMessageWindowCallback g_ShowMessageWindowCallbackFuncList;
+FTMessage g_MessageFunction;
+FTMessageR g_MessageRFunction;
+FTMessageA g_MessageAFunction;
+FTMessageAA g_MessageAAFunction;
+FTMessageB g_MessageBFunction;
+FTMessageC g_MessageCFunction;
+FTMessageD g_MessageDFunction;
+FTDrawMessageChar g_DrawMessageCharFunction;
+array@CReplacePair g_ReplacePair;
+CSystemButtonModelMap g_SystemButtonModelMap;
+CSystemButtonViewList g_SystemButtonViewList;
+array@選択エリア_t _選択エリア;
+int _選択枠;
+array@選択肢_t _選択肢;
+bool g_bBeginSelect = false;
+bool g_bInSelect = false;
+bool g_bCanReturnBackSelect = false;
+int g_テスト選択肢_フォント種類 = 0;
+int g_テスト選択肢_フォントサイズ = 16;
+_menu_rbutton_callback_t _g_menu_rbutton_callback_fnc;
+CMenuViewManager g_MenuViewManager;
+array@文字入力エリア_t _文字入力エリア;
+CASParts g_ColorLayerSprite;
+int _全表示効果番号;
+int _全表示効果時間;
+CASBGM g_BGM;
+array@CASBGM g_LoopSE;
+CASSE g_SE;
+bool g_ContinueToPlaySE = false;
+string _g_最終音声名 = "";
+array@BackSE_t g_サウンド再生リスト;
+int g_ch背景音声 = 21;
+CBGMVolumeCapManager g_BGMVolumeCapManager;
+CSoundVolumeCapManager g_SoundVolumeCapManager;
+array@ADVSoundData g_SuspendSoundData;
+_CSystemSound _g_SystemSound;
+array@int g_ADVLogListForSaveData;
+array@int g_ADVSceneListForSaveData;
+bool g_bバックシーン登録可能 = true;
+array@ADVSceneData g_ADVSceneList;
+string g_BackSceneBGName = "";
+DG_NotifyHandler g_dgBackScenePreEvent;
+DG_NotifyHandler g_dgBackScenePostEvent;
+bool g_OpenBacklogMessage = false;
+int g_OpenBacklogMessageTime;
+FTConfigView g_ConfigViewFunction;
+CConfigView g_ConfigView;
+CASTimer g_ConfigSampleTextTimer;
+CAS3DSetting g_Config3DSetting;
+bool g_bExistQuickSaveFile = false;
+int _g_Ｍ送ホイール確認時刻 = -2147483648;
+array@CASJoypadCallback g_InputJoypadCallbackList;
+FTPostCallUpdateView g_PostCallUpdateViewFuncList;
+bool g_KeepPreviousViewMode = true;
+int g_PrevPlayTime;
+int g_PlayMinuteTime;
+bool g_PausePlayTimeCounter = false;
+CASInputText g_InputText;
+int g_Test_NumofError;
+CASDebugFPS g_DebugFPS;
+CASDebugMemorySize g_DebugMemorySize;
+CASDebugFillRate g_DebugFillRate;
+CASDebugVoicePlaying g_DebugVoicePlaying;
+CASDebugVoicePlaying g_DebugGimicSEPlaying;
+CASDebugVoicePlaying g_DebugBackVoicePlaying;
+CASDebugVideoMemorySize g_DebugVideoMemorySize;
+bool g_CompulsorilyShowDebugInfo = true;
+string g_EventName;
+string _ゲーム時間;
+array@string _EV_TABLE;
+int _文字表示後画面揺らし横;
+int _文字表示後画面揺らし縦;
+int _文字表示後画面揺らし時;
+bool g_MessageSkipPermission = true;
+bool g_MessageSkipMode = false;
+bool g_bスキップ中 = false;
+CASTimer g_Ｍスキップタイマー;
+bool g_bスキップモードマーク表示許可 = true;
+CModeCGView _g_MsgSkipModeCGList;
+bool g_オートモード = false;
+CASTimer g_Ｍオートタイマー;
+bool g_bオートモードマーク表示許可 = true;
+CModeCGView _g_AutoModeCGList;
+bool g_SkipKeyWait = false;
+bool g_FrameSkipAll = false;
+bool g_既読メッセージ = false;
+bool _g_回想中 = false;
+bool _g_デフォルトセーブコメント要更新 = true;
+string _g_デフォルトセーブコメント = "最初";
+bool g_InvalidateFrameSkipWhileMessageSkip = false;
+globalgroup 共有データ
+{
+	int _最終セーブ番号;
+}
+globalgroup 情報集計データ
+{
+	int g_NumofOpenBacklog = 0;
+	int g_NumofOpenBackScene = 0;
+	int g_NumofOpenConfig = 0;
+	int g_NumofOpenManual = 0;
+}
+globalgroup コンフィグデータ
+{
+	float g_fMessageSpeedRate;
+	float g_fAutoModeWaitTimeRate;
+	float g_fReadMessageSkipWaitTimeRate;
+	bool g_bConfigIsSpeedupForFrameSkip = false;
+	bool g_ShowSampleMessage = false;
+	bool g_bConfigReleaseSkipModeByClick = true;
+	bool g_ReleaseMessageSkipInSelectMenu = false;
+	bool g_bConfigReleaseSkipModeByReadMessage = false;
+	bool g_ConfigSkipAllMessage = false;
+	bool g_bConfigReleaseAutoModeByClick = true;
+	bool g_ReleaseAutoModeInSelectMenu = false;
+	bool g_bRestrainScreensaverWhileAutoMode = false;
+	bool g_AnimateMessageWindow = true;
+	int g_既読メッセージ色番号 = 0;
+	int g_バックシーンメッセージ色番号 = 0;
+	float g_ConfigMessageWindowMulColorRate = 1.0;
+	float g_ConfigMessageWindowAlphaRate = 1.0;
+	bool g_ConfigStopVoiceBySkipMessage = true;
+	bool g_bConfigBGMFadeByVoice = true;
+	bool g_ConfigSoundGlobalFocus = true;
+	int g_nKeyConfigMouseWheelForward = 0;
+	bool g_ConfigQuickSaveConfirm = true;
+	bool g_ConfigQuickLoadConfirm = true;
+	bool g_ConfigSaveConfirm = true;
+	bool g_ConfigLoadConfirm = true;
+	int g_MoveMouseCursorSpeedID = 2;
+	array@int g_JoystickButtonAssignmentTable;
+	bool g_bSleepByInactiveWindow = false;
+	bool g_bConfigOverFrameRateSleep = true;
+	bool g_Network_EnableConnection = false;
+}
+int g_PARTS_PrevTime;
+CASTimer g_PARTS_MotionTimer;
+int g_PARTS_PrevMotionTime;
+int g_PARTS_CurrentMotionTime;
+bool g_EndPartsBusyLoop = false;
+int g_EndPartsBusyLoopNumber = 0;
+int g_PARTS_ActiveLayerID = -1;
+DG_PARTS_UpdateHandler g_dgPartsBeginUpdateEvent;
+DG_PARTS_UpdateHandler g_dgPartsEndUpdateEvent;
+bool g_IsInPartsBeginUpdate = false;
+bool g_IsInPartsEndUpdate = false;
+DG_PARTS_LayerHandler g_dgPartsErasingLayerEvent;
+DG_PARTS_LayerChangedHandler g_dgPartsChangedActiveLayerEvent;
+CParts3DLayerManager g_System3DLayerManager;
+bool g_EndActivity = false;
+array@AdvStand g_advStand[2];
+AdvBackground g_advBackGround;
+AdvNamePlate g_advNamePlate;
+AdvMessageWindow g_advMessageWindow;
+AdvEventCg g_advEventCg;
+AdvFullScreenEffect g_advFullScreenEffect;
+AdvChangeCharacter g_advChangeCharacter;
+AdvSound g_advSound;
+AdvStaffroll g_advStaffroll;
+array@string g_advCommandHistory;
+string g_currentFileName;
+string g_currentHandleName;
+globalgroup 共有データ
+{
+	array@EnquiteSelection g_enquiteSelection;
+	string g_enquiteFreeText;
+}
+array@string g_allFunctions;
+globalgroup 共有データ
+{
+	LatestDebugFunctions g_scenarioTestFunc;
+	LatestDebugFunctions g_debugTestFunc;
+}
+array@AdvSelectionInfo g_advSelectionInfo;
+globalgroup 共有データ
+{
+	int g_common_latestSaveIndex = -1;
+	int g_common_latestAutoSaveIndex = -1;
+	float g_common_globalTimeScaling = 1.0;
+}
+DG_OpenFlatCallback g_openFlatCallback;
+array@bool g_lastFrameSkipMode;
+bool g_battleCalcMode;
+GameSceneManager g_gameSceneManager;
+array@MapPlace g_mapPlace;
+MapChain g_mapChain;
+array@MapEncountProbability g_mapEncountProbability;
+array@MapEncountMonsterGroup g_mapEncountMonsterGroup;
+array@Dungeon g_dungeon;
+array@CardInfomation g_cardInfomation;
+array@BattleBackgroundInfomation g_battleBackgroundInfomation;
+Party g_party;
+PlayerCommonParam g_playerCommonParam;
+array@BadCondition g_badCondition;
+array@Player g_player;
+array@PlayerSkill g_attackSkill;
+array@PlayerBuff g_playerBuff;
+array@PlayerSkillAttribute g_playerAttackAttribute;
+array@ZeroThreeSkill g_zeroThreeSkill;
+array@PlayerSkillOpenLevel g_playerSkillOpenLevel;
+array@PlayerVoiceFinder g_voiceFinder;
+array@Monster g_monster;
+array@MonsterBuff g_monsterBuff;
+array@MonsterAttackAttribute g_monsterAttackAttribute;
+array@MonsterAttribute g_monsterAttribute;
+MonsterStrengthShifter g_monsterStrengthShifter;
+array@MirrorPiece g_mirrorPiece;
+array@Item g_item;
+BattleLog g_battleLog;
+BattleResult g_battleResult;
+GameFlagMap g_gameFlagMap;
+globalgroup 共有データ
+{
+	GameFlagMap g_globalGameFlag;
+}
+array@AdvSelectionButtonInfomation g_advSelectionButtonInfomation;
+array@Shop g_shop;
+array@CgList g_cgList;
+array@ReplayInfo g_replay;
+array@MusicInfo g_musicInfo;
+SaveDataManager g_saveDataManager;
+array@StandBackgroundFillInfomation g_standBackgroundFillInfomation;
+globalgroup 共有データ
+{
+	DebugFlag g_debugFlag;
+	array@string g_replayEvent;
+	array@string g_playedMusic;
+}
+bool g_battleMusicNotChangeMode = false;
+EnquiteSender g_enquiteSender;
+PartsCamera g_partsCamera;
+unknown_delegate g_dgPartsCameraAffectCallback;
+globalgroup コンフィグデータ
+{
+	float g_common_configTimerScaling;
+}
+globalgroup 共有データ
+{
+	float g_common_isWithOutSkillInformation = 1.0;
+}
+ref KeyInput g_keyboard;
+ref SystemSound g_sysSound;
+ref MouseInput g_mouse;
+ref LoopSound g_loopSound;
+ref Music g_music;
+ref GlobalGameTimer g_globalTimer;
+ref PartsNumberProvider g_partsNumberProvider;
+ref FrameManager g_frameManager;
+ViewModeManager g_viewModeManager;
+ref GameObjectManager g_gameObjectManager;
+ref PartsInitializeOption g_partsInitializeOption;
+ref PartsMotionManager g_partsMotionManager;
+bool g_testFinishFlag;
+array@SkillSelector g_sel;
+int g_testDungeonFront = 0;
+array@DungeonLineView g_testDungeonLine;
+Dungeon g_testDungeon;
+int g_testDungeonPlayerX = 0;
+int g_finishEventCount1;
+int g_finishEventCount2;
+MapBackground testMapBg;
+CASTimer testCASTimer;
+int debugTestAllocationObjectCount = 0;
+ref Hallucination g_hallucination;
+Parts g_partsGameMode;
+Parts g_partsVersion;

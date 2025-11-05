@@ -1,0 +1,7 @@
+bool OpenViewer(void);
+bool CloseViewer(void);
+bool IsOpenedViewer(void);
+void SetWindowTitleName(string pIWindowTitleName);
+bool AddText(string pIText);
+bool ClearText(void);
+void SetSaveFolderName(string SaveFolderName);

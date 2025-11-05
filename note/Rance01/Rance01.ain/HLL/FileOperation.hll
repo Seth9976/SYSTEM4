@@ -1,0 +1,12 @@
+bool ExistFile(string FileName);
+bool DeleteFile(string FileName);
+bool CopyFile(string DestFileName, string SrcFileName);
+bool GetFileCreationTime(string FileName, ref int nYear, ref int nMonth, ref int nDay, ref int nWeek, ref int nHour, ref int nMin, ref int nSecond);
+bool GetFileLastAccessTime(string FileName, ref int nYear, ref int nMonth, ref int nDay, ref int nWeek, ref int nHour, ref int nMin, ref int nSecond);
+bool GetFileLastWriteTime(string FileName, ref int nYear, ref int nMonth, ref int nDay, ref int nWeek, ref int nHour, ref int nMin, ref int nSecond);
+bool GetFileSize(string FileName, ref int nSize);
+bool ExistFolder(string FolderName);
+bool CreateFolder(string FolderName);
+bool DeleteFolder(string FolderName);
+bool GetFileList(string FolderName, ref array@string Array);
+bool GetFolderList(string FolderName, ref array@string Array);

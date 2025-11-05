@@ -1,0 +1,188 @@
+; FUNC TargetInfomation@setPlayerSkillId (0x1b381a-0x1b3834)
+/* 001b381a */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b381c */ PUSH 4                                   ; stack:  1 ->  2 (+1)
+/* 001b3822 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001b3824 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 001b3826 */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 001b382c */ S_REF                                    ; stack:  3 ->  3 (0)
+/* 001b382e */ S_ASSIGN                                 ; stack:  3 ->  1 (-2)
+/* 001b3830 */ S_POP                                    ; stack:  1 ->  0 (-1)
+/* 001b3832 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC TargetInfomation@setPlayerSkillId
+
+; FUNC TargetInfomation@getPlayerSkillId (0x1b383a-0x1b384e)
+/* 001b383a */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b383c */ PUSH 4                                   ; stack:  1 ->  2 (+1)
+/* 001b3842 */ S_REF                                    ; stack:  2 ->  2 (0)
+/* 001b3844 */ RETURN                                   ; stack:  2 ->  2 (0)
+/* 001b3846 */ S_PUSH 0 ("")                            ; stack:  2 ->  3 (+1)
+/* 001b384c */ RETURN                                   ; stack:  3 ->  3 (0)
+; ENDFUNC TargetInfomation@getPlayerSkillId
+
+; FUNC TargetInfomation@getDamage (0x1b3854-0x1b3868)
+/* 001b3854 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b3856 */ PUSH 5                                   ; stack:  1 ->  2 (+1)
+/* 001b385c */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001b385e */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 001b3860 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 001b3866 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC TargetInfomation@getDamage
+
+; FUNC TargetInfomation@getType (0x1b386e-0x1b3882)
+/* 001b386e */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b3870 */ PUSH 6                                   ; stack:  1 ->  2 (+1)
+/* 001b3876 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001b3878 */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 001b387a */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 001b3880 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC TargetInfomation@getType
+
+; FUNC TargetInfomation@getMessage (0x1b3888-0x1b389c)
+/* 001b3888 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b388a */ PUSH 7                                   ; stack:  1 ->  2 (+1)
+/* 001b3890 */ S_REF                                    ; stack:  2 ->  2 (0)
+/* 001b3892 */ RETURN                                   ; stack:  2 ->  2 (0)
+/* 001b3894 */ S_PUSH 0 ("")                            ; stack:  2 ->  3 (+1)
+/* 001b389a */ RETURN                                   ; stack:  3 ->  3 (0)
+; ENDFUNC TargetInfomation@getMessage
+
+; FUNC TargetInfomation@setDamage (0x1b38a2-0x1b38ba)
+/* 001b38a2 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b38a4 */ PUSH 5                                   ; stack:  1 ->  2 (+1)
+/* 001b38aa */ PUSHLOCALPAGE                            ; stack:  2 ->  3 (+1)
+/* 001b38ac */ PUSH 0                                   ; stack:  3 ->  4 (+1)
+/* 001b38b2 */ REF                                      ; stack:  4 ->  3 (-1)
+/* 001b38b4 */ ASSIGN                                   ; stack:  3 ->  1 (-2)
+/* 001b38b6 */ POP                                      ; stack:  1 ->  0 (-1)
+/* 001b38b8 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC TargetInfomation@setDamage
+
+; FUNC TargetInfomation@setType (0x1b38c0-0x1b38d8)
+/* 001b38c0 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b38c2 */ PUSH 6                                   ; stack:  1 ->  2 (+1)
+/* 001b38c8 */ PUSHLOCALPAGE                            ; stack:  2 ->  3 (+1)
+/* 001b38ca */ PUSH 0                                   ; stack:  3 ->  4 (+1)
+/* 001b38d0 */ REF                                      ; stack:  4 ->  3 (-1)
+/* 001b38d2 */ ASSIGN                                   ; stack:  3 ->  1 (-2)
+/* 001b38d4 */ POP                                      ; stack:  1 ->  0 (-1)
+/* 001b38d6 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC TargetInfomation@setType
+
+; FUNC TargetInfomation@setMessage (0x1b38de-0x1b38f8)
+/* 001b38de */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b38e0 */ PUSH 7                                   ; stack:  1 ->  2 (+1)
+/* 001b38e6 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001b38e8 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 001b38ea */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 001b38f0 */ S_REF                                    ; stack:  3 ->  3 (0)
+/* 001b38f2 */ S_ASSIGN                                 ; stack:  3 ->  1 (-2)
+/* 001b38f4 */ S_POP                                    ; stack:  1 ->  0 (-1)
+/* 001b38f6 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC TargetInfomation@setMessage
+
+; FUNC TargetInfomation@setSourceId (0x1b38fe-0x1b3918)
+/* 001b38fe */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b3900 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 001b3906 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001b3908 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 001b390a */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 001b3910 */ S_REF                                    ; stack:  3 ->  3 (0)
+/* 001b3912 */ S_ASSIGN                                 ; stack:  3 ->  1 (-2)
+/* 001b3914 */ S_POP                                    ; stack:  1 ->  0 (-1)
+/* 001b3916 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC TargetInfomation@setSourceId
+
+; FUNC TargetInfomation@setSourceIndex (0x1b391e-0x1b3936)
+/* 001b391e */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b3920 */ PUSH 2                                   ; stack:  1 ->  2 (+1)
+/* 001b3926 */ PUSHLOCALPAGE                            ; stack:  2 ->  3 (+1)
+/* 001b3928 */ PUSH 0                                   ; stack:  3 ->  4 (+1)
+/* 001b392e */ REF                                      ; stack:  4 ->  3 (-1)
+/* 001b3930 */ ASSIGN                                   ; stack:  3 ->  1 (-2)
+/* 001b3932 */ POP                                      ; stack:  1 ->  0 (-1)
+/* 001b3934 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC TargetInfomation@setSourceIndex
+
+; FUNC TargetInfomation@setTargetId (0x1b393c-0x1b3956)
+/* 001b393c */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b393e */ PUSH 1                                   ; stack:  1 ->  2 (+1)
+/* 001b3944 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001b3946 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 001b3948 */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 001b394e */ S_REF                                    ; stack:  3 ->  3 (0)
+/* 001b3950 */ S_ASSIGN                                 ; stack:  3 ->  1 (-2)
+/* 001b3952 */ S_POP                                    ; stack:  1 ->  0 (-1)
+/* 001b3954 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC TargetInfomation@setTargetId
+
+; FUNC TargetInfomation@setTargetIndex (0x1b395c-0x1b3974)
+/* 001b395c */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b395e */ PUSH 3                                   ; stack:  1 ->  2 (+1)
+/* 001b3964 */ PUSHLOCALPAGE                            ; stack:  2 ->  3 (+1)
+/* 001b3966 */ PUSH 0                                   ; stack:  3 ->  4 (+1)
+/* 001b396c */ REF                                      ; stack:  4 ->  3 (-1)
+/* 001b396e */ ASSIGN                                   ; stack:  3 ->  1 (-2)
+/* 001b3970 */ POP                                      ; stack:  1 ->  0 (-1)
+/* 001b3972 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC TargetInfomation@setTargetIndex
+
+; FUNC TargetInfomation@getSourceId (0x1b397a-0x1b398e)
+/* 001b397a */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b397c */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 001b3982 */ S_REF                                    ; stack:  2 ->  2 (0)
+/* 001b3984 */ RETURN                                   ; stack:  2 ->  2 (0)
+/* 001b3986 */ S_PUSH 0 ("")                            ; stack:  2 ->  3 (+1)
+/* 001b398c */ RETURN                                   ; stack:  3 ->  3 (0)
+; ENDFUNC TargetInfomation@getSourceId
+
+; FUNC TargetInfomation@getSourceIndex (0x1b3994-0x1b39a8)
+/* 001b3994 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b3996 */ PUSH 2                                   ; stack:  1 ->  2 (+1)
+/* 001b399c */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001b399e */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 001b39a0 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 001b39a6 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC TargetInfomation@getSourceIndex
+
+; FUNC TargetInfomation@getTargetId (0x1b39ae-0x1b39c2)
+/* 001b39ae */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b39b0 */ PUSH 1                                   ; stack:  1 ->  2 (+1)
+/* 001b39b6 */ S_REF                                    ; stack:  2 ->  2 (0)
+/* 001b39b8 */ RETURN                                   ; stack:  2 ->  2 (0)
+/* 001b39ba */ S_PUSH 0 ("")                            ; stack:  2 ->  3 (+1)
+/* 001b39c0 */ RETURN                                   ; stack:  3 ->  3 (0)
+; ENDFUNC TargetInfomation@getTargetId
+
+; FUNC TargetInfomation@getTargetIndex (0x1b39c8-0x1b39dc)
+/* 001b39c8 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b39ca */ PUSH 3                                   ; stack:  1 ->  2 (+1)
+/* 001b39d0 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001b39d2 */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 001b39d4 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 001b39da */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC TargetInfomation@getTargetIndex
+
+; FUNC TargetInfomation@isSourcePlayer (0x1b39e2-0x1b3a00)
+/* 001b39e2 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b39e4 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 001b39ea */ S_REF                                    ; stack:  2 ->  2 (0)
+/* 001b39ec */ S_PUSH 0 ("")                            ; stack:  2 ->  3 (+1)
+/* 001b39f2 */ S_NOTE                                   ; stack:  3 ->  2 (-1)
+/* 001b39f4 */ ITOB                                     ; stack:  2 ->  2 (0)
+/* 001b39f6 */ RETURN                                   ; stack:  2 ->  2 (0)
+/* 001b39f8 */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 001b39fe */ RETURN                                   ; stack:  3 ->  3 (0)
+; ENDFUNC TargetInfomation@isSourcePlayer
+
+; FUNC TargetInfomation@isTargetPlayer (0x1b3a06-0x1b3a24)
+/* 001b3a06 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001b3a08 */ PUSH 1                                   ; stack:  1 ->  2 (+1)
+/* 001b3a0e */ S_REF                                    ; stack:  2 ->  2 (0)
+/* 001b3a10 */ S_PUSH 0 ("")                            ; stack:  2 ->  3 (+1)
+/* 001b3a16 */ S_NOTE                                   ; stack:  3 ->  2 (-1)
+/* 001b3a18 */ ITOB                                     ; stack:  2 ->  2 (0)
+/* 001b3a1a */ RETURN                                   ; stack:  2 ->  2 (0)
+/* 001b3a1c */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 001b3a22 */ RETURN                                   ; stack:  3 ->  3 (0)
+; ENDFUNC TargetInfomation@isTargetPlayer
+

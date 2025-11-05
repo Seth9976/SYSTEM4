@@ -1,0 +1,12 @@
+bool Mouse_GetPos(ref int pX, ref int pY);
+bool Mouse_MovePosImmediately(int X, int Y);
+bool Mouse_HideCursorByGame(bool Hide);
+bool Mouse_IsHideCursorByGame(void);
+void Mouse_HideByStepMessage(void);
+void MouseWheel_ClearCount(void);
+void MouseWheel_GetCount(ref int pForward, ref int pBack);
+bool Key_IsDown(int KeyCode);
+void Joystick_ClearCaptureFlag(void);
+int Joystick_GetNumofDevice(void);
+bool Joystick_IsKeyDown(int DeviceNumber, int JoystickCode);
+float Joystick_GetAxis(int DeviceNumber, int AxisType);

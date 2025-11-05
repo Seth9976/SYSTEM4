@@ -1,0 +1,38 @@
+; FUNC PartsInitializeOption@0 (0x605c8-0x605d2)
+/* 000605c8 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 000605ca */ CALLMETHOD 7177                          ; stack:  1 -> -1 (-2)
+/* 000605d0 */ RETURN                                   ; stack: -1 -> -1 (0)
+; ENDFUNC PartsInitializeOption@0
+
+; FUNC PartsInitializeOption@setSleepLevel (0x605d8-0x60618)
+/* 000605d8 */ (SH_IF_LOC_GE_IMM (0, 0l, 394758))       ; stack:  0 ->  0 (0)
+/* 000605e6 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 000605e8 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 000605ee */ (A_NUMOF_STRUCT_1 0)                     ; stack:  2 ->  2 (0)
+/* 000605f4 */ PUSH 1                                   ; stack:  2 ->  3 (+1)
+/* 000605fa */ SUB                                      ; stack:  3 ->  2 (-1)
+/* 000605fc */ A_ERASE                                  ; stack:  2 ->  2 (0)
+/* 000605fe */ POP                                      ; stack:  2 ->  1 (-1)
+/* 00060600 */ JUMP 0x60616                             ; stack:  1 ->  1 (0)
+/* 00060606 */ PUSHSTRUCTPAGE                           ; stack:  1 ->  2 (+1)
+/* 00060608 */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 0006060e */ SH_LOCALREF val                          ; stack:  3 ->  3 (0)
+/* 00060614 */ A_PUSHBACK                               ; stack:  3 ->  3 (0)
+/* 00060616 */ RETURN                                   ; stack:  3 ->  3 (0)
+; ENDFUNC PartsInitializeOption@setSleepLevel
+
+; FUNC PartsInitializeOption@getSleepLevel (0x6061e-0x60656)
+/* 0006061e */ (SH_IF_STRUCT_A_NOT_EMPTY (0, 394806))   ; stack:  0 ->  0 (0)
+/* 00060628 */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 0006062e */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 00060630 */ JUMP 0x60636                             ; stack:  1 ->  1 (0)
+/* 00060636 */ SH_STRUCTREF PartsInitializeOption.sleepLevel_ ; stack:  1 ->  1 (0)
+/* 0006063c */ (A_NUMOF_STRUCT_1 0)                     ; stack:  1 ->  1 (0)
+/* 00060642 */ PUSH 1                                   ; stack:  1 ->  2 (+1)
+/* 00060648 */ SUB                                      ; stack:  2 ->  1 (-1)
+/* 0006064a */ REF                                      ; stack:  1 ->  0 (-1)
+/* 0006064c */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 0006064e */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 00060654 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC PartsInitializeOption@getSleepLevel
+

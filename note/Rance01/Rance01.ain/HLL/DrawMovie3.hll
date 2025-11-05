@@ -1,0 +1,8 @@
+void Release(void);
+bool Load(string pIFileName);
+bool Run(void);
+bool Draw(int nSprite);
+void SetInnerVolume(int nInnerVolume);
+void UpdateVolume(bool IsMuteByInactiveWindow);
+bool IsEnd(void);
+int GetCount(void);

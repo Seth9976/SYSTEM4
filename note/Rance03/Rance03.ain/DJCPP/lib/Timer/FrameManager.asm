@@ -1,0 +1,38 @@
+; FUNC FrameManager@0 (0x1ed276-0x1ed290)
+/* 001ed276 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001ed278 */ CALLMETHOD 10526                         ; stack:  1 -> -1 (-2)
+/* 001ed27e */ PUSHSTRUCTPAGE                           ; stack: -1 ->  0 (+1)
+/* 001ed280 */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 001ed286 */ REF                                      ; stack:  1 ->  0 (-1)
+/* 001ed288 */ CALLMETHOD 36                            ; stack:  0 -> -2 (-2)
+/* 001ed28e */ RETURN                                   ; stack: -2 -> -2 (0)
+; ENDFUNC FrameManager@0
+
+; FUNC FrameManager@updateFrame (0x1ed296-0x1ed2cc)
+/* 001ed296 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001ed298 */ CALLMETHOD 7913                          ; stack:  1 -> -1 (-2)
+/* 001ed29e */ PUSHGLOBALPAGE                           ; stack: -1 ->  0 (+1)
+/* 001ed2a0 */ PUSH 248                                 ; stack:  0 ->  1 (+1)
+/* 001ed2a6 */ REF                                      ; stack:  1 ->  0 (-1)
+/* 001ed2a8 */ CALLMETHOD 7878                          ; stack:  0 -> -2 (-2)
+/* 001ed2ae */ PUSHGLOBALPAGE                           ; stack: -2 -> -1 (+1)
+/* 001ed2b0 */ PUSH 242                                 ; stack: -1 ->  0 (+1)
+/* 001ed2b6 */ REF                                      ; stack:  0 -> -1 (-1)
+/* 001ed2b8 */ CALLMETHOD 7915                          ; stack: -1 -> -3 (-2)
+/* 001ed2be */ PUSH 1                                   ; stack: -3 -> -2 (+1)
+/* 001ed2c4 */ CALLFUNC AFL_View_Update (args: 1)       ; stack: -2 -> -3 (-1)
+/* 001ed2ca */ RETURN                                   ; stack: -3 -> -3 (0)
+; ENDFUNC FrameManager@updateFrame
+
+; FUNC FrameManager@udpateInputDevices (0x1ed2d2-0x1ed2f4)
+/* 001ed2d2 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 001ed2d4 */ PUSH 239                                 ; stack:  1 ->  2 (+1)
+/* 001ed2da */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001ed2dc */ CALLMETHOD 7682                          ; stack:  1 -> -1 (-2)
+/* 001ed2e2 */ PUSHGLOBALPAGE                           ; stack: -1 ->  0 (+1)
+/* 001ed2e4 */ PUSH 237                                 ; stack:  0 ->  1 (+1)
+/* 001ed2ea */ REF                                      ; stack:  1 ->  0 (-1)
+/* 001ed2ec */ CALLMETHOD 7676                          ; stack:  0 -> -2 (-2)
+/* 001ed2f2 */ RETURN                                   ; stack: -2 -> -2 (0)
+; ENDFUNC FrameManager@udpateInputDevices
+

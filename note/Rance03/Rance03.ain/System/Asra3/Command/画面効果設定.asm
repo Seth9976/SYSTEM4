@@ -1,0 +1,18 @@
+; FUNC 全表示設定 (0x15c8e4-0x15c912)
+/* 0015c8e4 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0015c8e6 */ PUSH 51                                  ; stack:  1 ->  2 (+1)
+/* 0015c8ec */ PUSHLOCALPAGE                            ; stack:  2 ->  3 (+1)
+/* 0015c8ee */ PUSH 0                                   ; stack:  3 ->  4 (+1)
+/* 0015c8f4 */ REF                                      ; stack:  4 ->  3 (-1)
+/* 0015c8f6 */ ASSIGN                                   ; stack:  3 ->  1 (-2)
+/* 0015c8f8 */ POP                                      ; stack:  1 ->  0 (-1)
+/* 0015c8fa */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0015c8fc */ PUSH 52                                  ; stack:  1 ->  2 (+1)
+/* 0015c902 */ PUSHLOCALPAGE                            ; stack:  2 ->  3 (+1)
+/* 0015c904 */ PUSH 1                                   ; stack:  3 ->  4 (+1)
+/* 0015c90a */ REF                                      ; stack:  4 ->  3 (-1)
+/* 0015c90c */ ASSIGN                                   ; stack:  3 ->  1 (-2)
+/* 0015c90e */ POP                                      ; stack:  1 ->  0 (-1)
+/* 0015c910 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC 全表示設定
+

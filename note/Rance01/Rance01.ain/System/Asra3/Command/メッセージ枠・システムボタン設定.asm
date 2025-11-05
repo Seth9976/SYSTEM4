@@ -1,0 +1,65 @@
+; FUNC システムボタン (0x4937e-0x493c2)
+/* 0004937e */ SH_GLOBALREF g_SystemButtonModelMap      ; stack:  0 ->  0 (0)
+/* 00049384 */ SH_LOCALREF Ｍ番号                    ; stack:  0 ->  0 (0)
+/* 0004938a */ SH_LOCALREF 呼出コマンド           ; stack:  0 ->  0 (0)
+/* 00049390 */ SH_LOCALREF Ｘ                          ; stack:  0 ->  0 (0)
+/* 00049396 */ SH_LOCALREF Ｙ                          ; stack:  0 ->  0 (0)
+/* 0004939c */ SH_LOCALREF Ｚ                          ; stack:  0 ->  0 (0)
+/* 000493a2 */ (SH_LOCAL_S_REF 4)                       ; stack:  0 ->  0 (0)
+/* 000493a8 */ (SH_LOCAL_S_REF 5)                       ; stack:  0 ->  0 (0)
+/* 000493ae */ (SH_LOCAL_S_REF 6)                       ; stack:  0 ->  0 (0)
+/* 000493b4 */ SH_LOCALREF ピクセル判定           ; stack:  0 ->  0 (0)
+/* 000493ba */ CALLMETHOD 1142                          ; stack:  0 -> -2 (-2)
+/* 000493c0 */ RETURN                                   ; stack: -2 -> -2 (0)
+; ENDFUNC システムボタン
+
+; FUNC システムボタン２ (0x493ce-0x493ee)
+/* 000493ce */ SH_GLOBALREF g_SystemButtonModelMap      ; stack:  0 ->  0 (0)
+/* 000493d4 */ SH_LOCALREF Ｍ番号                    ; stack:  0 ->  0 (0)
+/* 000493da */ SH_LOCALREF 呼出コマンド           ; stack:  0 ->  0 (0)
+/* 000493e0 */ (SH_LOCAL_S_REF 2)                       ; stack:  0 ->  0 (0)
+/* 000493e6 */ CALLMETHOD 1146                          ; stack:  0 -> -2 (-2)
+/* 000493ec */ RETURN                                   ; stack: -2 -> -2 (0)
+; ENDFUNC システムボタン２
+
+; FUNC システムボタン選択不可ＣＧ設定 (0x493fa-0x4941a)
+/* 000493fa */ SH_GLOBALREF g_SystemButtonModelMap      ; stack:  0 ->  0 (0)
+/* 00049400 */ SH_LOCALREF Ｍ番号                    ; stack:  0 ->  0 (0)
+/* 00049406 */ SH_LOCALREF 呼出コマンド           ; stack:  0 ->  0 (0)
+/* 0004940c */ (SH_LOCAL_S_REF 2)                       ; stack:  0 ->  0 (0)
+/* 00049412 */ CALLMETHOD 1148                          ; stack:  0 -> -2 (-2)
+/* 00049418 */ RETURN                                   ; stack: -2 -> -2 (0)
+; ENDFUNC システムボタン選択不可ＣＧ設定
+
+; FUNC システムボタン選択不可判定関数設定 (0x49426-0x49446)
+/* 00049426 */ SH_GLOBALREF g_SystemButtonModelMap      ; stack:  0 ->  0 (0)
+/* 0004942c */ SH_LOCALREF Ｍ番号                    ; stack:  0 ->  0 (0)
+/* 00049432 */ SH_LOCALREF 呼出コマンド           ; stack:  0 ->  0 (0)
+/* 00049438 */ SH_LOCALREF 判定関数                 ; stack:  0 ->  0 (0)
+/* 0004943e */ CALLMETHOD 1149                          ; stack:  0 -> -2 (-2)
+/* 00049444 */ RETURN                                   ; stack: -2 -> -2 (0)
+; ENDFUNC システムボタン選択不可判定関数設定
+
+; FUNC システムボタン可視矩形設定 (0x49452-0x4948a)
+/* 00049452 */ SH_GLOBALREF g_SystemButtonModelMap      ; stack:  0 ->  0 (0)
+/* 00049458 */ SH_LOCALREF Ｍ番号                    ; stack:  0 ->  0 (0)
+/* 0004945e */ SH_LOCALREF 呼出コマンド           ; stack:  0 ->  0 (0)
+/* 00049464 */ SH_LOCALREF X                            ; stack:  0 ->  0 (0)
+/* 0004946a */ SH_LOCALREF Y                            ; stack:  0 ->  0 (0)
+/* 00049470 */ SH_LOCALREF Width                        ; stack:  0 ->  0 (0)
+/* 00049476 */ SH_LOCALREF Height                       ; stack:  0 ->  0 (0)
+/* 0004947c */ CALLFUNC CF_CASRect (args: 4)            ; stack:  0 -> -3 (-3)
+/* 00049482 */ CALLMETHOD 1163                          ; stack: -3 -> -5 (-2)
+/* 00049488 */ RETURN                                   ; stack: -5 -> -5 (0)
+; ENDFUNC システムボタン可視矩形設定
+
+; FUNC システムボタン効果音 (0x49496-0x494bc)
+/* 00049496 */ SH_GLOBALREF _g_MsgKeyWait               ; stack:  0 ->  0 (0)
+/* 0004949c */ SH_LOCALREF _click                       ; stack:  0 ->  0 (0)
+/* 000494a2 */ CALLMETHOD 1097                          ; stack:  0 -> -2 (-2)
+/* 000494a8 */ SH_GLOBALREF _g_MsgKeyWait               ; stack: -2 -> -2 (0)
+/* 000494ae */ SH_LOCALREF _cursor                      ; stack: -2 -> -2 (0)
+/* 000494b4 */ CALLMETHOD 1098                          ; stack: -2 -> -4 (-2)
+/* 000494ba */ RETURN                                   ; stack: -4 -> -4 (0)
+; ENDFUNC システムボタン効果音
+

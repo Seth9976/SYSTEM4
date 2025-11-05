@@ -1,0 +1,4 @@
+bool Create(string FileName);
+bool Close(void);
+bool Write(string Text);
+bool ReadAll(string FileName, ref string Text);

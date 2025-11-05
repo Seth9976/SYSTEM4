@@ -1,0 +1,10 @@
+bool Get(string pIURL);
+bool Post(string pIURL, string pIParam);
+bool IsRun(void);
+void Stop(void);
+int GetReadSize(void);
+bool ReadString(ref string pIString);
+bool UTF8ToSJIS(ref string pIString);
+bool SJISToUTF8(ref string pIString);
+bool EncodeString(ref string pIString);
+bool DecodeString(ref string pIString);

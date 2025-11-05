@@ -1,0 +1,10 @@
+void SetFullPathSaveFileName(string FileName);
+bool LoadAtStartup(void);
+bool SetDataInt(string Name, int Value);
+bool SetDataFloat(string Name, float Value);
+bool SetDataString(string Name, string Value);
+bool SetDataBool(string Name, bool Value);
+bool GetDataInt(string Name, ref int Value);
+bool GetDataFloat(string Name, ref float Value);
+bool GetDataString(string Name, ref string Value);
+bool GetDataBool(string Name, ref bool Value);

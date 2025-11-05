@@ -1,0 +1,16 @@
+table ダンジョンデータ = {
+	{ indexed string id, string name, string nameImageName, string bgImageName, string battleBgImageName, int view, string randomCardId1, string randomCardId2, string randomCardId3, string randomCardId4, string randomCardId5, string randomCardId6, string randomCardId7, string randomCardId8, string randomCardId9, string randomCardId10, string randomCardId11, string randomCardId12, int music, int isReturnMapEnable },
+	{ "DUNG01", "城下町辺境", "システム／ダンジョン／名前／辺境", "背景／ダンジョン／辺境", "背景／戦闘／辺境", 4, "CARD001", "CARD001", "CARD232", "CARD001", "CARD304", "CARD325", "CARD401", "CARD401", "CARD502", "CARD503", "CARD501", "CARD504", 53, 1 },
+	{ "DUNG02", "盗賊団のアジト", "システム／ダンジョン／名前／盗賊団", "背景／ダンジョン／盗賊団", "背景／戦闘／盗賊団", 3, "CARD005", "CARD005", "CARD252", "CARD001", "CARD305", "CARD306", "CARD410", "CARD410", "CARD114", "CARD114", "CARD505", "CARD505", 51, 1 },
+	{ "DUNG03", "盗賊団のアジト 下層", "システム／ダンジョン／名前／盗賊団下層", "背景／ダンジョン／盗賊団", "背景／戦闘／盗賊団", 3, "CARD005", "CARD005", "CARD260", "CARD005", "CARD305", "CARD307", "CARD411", "CARD411", "CARD506", "CARD114", "CARD505", "CARD505", 51, 1 },
+	{ "DUNG04", "マーガリン英雄墓地", "システム／ダンジョン／名前／墓地", "背景／ダンジョン／墓地", "背景／戦闘／墓地", 3, "CARD009", "CARD225", "CARD229", "CARD243", "CARD309", "CARD310", "CARD417", "CARD417", "CARD510", "CARD511", "CARD509", "CARD512", 52, 1 },
+	{ "DUNG05", "妃円屋敷", "システム／ダンジョン／名前／屋敷", "背景／ダンジョン／屋敷", "背景／戦闘／屋敷", 2, "CARD013", "CARD013", "CARD221", "CARD222", "CARD313", "CARD314", "CARD425", "CARD425", "CARD514", "CARD183", "CARD513", "CARD516", 51, 1 },
+	{ "DUNG06", "妃円屋敷 二階", "システム／ダンジョン／名前／屋敷二階", "背景／ダンジョン／屋敷", "背景／戦闘／屋敷", 2, "CARD013", "CARD226", "CARD222", "CARD234", "CARD315", "CARD316", "CARD426", "CARD426", "CARD013", "CARD013", "CARD013", "CARD013", 51, 1 },
+	{ "DUNG07", "妃円屋敷 地下", "システム／ダンジョン／名前／屋敷地下", "背景／ダンジョン／屋敷", "背景／戦闘／屋敷", 2, "CARD013", "CARD013", "CARD221", "CARD230", "CARD313", "CARD316", "CARD427", "CARD427", "CARD515", "CARD013", "CARD013", "CARD516", 51, 1 },
+	{ "DUNG08", "下水道", "システム／ダンジョン／名前／下水道", "背景／ダンジョン／下水道", "背景／戦闘／下水道", 1, "CARD017", "CARD240", "CARD241", "CARD257", "CARD319", "CARD320", "CARD433", "CARD433", "CARD518", "CARD519", "CARD017", "CARD520", 52, 1 },
+	{ "DUNG09", "リーザス城 地下", "システム／ダンジョン／名前／城地下", "背景／ダンジョン／城地下", "背景／戦闘／城地下", 3, "CARD021", "CARD231", "CARD216", "CARD217", "CARD321", "CARD323", "CARD441", "CARD441", "CARD522", "CARD524", "CARD521", "CARD521", 10, 1 },
+	{ "DUNG10", "埋没遺跡", "システム／ダンジョン／名前／遺跡", "背景／ダンジョン／遺跡", "背景／戦闘／遺跡", 3, "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", 52, 1 },
+	{ "DUNG11", "森", "システム／ダンジョン／名前／森", "背景／ダンジョン／辺境", "背景／戦闘／辺境", 3, "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", 53, 0 },
+	{ "DUNG12", "リーザス城 牢獄", "システム／ダンジョン／名前／牢獄", "背景／ダンジョン／牢獄", "背景／戦闘／牢獄", 2, "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", "CARD001", 52, 1 },
+	{ "DUNG13", "ウルンセルの巣", "システム／ダンジョン／名前／巣", "背景／ダンジョン／巣", "背景／戦闘／巣", 1, "CARD037", "CARD327", "CARD262", "CARD263", "CARD264", "CARD265", "CARD337", "CARD338", "CARD339", "CARD340", "CARD474", "CARD475", 93, 0 }
+};

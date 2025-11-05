@@ -1,0 +1,35 @@
+; FUNC AFL_SetInvalidateFrameSkipWhileMessageSkip (0x169f58-0x169f84)
+/* 00169f58 */ PUSHLOCALPAGE                            ; stack:  0 ->  1 (+1)
+/* 00169f5a */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 00169f60 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 00169f62 */ CALLHLL ChipmunkSpriteEngine.SYSTEM_SetInvalidateFrameSkipWhileMessageSkip (args: 1) ; stack:  1 ->  1 (0)
+/* 00169f6c */ PUSHGLOBALPAGE                           ; stack:  1 ->  2 (+1)
+/* 00169f6e */ PUSH 117                                 ; stack:  2 ->  3 (+1)
+/* 00169f74 */ PUSHLOCALPAGE                            ; stack:  3 ->  4 (+1)
+/* 00169f76 */ PUSH 0                                   ; stack:  4 ->  5 (+1)
+/* 00169f7c */ REF                                      ; stack:  5 ->  4 (-1)
+/* 00169f7e */ ASSIGN                                   ; stack:  4 ->  2 (-2)
+/* 00169f80 */ POP                                      ; stack:  2 ->  1 (-1)
+/* 00169f82 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC AFL_SetInvalidateFrameSkipWhileMessageSkip
+
+; FUNC AFL_GetInvalidateFrameSkipWhileMessageSkip (0x169f90-0x169fa4)
+/* 00169f90 */ CALLHLL ChipmunkSpriteEngine.SYSTEM_GetInvalidateFrameSkipWhileMessageSkip (args: 0) ; stack:  0 ->  0 (0)
+/* 00169f9a */ RETURN                                   ; stack:  0 ->  0 (0)
+/* 00169f9c */ PUSH 0                                   ; stack:  0 ->  1 (+1)
+/* 00169fa2 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC AFL_GetInvalidateFrameSkipWhileMessageSkip
+
+; FUNC AFL_SetDrawMessageCharFunction (0x169fb0-0x169fcc)
+/* 00169fb0 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 00169fb2 */ PUSH 35                                  ; stack:  1 ->  2 (+1)
+/* 00169fb8 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 00169fba */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 00169fbc */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 00169fc2 */ REF                                      ; stack:  3 ->  2 (-1)
+/* 00169fc4 */ DG_COPY                                  ; stack:  2 ->  2 (0)
+/* 00169fc6 */ DG_ASSIGN                                ; stack:  2 ->  2 (0)
+/* 00169fc8 */ DG_POP                                   ; stack:  2 ->  2 (0)
+/* 00169fca */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC AFL_SetDrawMessageCharFunction
+

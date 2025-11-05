@@ -1,0 +1,2 @@
+bool OpenLoadDialog(ref string LoadFileName, string TitleName, string FolderName, array@string FilterTitleList, array@string FilterExtendList);
+bool OpenSaveDialog(ref string SaveFileName, string TitleName, string FolderName, array@string FilterTitleList, array@string FilterExtendList);

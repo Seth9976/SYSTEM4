@@ -1,0 +1,76 @@
+; FUNC AFL_InputText_Begin (0x17317e-0x1731aa)
+/* 0017317e */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 00173180 */ PUSH 85                                  ; stack:  1 ->  2 (+1)
+/* 00173186 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 00173188 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 0017318a */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 00173190 */ REF                                      ; stack:  3 ->  2 (-1)
+/* 00173192 */ PUSHLOCALPAGE                            ; stack:  2 ->  3 (+1)
+/* 00173194 */ PUSH 1                                   ; stack:  3 ->  4 (+1)
+/* 0017319a */ S_REF                                    ; stack:  4 ->  4 (0)
+/* 0017319c */ PUSH 1                                   ; stack:  4 ->  5 (+1)
+/* 001731a2 */ CALLMETHOD 775                           ; stack:  5 ->  3 (-2)
+/* 001731a8 */ RETURN                                   ; stack:  3 ->  3 (0)
+; ENDFUNC AFL_InputText_Begin
+
+; FUNC AFL_InputHalfText_Begin (0x1731b6-0x1731e2)
+/* 001731b6 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 001731b8 */ PUSH 85                                  ; stack:  1 ->  2 (+1)
+/* 001731be */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001731c0 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 001731c2 */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 001731c8 */ REF                                      ; stack:  3 ->  2 (-1)
+/* 001731ca */ PUSHLOCALPAGE                            ; stack:  2 ->  3 (+1)
+/* 001731cc */ PUSH 1                                   ; stack:  3 ->  4 (+1)
+/* 001731d2 */ S_REF                                    ; stack:  4 ->  4 (0)
+/* 001731d4 */ PUSH 0                                   ; stack:  4 ->  5 (+1)
+/* 001731da */ CALLMETHOD 775                           ; stack:  5 ->  3 (-2)
+/* 001731e0 */ RETURN                                   ; stack:  3 ->  3 (0)
+; ENDFUNC AFL_InputHalfText_Begin
+
+; FUNC AFL_InputText_Update (0x1731ee-0x173200)
+/* 001731ee */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 001731f0 */ PUSH 85                                  ; stack:  1 ->  2 (+1)
+/* 001731f6 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001731f8 */ CALLMETHOD 776                           ; stack:  1 -> -1 (-2)
+/* 001731fe */ RETURN                                   ; stack: -1 -> -1 (0)
+; ENDFUNC AFL_InputText_Update
+
+; FUNC AFL_InputText_End (0x17320c-0x17321e)
+/* 0017320c */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0017320e */ PUSH 85                                  ; stack:  1 ->  2 (+1)
+/* 00173214 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 00173216 */ CALLMETHOD 777                           ; stack:  1 -> -1 (-2)
+/* 0017321c */ RETURN                                   ; stack: -1 -> -1 (0)
+; ENDFUNC AFL_InputText_End
+
+; FUNC AFL_InputText_IsEnd (0x17322a-0x173244)
+/* 0017322a */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0017322c */ PUSH 85                                  ; stack:  1 ->  2 (+1)
+/* 00173232 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 00173234 */ CALLMETHOD 778                           ; stack:  1 -> -1 (-2)
+/* 0017323a */ RETURN                                   ; stack: -1 -> -1 (0)
+/* 0017323c */ PUSH 0                                   ; stack: -1 ->  0 (+1)
+/* 00173242 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC AFL_InputText_IsEnd
+
+; FUNC AFL_InputText_GetText (0x173250-0x17326a)
+/* 00173250 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 00173252 */ PUSH 85                                  ; stack:  1 ->  2 (+1)
+/* 00173258 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 0017325a */ CALLMETHOD 779                           ; stack:  1 -> -1 (-2)
+/* 00173260 */ RETURN                                   ; stack: -1 -> -1 (0)
+/* 00173262 */ S_PUSH 0 ("")                            ; stack: -1 ->  0 (+1)
+/* 00173268 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC AFL_InputText_GetText
+
+; FUNC AFL_InputText_IsConverting (0x173276-0x173290)
+/* 00173276 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 00173278 */ PUSH 85                                  ; stack:  1 ->  2 (+1)
+/* 0017327e */ REF                                      ; stack:  2 ->  1 (-1)
+/* 00173280 */ CALLMETHOD 784                           ; stack:  1 -> -1 (-2)
+/* 00173286 */ RETURN                                   ; stack: -1 -> -1 (0)
+/* 00173288 */ PUSH 0                                   ; stack: -1 ->  0 (+1)
+/* 0017328e */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC AFL_InputText_IsConverting
+

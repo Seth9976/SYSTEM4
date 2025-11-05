@@ -1,0 +1,7397 @@
+class sact_text_metrics_t
+{
+public:
+	int nColorR;
+	int nColorG;
+	int nColorB;
+	int nSize;
+	int nWeight;
+	int nFace;
+	int nShadowPixelL;
+	int nShadowPixelU;
+	int nShadowPixelR;
+	int nShadowPixelD;
+	int nShadowColorR;
+	int nShadowColorG;
+	int nShadowColorB;
+
+	sact_text_metrics_t();
+};
+
+class cg_metrics_t
+{
+public:
+	int nWidth;
+	int nHeight;
+	int nBpp;
+	int bExistPixel;
+	int bExistAlpha;
+	int nPixelPitch;
+	int nAlphaPitch;
+
+	cg_metrics_t();
+};
+
+class SYS_選択_result_t
+{
+public:
+	int 値;
+	sys_btn_fnc_t fnc;
+};
+
+class 文字入力エリア_t
+{
+public:
+	int Ｘ;
+	int Ｙ;
+	int Ｚ;
+	string ＣＧ名;
+	int 幅;
+	int 高;
+	int 塗Ｒ;
+	int 塗Ｇ;
+	int 塗Ｂ;
+	int 塗率;
+	int 枠タイプ;
+	int 枠Ｒ;
+	int 枠Ｇ;
+	int 枠Ｂ;
+	int 文字Ｘ;
+	int 文字Ｙ;
+	int フォント;
+	int 文字サイズ;
+	int 文字Ｒ;
+	int 文字Ｇ;
+	int 文字Ｂ;
+	int 文字飾上;
+	int 文字飾右;
+	int 文字飾下;
+	int 文字飾左;
+	int 文字飾Ｒ;
+	int 文字飾Ｇ;
+	int 文字飾Ｂ;
+	int m_nMaxTextLengthSJIS;
+
+	文字入力エリア_t();
+};
+
+class 選択エリア_字_t
+{
+public:
+	int フォント;
+	int 文字Ｒ;
+	int 文字Ｇ;
+	int 文字Ｂ;
+	int 文字飾上;
+	int 文字飾右;
+	int 文字飾下;
+	int 文字飾左;
+	int 文字飾Ｒ;
+	int 文字飾Ｇ;
+	int 文字飾Ｂ;
+};
+
+class 選択エリア_t
+{
+public:
+	int Ｓ番号;
+	int Ｘ;
+	int Ｙ;
+	int Ｚ;
+	string ＣＧ名;
+	int 幅フラグ;
+	int 高フラグ;
+	int 座標フラグ;
+	int 枠太;
+	int 幅;
+	int 高;
+	int 塗Ｒ;
+	int 塗Ｇ;
+	int 塗Ｂ;
+	int 塗率;
+	int 枠タイプ;
+	int 枠Ｒ;
+	int 枠Ｇ;
+	int 枠Ｂ;
+	int 余白上;
+	int 余白右;
+	int 余白下;
+	int 余白左;
+	int 文字サイズ;
+	選択エリア_字_t _選択可能字;
+	選択エリア_字_t _選択不可字;
+	int 文字配置;
+	int 行間;
+	int カーソルタイプ;
+	int カーソルＲ;
+	int カーソルＧ;
+	int カーソルＢ;
+	int カーソル率;
+	int 選択文字Ｒ;
+	int 選択文字Ｇ;
+	int 選択文字Ｂ;
+	int 選択文字飾上;
+	int 選択文字飾右;
+	int 選択文字飾下;
+	int 選択文字飾左;
+	int 選択文字飾Ｒ;
+	int 選択文字飾Ｇ;
+	int 選択文字飾Ｂ;
+	int 音決定;
+	int 音無効;
+	int 音移動１;
+	int 音移動２;
+	float m_fBoldWeight;
+	float m_fSelectedBoldWeight;
+	float m_fUnselectableBoldWeight;
+	int m_nCharSpace;
+	int m_nSelectedCharSpace;
+	int m_nUnselectableCharSpace;
+	string CursorCG;
+	int nCursorOffsetX;
+	int nCursorOffsetY;
+	int nCursorOffsetZ;
+
+	選択エリア_t();
+};
+
+class 選択肢_t
+{
+public:
+	int 番号;
+	string テキスト;
+	int キーコード;
+};
+
+class セーブ２_t
+{
+public:
+	int sys年;
+	int sys月;
+	int sys日;
+	int sys曜;
+	int sys時;
+	int sys分;
+	int sys秒;
+	string ゲーム時間文字列;
+	string コメント;
+	int PlayMinuteTime;
+};
+
+class BackSE_t
+{
+public:
+	int Group;
+	int FadeChannel;
+	int PlayIndex;
+	array@int PlayList;
+	bool bStop;
+	bool bRunSoundFadeByVoice;
+};
+
+class 画面保管_t
+{
+public:
+	string m_EventName;
+	CMessageWindowStatusManager m_MessageWindowStatusManager;
+	CMessageTextModel m_MessageTextModel;
+	int t音楽;
+	int t一時停止中;
+	int m_BGMVolume;
+	int m_nループ効果音;
+	int m_nループ効果音ボリューム;
+	int m_n最終音声番号;
+	array@BackSE_t m_サウンド再生リスト;
+	array@int m_PartsEngineData;
+};
+
+class CASClick
+{
+public:
+	int m_nKey;
+	int m_nKeyDownOnObject;
+	bool m_bKeyDown;
+	bool m_bFirstClickOff;
+	bool m_Trigger;
+	bool m_bKeyPress;
+	bool m_bKeyDownLoop;
+	CASTimer m_Timer;
+	int m_nPressFirstTime;
+	int m_nPressTime;
+
+	CASClick();
+	void Init(int nKey, bool FirstKeyDownCancel);
+	void Reset(bool FirstKeyDownCancel);
+	bool IsFirstClick();
+	bool IsClick(int nOnObject);
+	bool IsKeyDown();
+	bool IsKeyTrigger();
+	bool IsKeyPress(int nOnObject);
+};
+
+class CASJoyClick
+{
+public:
+	int m_nKey;
+	int m_nKeyDownOnObject;
+	bool m_bKeyDown;
+	bool m_bFirstClickOff;
+	bool m_Trigger;
+	int m_DeviceNumber;
+	bool m_bKeyPress;
+	bool m_bKeyDownLoop;
+	CASTimer m_Timer;
+	int m_nPressFirstTime;
+	int m_nPressTime;
+
+	CASJoyClick();
+	void Init(int nKey, bool FirstKeyDownCancel);
+	void ChangeKey(int nKey);
+	void Reset(bool FirstKeyDownCancel);
+	bool IsFirstClick();
+	bool IsClick(int nOnObject);
+	bool IsKeyDown();
+	bool IsKeyTrigger();
+	bool IsKeyPress();
+};
+
+class CASJoyClickAssignedKey
+{
+public:
+	CASJoyClick m_JoyClick;
+	int m_AssignedCode;
+
+	CASJoyClickAssignedKey();
+	~CASJoyClickAssignedKey();
+	void UpdateAssignedKey();
+	void Init(int AssignedCode, bool FirstKeyDownCancel);
+	void Reset(bool FirstKeyDownCancel);
+	bool IsFirstClick();
+	bool IsClick(int nOnObject);
+	bool IsKeyDown();
+	bool IsKeyTrigger();
+	bool IsKeyPress();
+};
+
+class CASTimer
+{
+public:
+	int m_nHandle;
+
+	CASTimer();
+	~CASTimer();
+	void Reset();
+	int Get();
+	void SetPassTime(int PassTime);
+};
+
+class CASTimerImp
+{
+public:
+	int m_nBeginTime;
+	int m_nCurrentTime;
+
+	void Reset();
+	int Get();
+	void SetPassTime(int PassTime);
+	void UpdateCurrentTime();
+	void Rebuild(int nCurrentTime);
+};
+
+class CASTimerManager
+{
+public:
+	array@CASTimerImp m_TimerImpList;
+	array@int m_CreatedFlagList;
+
+	CASTimerManager();
+	~CASTimerManager();
+	int CreateHandle();
+	void ReleaseHandle(int nHandle);
+	ref CASTimerImp GetObject(int nHandle);
+	bool CheckHandle(int nHandle);
+	void UpdateCurrentTime();
+	void Rebuild();
+};
+
+class CASColor
+{
+public:
+	int m_nR;
+	int m_nG;
+	int m_nB;
+	int m_nA;
+
+	void Set(int nR, int nG, int nB, int nA);
+	int GetR();
+	int GetG();
+	int GetB();
+	int GetA();
+	bool Equal(ref CASColor Obj);
+};
+
+class CASPos
+{
+public:
+	int m_nX;
+	int m_nY;
+
+	void Set(int nX, int nY);
+	int GetX();
+	int GetY();
+};
+
+class CASRect
+{
+public:
+	int m_nX;
+	int m_nY;
+	int m_nWidth;
+	int m_nHeight;
+
+	void Set(int nX, int nY, int nWidth, int nHeight);
+	int GetX();
+	int GetY();
+	int GetWidth();
+	int GetHeight();
+	bool IsIn(int nX, int nY);
+};
+
+class CASCharSpriteProperty
+{
+public:
+	int m_nType;
+	int m_nSize;
+	CASColor m_Color;
+	float m_fBoldWeight;
+	float m_fEdgeWeight;
+	CASColor m_EdgeColor;
+
+	CASCharSpriteProperty();
+	void SetType(int nType);
+	void SetSize(int nSize);
+	void SetColor(CASColor Color);
+	void SetBoldWeight(float fBoldWeight);
+	void SetEdgeWeight(float fEdgeWeight);
+	void SetEdgeColor(CASColor EdgeColor);
+	int GetType();
+	int GetSize();
+	CASColor GetColor();
+	float GetBoldWeight();
+	float GetEdgeWeight();
+	CASColor GetEdgeColor();
+	bool Equal(ref CASCharSpriteProperty Obj);
+	void SetProperty();
+	int GetPixelWidth();
+	int GetPixelHeight();
+	int GetFontWidth(string Char);
+};
+
+class _CButtonCgInfo
+{
+public:
+	int _m_x;
+	int _m_y;
+	int _m_z;
+	string _m_cg_pln;
+	string _m_cg_hlt;
+	string _m_cg_inv;
+	string _m_cg_chk;
+	string _m_cg_hlt_chk;
+	int _m_click_sound;
+	int _m_cursor_sound;
+
+	void _SetCgPln(string _cg);
+	void _SetCgHlt(string _cg);
+	void _SetCgInv(string _cg);
+	void _SetCgChk(string _cg);
+	void _SetCgHltChk(string _cg);
+	void _SetClickSound(int _click);
+	void _SetCursorSound(int _cursor);
+	bool _IsSetCgPln();
+	bool _IsSetCgHlt();
+	bool _IsSetCgInv();
+	bool _IsSetCgChk();
+	bool _IsSetCgHltChk();
+	int _GetX();
+	int _GetY();
+	int _GetZ();
+	int _GetClickSound();
+	int _GetCursorSound();
+	void _SetCg(ref string _dst, string _src);
+	_CButtonCgInfo();
+	void _SetPos(int _x, int _y);
+	void _SetZ(int _z);
+	string _GetCg(bool _hilite, bool _check, bool _invalid);
+};
+
+class CASParts
+{
+public:
+	int m_PartsNumber;
+
+	CASParts();
+	~CASParts();
+	void Create();
+	void Release();
+	bool IsExist();
+	int GetPartsNumber();
+	void SetState(int State);
+	int GetState();
+	void SetCG(string CGName, int State);
+	void SetCGSurfaceArea(int X, int Y, int Width, int Height, int State);
+	void SetLoopCG(string CGName, int BeginNumber, int Numof, int Time, int State);
+	void SetText(string Text, int State);
+	void SetFontProperty(ref CASCharSpriteProperty Property, int State);
+	void SetFont(int Type, int State);
+	void SetFontSize(int Size, int State);
+	void SetFontBoldWeight(float Weight, int State);
+	void SetFontEdgeWeight(float Weight, int State);
+	void SetFontColor(int ColorR, int ColorG, int ColorB, int State);
+	void SetFontEdgeColor(int ColorR, int ColorG, int ColorB, int State);
+	void SetFontCharSpace(int Space, int State);
+	void SetTextSurfaceArea(int X, int Y, int Width, int Height, int State);
+	void SetNumeralCG(string CGName, int State);
+	void SetNumeralNumber(int Number, int State);
+	void SetRectangleDetection(int Width, int Height);
+	void SetFlat(string FlatFileName);
+	int GetFlatCurrentFrameNumber();
+	void BackFlatBeginFrame();
+	void StepFlatFinalFrame();
+	bool Create3DLayerPluginID(int State);
+	int Get3DLayerPluginID(int State);
+	bool Release3DLayerPluginID(int State);
+	void SetPos(int X, int Y);
+	void SetZ(int Z);
+	void SetZByBaseZ(int Z, int BaseZ);
+	void SetShow(bool Show);
+	void SetAlpha(int Alpha);
+	void SetAddColor(int Red, int Green, int Blue);
+	void SetMultipleColor(int Red, int Green, int Blue);
+	void SetOriginPosMode(int OriginPosMode);
+	void SetParentParts(ref CASParts ParentParts);
+	void SetMessageWindowShowLink(bool ShowLink);
+	void SetClickable(bool Clickable);
+	bool IsShow();
+	int GetX();
+	int GetY();
+	int GetAlpha();
+	int GetWidth(int State);
+	int GetHeight(int State);
+	void SetOnCursorSoundNumber(int SoundNumber);
+	void SetClickSoundNumber(int SoundNumber);
+};
+
+class CPartsMessageManager
+{
+public:
+	array@CPartsFunctionSet m_FunctionSetList;
+	CPartsFunctionSet m_ErrorFunctionSet;
+
+	CPartsMessageManager();
+	~CPartsMessageManager();
+	void Update();
+	void PopMessage();
+	bool CallDelegate(int MessageType);
+	bool CallDelegateMouseEnter(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateMouseMove(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateMouseLeave(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateMouseWheel(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateMouseClick(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateMouseOnCursor(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateKetTrigger(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateKeyDown(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateKeyPress(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateKeyUp(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateDragBegin(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateDraging(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateDragEnd(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateDropEnter(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateDroped(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateDropLeave(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateFocus(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateLostFocus(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateScroll(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateCreated(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateDeleted(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateSelected(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	bool CallDelegateChanged(int PartsNumber, ref CPartsFunctionSet FunctionSet);
+	void ReleaseFunctionSet(int DelegateIndex);
+	void ReleaseFunctionSetList(ref array@int DelegateIndexList);
+	ref CPartsFunctionSet GetFunctionSet(int PartsNumber);
+	ref CPartsFunctionSet GetFunctionSetWithoutCreate(int PartsNumber);
+	void AddMouseEnterEvent(int PartsNumber, DG_MouseEnterHandler DelegateObject);
+	void EraseMouseEnterEvent(int PartsNumber, DG_MouseEnterHandler DelegateObject);
+	void AddMouseMoveEvent(int PartsNumber, DG_MouseMoveHandler DelegateObject);
+	void EraseMouseMoveEvent(int PartsNumber, DG_MouseMoveHandler DelegateObject);
+	void AddMouseLeaveEvent(int PartsNumber, DG_MouseLeaveHandler DelegateObject);
+	void EraseMouseLeaveEvent(int PartsNumber, DG_MouseLeaveHandler DelegateObject);
+	void AddMouseWheelEvent(int PartsNumber, DG_MouseWheelHandler DelegateObject);
+	void EraseMouseWheelEvent(int PartsNumber, DG_MouseWheelHandler DelegateObject);
+	void AddMouseClickEvent(int PartsNumber, DG_MouseClickHandler DelegateObject);
+	void EraseMouseClickEvent(int PartsNumber, DG_MouseClickHandler DelegateObject);
+	void AddMouseOnEvent(int PartsNumber, DG_MouseOnHandler DelegateObject);
+	void EraseMouseOnEvent(int PartsNumber, DG_MouseOnHandler DelegateObject);
+	void AddMouseEnterFunction(int PartsNumber, FT_MouseEnterHandler FunctionObject);
+	void EraseMouseEnterFunction(int PartsNumber, FT_MouseEnterHandler FunctionObject);
+	void AddMouseMoveFunction(int PartsNumber, FT_MouseMoveHandler FunctionObject);
+	void EraseMouseMoveFunction(int PartsNumber, FT_MouseMoveHandler FunctionObject);
+	void AddMouseLeaveFunction(int PartsNumber, FT_MouseLeaveHandler FunctionObject);
+	void EraseMouseLeaveFunction(int PartsNumber, FT_MouseLeaveHandler FunctionObject);
+	void AddMouseWheelFunction(int PartsNumber, FT_MouseWheelHandler FunctionObject);
+	void EraseMouseWheelFunction(int PartsNumber, FT_MouseWheelHandler FunctionObject);
+	void AddMouseClickFunction(int PartsNumber, FT_MouseClickHandler FunctionObject);
+	void EraseMouseClickFunction(int PartsNumber, FT_MouseClickHandler FunctionObject);
+	void AddMouseOnFunction(int PartsNumber, FT_MouseOnHandler FunctionObject);
+	void EraseMouseOnFunction(int PartsNumber, FT_MouseOnHandler FunctionObject);
+	void AddKeyTriggerEvent(int PartsNumber, DG_KeyTriggerHandler DelegateObject);
+	void EraseKeyTriggerEvent(int PartsNumber, DG_KeyTriggerHandler DelegateObject);
+	void AddKeyDownEvent(int PartsNumber, DG_KeyDownHandler DelegateObject);
+	void EraseKeyDownEvent(int PartsNumber, DG_KeyDownHandler DelegateObject);
+	void AddKeyPressEvent(int PartsNumber, DG_KeyPressHandler DelegateObject);
+	void EraseKeyPressEvent(int PartsNumber, DG_KeyPressHandler DelegateObject);
+	void AddKeyUpEvent(int PartsNumber, DG_KeyUpHandler DelegateObject);
+	void EraseKeyUpEvent(int PartsNumber, DG_KeyUpHandler DelegateObject);
+	void AddKeyTriggerFunction(int PartsNumber, FT_KeyTriggerHandler FunctionObject);
+	void EraseKeyTriggerFunction(int PartsNumber, FT_KeyTriggerHandler FunctionObject);
+	void AddKeyDownFunction(int PartsNumber, FT_KeyDownHandler FunctionObject);
+	void EraseKeyDownFunction(int PartsNumber, FT_KeyDownHandler FunctionObject);
+	void AddKeyPressFunction(int PartsNumber, FT_KeyPressHandler FunctionObject);
+	void EraseKeyPressFunction(int PartsNumber, FT_KeyPressHandler FunctionObject);
+	void AddKeyUpFunction(int PartsNumber, FT_KeyUpHandler FunctionObject);
+	void EraseKeyUpFunction(int PartsNumber, FT_KeyUpHandler FunctionObject);
+	void AddDragBeginEvent(int PartsNumber, DG_DragBeginHandler DelegateObject);
+	void EraseDragBeginEvent(int PartsNumber, DG_DragBeginHandler DelegateObject);
+	void AddDragingEvent(int PartsNumber, DG_DragingHandler DelegateObject);
+	void EraseDragingEvent(int PartsNumber, DG_DragingHandler DelegateObject);
+	void AddDragEndEvent(int PartsNumber, DG_DragEndHandler DelegateObject);
+	void EraseDragEndEvent(int PartsNumber, DG_DragEndHandler DelegateObject);
+	void AddDragBeginFunction(int PartsNumber, FT_DragBeginHandler FunctionObject);
+	void EraseDragBeginFunction(int PartsNumber, FT_DragBeginHandler FunctionObject);
+	void AddDragingFunction(int PartsNumber, FT_DragingHandler FunctionObject);
+	void EraseDragingFunction(int PartsNumber, FT_DragingHandler FunctionObject);
+	void AddDragEndFunction(int PartsNumber, FT_DragEndHandler FunctionObject);
+	void EraseDragEndFunction(int PartsNumber, FT_DragEndHandler FunctionObject);
+	void AddDropEnterEvent(int PartsNumber, DG_DropEnterHandler DelegateObject);
+	void EraseDropEnterEvent(int PartsNumber, DG_DropEnterHandler DelegateObject);
+	void AddDropedEvent(int PartsNumber, DG_DropedHandler DelegateObject);
+	void EraseDropedEvent(int PartsNumber, DG_DropedHandler DelegateObject);
+	void AddDropLeaveEvent(int PartsNumber, DG_DropLeaveHandler DelegateObject);
+	void EraseDropLeaveEvent(int PartsNumber, DG_DropLeaveHandler DelegateObject);
+	void AddDropEnterFunction(int PartsNumber, FT_DropEnterHandler FunctionObject);
+	void EraseDropEnterFunction(int PartsNumber, FT_DropEnterHandler FunctionObject);
+	void AddDropedFunction(int PartsNumber, FT_DropedHandler FunctionObject);
+	void EraseDropedFunction(int PartsNumber, FT_DropedHandler FunctionObject);
+	void AddDropLeaveFunction(int PartsNumber, FT_DropLeaveHandler FunctionObject);
+	void EraseDropLeaveFunction(int PartsNumber, FT_DropLeaveHandler FunctionObject);
+	void AddFocusEvent(int PartsNumber, DG_FocusHandler DelegateObject);
+	void EraseFocusEvent(int PartsNumber, DG_FocusHandler DelegateObject);
+	void AddLostFocusEvent(int PartsNumber, DG_LostFocusHandler DelegateObject);
+	void EraseLostFocusEvent(int PartsNumber, DG_LostFocusHandler DelegateObject);
+	void AddFocusFunction(int PartsNumber, FT_FocusHandler FunctionObject);
+	void EraseFocusFunction(int PartsNumber, FT_FocusHandler FunctionObject);
+	void AddLostFocusFunction(int PartsNumber, FT_LostFocusHandler FunctionObject);
+	void EraseLostFocusFunction(int PartsNumber, FT_LostFocusHandler FunctionObject);
+	void AddScrollEvent(int PartsNumber, DG_ScrollHandler DelegateObject);
+	void EraseScrollEvent(int PartsNumber, DG_ScrollHandler DelegateObject);
+	void AddScrollFunction(int PartsNumber, FT_ScrollHandler FunctionObject);
+	void EraseScrollFunction(int PartsNumber, FT_ScrollHandler FunctionObject);
+	void AddCreatedEvent(int PartsNumber, DG_CreatedHandler DelegateObject);
+	void EraseCreatedEvent(int PartsNumber, DG_CreatedHandler DelegateObject);
+	void AddCreatedFunction(int PartsNumber, FT_CreatedHandler FunctionObject);
+	void EraseCreatedFunction(int PartsNumber, FT_CreatedHandler FunctionObject);
+	void AddDeletedEvent(int PartsNumber, DG_DeletedHandler DelegateObject);
+	void EraseDeletedEvent(int PartsNumber, DG_DeletedHandler DelegateObject);
+	void AddDeletedFunction(int PartsNumber, FT_DeletedHandler FunctionObject);
+	void EraseDeletedFunction(int PartsNumber, FT_DeletedHandler FunctionObject);
+	void AddSelectedEvent(int PartsNumber, DG_SelectedHandler DelegateObject);
+	void EraseSelectedEvent(int PartsNumber, DG_SelectedHandler DelegateObject);
+	void AddSelectedFunction(int PartsNumber, FT_SelectedHandler FunctionObject);
+	void EraseSelectedFunction(int PartsNumber, FT_SelectedHandler FunctionObject);
+	void AddChangedEvent(int PartsNumber, DG_ChangedHandler DelegateObject);
+	void EraseChangedEvent(int PartsNumber, DG_ChangedHandler DelegateObject);
+	void AddChangedFunction(int PartsNumber, FT_ChangedHandler FunctionObject);
+	void EraseChangedFunction(int PartsNumber, FT_ChangedHandler FunctionObject);
+};
+
+class CPartsFunctionSet
+{
+public:
+	bool m_Use;
+	DG_MouseEnterHandler m_dgMouseEnterEvent;
+	DG_MouseMoveHandler m_dgMouseMoveEvent;
+	DG_MouseLeaveHandler m_dgMouseLeaveEvent;
+	DG_MouseWheelHandler m_dgMouseWheelEvent;
+	DG_MouseClickHandler m_dgMouseClickEvent;
+	DG_MouseOnHandler m_dgMouseOnEvent;
+	array@FT_MouseEnterHandler m_ftMouseEnterEvent;
+	array@FT_MouseMoveHandler m_ftMouseMoveEvent;
+	array@FT_MouseLeaveHandler m_ftMouseLeaveEvent;
+	array@FT_MouseWheelHandler m_ftMouseWheelEvent;
+	array@FT_MouseClickHandler m_ftMouseClickEvent;
+	array@FT_MouseOnHandler m_ftMouseOnEvent;
+	DG_KeyTriggerHandler m_dgKeyTriggerEvent;
+	DG_KeyDownHandler m_dgKeyDownEvent;
+	DG_KeyPressHandler m_dgKeyPressEvent;
+	DG_KeyUpHandler m_dgKeyUpEvent;
+	array@FT_KeyTriggerHandler m_ftKeyTriggerEvent;
+	array@FT_KeyDownHandler m_ftKeyDownEvent;
+	array@FT_KeyPressHandler m_ftKeyPressEvent;
+	array@FT_KeyUpHandler m_ftKeyUpEvent;
+	DG_DragBeginHandler m_dgDragBeginEvent;
+	DG_DragingHandler m_dgDragingEvent;
+	DG_DragEndHandler m_dgDragEndEvent;
+	array@FT_DragBeginHandler m_ftDragBeginEvent;
+	array@FT_DragingHandler m_ftDragingEvent;
+	array@FT_DragEndHandler m_ftDragEndEvent;
+	DG_DropEnterHandler m_dgDropEnterEvent;
+	DG_DropedHandler m_dgDropedEvent;
+	DG_DropLeaveHandler m_dgDropLeaveEvent;
+	array@FT_DropEnterHandler m_ftDropEnterEvent;
+	array@FT_DropedHandler m_ftDropedEvent;
+	array@FT_DropLeaveHandler m_ftDropLeaveEvent;
+	DG_FocusHandler m_dgFocusEvent;
+	DG_LostFocusHandler m_dgLostFocusEvent;
+	array@FT_FocusHandler m_ftFocusEvent;
+	array@FT_LostFocusHandler m_ftLostFocusEvent;
+	DG_ScrollHandler m_dgScrollEvent;
+	array@FT_ScrollHandler m_ftScrollEvent;
+	DG_CreatedHandler m_dgCreatedEvent;
+	array@FT_CreatedHandler m_ftCreatedEvent;
+	DG_DeletedHandler m_dgDeletedEvent;
+	array@FT_DeletedHandler m_ftDeletedEvent;
+	DG_SelectedHandler m_dgSelectedEvent;
+	array@FT_SelectedHandler m_ftSelectedEvent;
+	DG_ChangedHandler m_dgChangedEvent;
+	array@FT_ChangedHandler m_ftChangedEvent;
+
+	CPartsFunctionSet();
+	~CPartsFunctionSet();
+	void Release();
+	void Init();
+	bool IsUse();
+	void CallFunctionMouseEnter(int PartsNumber, int MouseX, int MouseY);
+	void CallFunctionMouseMove(int PartsNumber, int MouseX, int MouseY);
+	void CallFunctionMouseLeave(int PartsNumber, int MouseX, int MouseY);
+	void CallFunctionMouseWheel(int PartsNumber, int Forward, int Back);
+	void CallFunctionMouseClick(int PartsNumber, int MouseX, int MouseY);
+	void CallFunctionMouseOnCursor(int PartsNumber, int MouseX, int MouseY, int Time);
+	void CallFunctionKeyTrigger(int PartsNumber, int KeyCode);
+	void CallFunctionKeyDown(int PartsNumber, int KeyCode);
+	void CallFunctionKeyPress(int PartsNumber, int KeyCode);
+	void CallFunctionKeyUp(int PartsNumber, int KeyCode);
+	void CallFunctionDragBegin(int PartsNumber);
+	void CallFunctionDraging(int PartsNumber, int MouseX, int MouseY);
+	void CallFunctionDragEnd(int PartsNumber);
+	void CallFunctionDropEnter(int PartsNumber, int DragPartsNumber);
+	void CallFunctionDroped(int PartsNumber, int DragPartsNumber);
+	void CallFunctionDropLeave(int PartsNumber, int DragPartsNumber);
+	void CallFunctionFocus(int PartsNumber);
+	void CallFunctionLostFocus(int PartsNumber);
+	void CallFunctionScroll(int PartsNumber, int ScrollPos);
+	void CallFunctionCreated(int PartsNumber);
+	void CallFunctionDeleted(int PartsNumber);
+	void CallFunctionSelected(int PartsNumber, int Selected);
+	void CallFunctionChanged(int PartsNumber);
+	void AddMouseEnterEvent(DG_MouseEnterHandler DelegateObject);
+	void EraseMouseEnterEvent(DG_MouseEnterHandler DelegateObject);
+	void AddMouseMoveEvent(DG_MouseMoveHandler DelegateObject);
+	void EraseMouseMoveEvent(DG_MouseMoveHandler DelegateObject);
+	void AddMouseLeaveEvent(DG_MouseLeaveHandler DelegateObject);
+	void EraseMouseLeaveEvent(DG_MouseLeaveHandler DelegateObject);
+	void AddMouseWheelEvent(DG_MouseWheelHandler DelegateObject);
+	void EraseMouseWheelEvent(DG_MouseWheelHandler DelegateObject);
+	void AddMouseClickEvent(DG_MouseClickHandler DelegateObject);
+	void EraseMouseClickEvent(DG_MouseClickHandler DelegateObject);
+	void AddMouseOnEvent(DG_MouseOnHandler DelegateObject);
+	void EraseMouseOnEvent(DG_MouseOnHandler DelegateObject);
+	void AddMouseEnterFunction(FT_MouseEnterHandler FunctionObject);
+	void EraseMouseEnterFunction(FT_MouseEnterHandler FunctionObject);
+	void AddMouseMoveFunction(FT_MouseMoveHandler FunctionObject);
+	void EraseMouseMoveFunction(FT_MouseMoveHandler FunctionObject);
+	void AddMouseLeaveFunction(FT_MouseLeaveHandler FunctionObject);
+	void EraseMouseLeaveFunction(FT_MouseLeaveHandler FunctionObject);
+	void AddMouseWheelFunction(FT_MouseWheelHandler FunctionObject);
+	void EraseMouseWheelFunction(FT_MouseWheelHandler FunctionObject);
+	void AddMouseClickFunction(FT_MouseClickHandler FunctionObject);
+	void EraseMouseClickFunction(FT_MouseClickHandler FunctionObject);
+	void AddMouseOnFunction(FT_MouseOnHandler FunctionObject);
+	void EraseMouseOnFunction(FT_MouseOnHandler FunctionObject);
+	void AddKeyTriggerEvent(DG_KeyTriggerHandler DelegateObject);
+	void EraseKeyTriggerEvent(DG_KeyTriggerHandler DelegateObject);
+	void AddKeyDownEvent(DG_KeyDownHandler DelegateObject);
+	void EraseKeyDownEvent(DG_KeyDownHandler DelegateObject);
+	void AddKeyPressEvent(DG_KeyPressHandler DelegateObject);
+	void EraseKeyPressEvent(DG_KeyPressHandler DelegateObject);
+	void AddKeyUpEvent(DG_KeyUpHandler DelegateObject);
+	void EraseKeyUpEvent(DG_KeyUpHandler DelegateObject);
+	void AddKeyTriggerFunction(FT_KeyTriggerHandler FunctionObject);
+	void EraseKeyTriggerFunction(FT_KeyTriggerHandler FunctionObject);
+	void AddKeyDownFunction(FT_KeyDownHandler FunctionObject);
+	void EraseKeyDownFunction(FT_KeyDownHandler FunctionObject);
+	void AddKeyPressFunction(FT_KeyPressHandler FunctionObject);
+	void EraseKeyPressFunction(FT_KeyPressHandler FunctionObject);
+	void AddKeyUpFunction(FT_KeyUpHandler FunctionObject);
+	void EraseKeyUpFunction(FT_KeyUpHandler FunctionObject);
+	void AddDragBeginEvent(DG_DragBeginHandler DelegateObject);
+	void EraseDragBeginEvent(DG_DragBeginHandler DelegateObject);
+	void AddDragingEvent(DG_DragingHandler DelegateObject);
+	void EraseDragingEvent(DG_DragingHandler DelegateObject);
+	void AddDragEndEvent(DG_DragEndHandler DelegateObject);
+	void EraseDragEndEvent(DG_DragEndHandler DelegateObject);
+	void AddDragBeginFunction(FT_DragBeginHandler FunctionObject);
+	void EraseDragBeginFunction(FT_DragBeginHandler FunctionObject);
+	void AddDragingFunction(FT_DragingHandler FunctionObject);
+	void EraseDragingFunction(FT_DragingHandler FunctionObject);
+	void AddDragEndFunction(FT_DragEndHandler FunctionObject);
+	void EraseDragEndFunction(FT_DragEndHandler FunctionObject);
+	void AddDropEnterEvent(DG_DropEnterHandler DelegateObject);
+	void EraseDropEnterEvent(DG_DropEnterHandler DelegateObject);
+	void AddDropedEvent(DG_DropedHandler DelegateObject);
+	void EraseDropedEvent(DG_DropedHandler DelegateObject);
+	void AddDropLeaveEvent(DG_DropLeaveHandler DelegateObject);
+	void EraseDropLeaveEvent(DG_DropLeaveHandler DelegateObject);
+	void AddDropEnterFunction(FT_DropEnterHandler FunctionObject);
+	void EraseDropEnterFunction(FT_DropEnterHandler FunctionObject);
+	void AddDropedFunction(FT_DropedHandler FunctionObject);
+	void EraseDropedFunction(FT_DropedHandler FunctionObject);
+	void AddDropLeaveFunction(FT_DropLeaveHandler FunctionObject);
+	void EraseDropLeaveFunction(FT_DropLeaveHandler FunctionObject);
+	void AddFocusEvent(DG_FocusHandler DelegateObject);
+	void EraseFocusEvent(DG_FocusHandler DelegateObject);
+	void AddLostFocusEvent(DG_LostFocusHandler DelegateObject);
+	void EraseLostFocusEvent(DG_LostFocusHandler DelegateObject);
+	void AddFocusFunction(FT_FocusHandler FunctionObject);
+	void EraseFocusFunction(FT_FocusHandler FunctionObject);
+	void AddLostFocusFunction(FT_LostFocusHandler FunctionObject);
+	void EraseLostFocusFunction(FT_LostFocusHandler FunctionObject);
+	void AddScrollEvent(DG_ScrollHandler DelegateObject);
+	void EraseScrollEvent(DG_ScrollHandler DelegateObject);
+	void AddScrollFunction(FT_ScrollHandler FunctionObject);
+	void EraseScrollFunction(FT_ScrollHandler FunctionObject);
+	void AddCreatedEvent(DG_CreatedHandler DelegateObject);
+	void EraseCreatedEvent(DG_CreatedHandler DelegateObject);
+	void AddCreatedFunction(FT_CreatedHandler FunctionObject);
+	void EraseCreatedFunction(FT_CreatedHandler FunctionObject);
+	void AddDeletedEvent(DG_DeletedHandler DelegateObject);
+	void EraseDeletedEvent(DG_DeletedHandler DelegateObject);
+	void AddDeletedFunction(FT_DeletedHandler FunctionObject);
+	void EraseDeletedFunction(FT_DeletedHandler FunctionObject);
+	void AddSelectedEvent(DG_SelectedHandler DelegateObject);
+	void EraseSelectedEvent(DG_SelectedHandler DelegateObject);
+	void AddSelectedFunction(FT_SelectedHandler FunctionObject);
+	void EraseSelectedFunction(FT_SelectedHandler FunctionObject);
+	void AddChangedEvent(DG_ChangedHandler DelegateObject);
+	void EraseChangedEvent(DG_ChangedHandler DelegateObject);
+	void AddChangedFunction(FT_ChangedHandler FunctionObject);
+	void EraseChangedFunction(FT_ChangedHandler FunctionObject);
+};
+
+class CPartsButton
+{
+public:
+	int m_PartsNumber;
+
+	CPartsButton();
+	~CPartsButton();
+	void Init();
+	void Release();
+	bool IsExist();
+	int GetPartsNumber();
+	void SetFocus();
+	bool IsFocus();
+	bool IsOnCursor();
+	bool IsClick();
+	void SetPos(int PosX, int PosY);
+	void SetZ(int PosZ);
+	int GetX();
+	int GetY();
+	int GetZ();
+	void SetSize(int Width, int Height);
+	int GetWidth();
+	int GetHeight();
+	void SetShow(bool Show);
+	bool IsShow();
+	void SetDrag(bool Drag);
+	bool IsDrag();
+	void SetEnable(bool Enable);
+	bool IsEnable();
+	void SetPixelDecide(bool PixelDecide);
+	bool IsPixelDecide();
+	void SetColor(int Red, int Green, int Blue);
+	int GetR();
+	int GetG();
+	int GetB();
+	void SetFontProperty(ref CASCharSpriteProperty FontProperty);
+	void GetFontProperty(ref CASCharSpriteProperty FontProperty);
+	void SetOnCursorSoundNumber(int SoundNumber);
+	void SetClickSoundNumber(int SoundNumber);
+	int GetOnCursorSoundNumber();
+	int GetClickSoundNumber();
+	void SetCGName(string Name);
+	string GetCGName();
+	void SetText(string Text);
+	string GetText();
+	void AddMouseMoveEvent(DG_MouseMoveHandler DelegateObject);
+	void EraseMouseMoveEvent(DG_MouseMoveHandler DelegateObject);
+	void AddMouseLeaveEvent(DG_MouseLeaveHandler DelegateObject);
+	void EraseMouseLeaveEvent(DG_MouseLeaveHandler DelegateObject);
+	void AddMouseEnterEvent(DG_MouseEnterHandler DelegateObject);
+	void EraseMouseEnterEvent(DG_MouseEnterHandler DelegateObject);
+	void AddMouseClickEvent(DG_MouseClickHandler DelegateObject);
+	void EraseMouseClickEvent(DG_MouseClickHandler DelegateObject);
+	void AddMouseWheelEvent(DG_MouseWheelHandler DelegateObject);
+	void EraseMouseWheelEvent(DG_MouseWheelHandler DelegateObject);
+	void AddMouseOnEvent(DG_MouseOnHandler DelegateObject);
+	void EraseMouseOnEvent(DG_MouseOnHandler DelegateObject);
+	void AddDragBeginEvent(DG_DragBeginHandler DelegateObject);
+	void EraseDragBeginEvent(DG_DragBeginHandler DelegateObject);
+	void AddDragingEvent(DG_DragingHandler DelegateObject);
+	void EraseDragingEvent(DG_DragingHandler DelegateObject);
+	void AddDragEndEvent(DG_DragEndHandler DelegateObject);
+	void EraseDragEndEvent(DG_DragEndHandler DelegateObject);
+	void AddDropEnterEvent(DG_DropEnterHandler DelegateObject);
+	void EraseDropEnterEvent(DG_DropEnterHandler DelegateObject);
+	void AddDropedEvent(DG_DropedHandler DelegateObject);
+	void EraseDropedEvent(DG_DropedHandler DelegateObject);
+	void AddDropLeaveEvent(DG_DropLeaveHandler DelegateObject);
+	void EraseDropLeaveEvent(DG_DropLeaveHandler DelegateObject);
+	void AddKeyTriggerEvent(DG_KeyTriggerHandler DelegateObject);
+	void EraseKeyTriggerEvent(DG_KeyTriggerHandler DelegateObject);
+	void AddKeyDownEvent(DG_KeyDownHandler DelegateObject);
+	void EraseKeyDownEvent(DG_KeyDownHandler DelegateObject);
+	void AddKeyPressEvent(DG_KeyPressHandler DelegateObject);
+	void EraseKeyPressEvent(DG_KeyPressHandler DelegateObject);
+	void AddKeyUpEvent(DG_KeyUpHandler DelegateObject);
+	void EraseKeyUpEvent(DG_KeyUpHandler DelegateObject);
+};
+
+class CPartsComboBox
+{
+public:
+	DG_MouseMoveHandler DG_MouseMoveEvent;
+	unknown_delegate DG_MouseLeaveEvent;
+	unknown_delegate DG_MouseEnterEvent;
+	DG_MouseClickHandler DG_MouseClickEvent;
+	DG_MouseWheelHandler DG_MouseWheelEvent;
+	unknown_delegate DG_MouseOnEvent;
+	DG_DragBeginHandler DG_DragBeginEvent;
+	DG_DragingHandler DG_DragingEvent;
+	DG_DragEndHandler DG_DragEndEvent;
+	DG_DropEnterHandler DG_DropEnterEvent;
+	DG_DropedHandler DG_DropedEvent;
+	DG_DropLeaveHandler DG_DropLeaveEvent;
+	DG_KeyTriggerHandler DG_KeyTriggerEvent;
+	DG_KeyDownHandler DG_KeyDownEvent;
+	DG_KeyPressHandler DG_KeyPressEvent;
+	DG_KeyUpHandler DG_KeyUpEvent;
+	unknown_delegate DG_ScrollEvent;
+	DG_SelectedHandler DG_SelectedEvent;
+	int m_ComboNumber;
+	int m_ListNumber;
+	bool m_OpenList;
+	int m_OnCursorTime;
+	int m_OnCursorTimeCombo;
+	int m_OnCursorTimeList;
+	int m_SelectedIndex;
+	int m_LineHeight;
+	int m_BoxHeight;
+	string m_ListBoxCGName;
+	CASCharSpriteProperty m_ListFontProperty;
+	int m_MarginListWidth;
+	int m_MarginListHeight;
+	array@string m_ItemList;
+
+	CPartsComboBox();
+	~CPartsComboBox();
+	void Create();
+	void Release();
+	int GetPartsNumber();
+	void SetFocus();
+	bool IsFocus();
+	bool IsOnCursor();
+	bool IsClick();
+	void MouseMoveEvent(int PartsNumber, int UIMouseX, int UIMouseY);
+	void MouseLeaveEvent(int PartsNumber, int UIMouseX, int UIMouseY);
+	void MouseEnterEvent(int PartsNumber, int UIMouseX, int UIMouseY);
+	void MouseClickEvent(int PartsNumber, int UIMouseX, int UIMouseY);
+	void MouseWheelEvent(int PartsNumber, int Forward, int Back);
+	void MouseOnEvent(int PartsNumber, int UIMouseX, int UIMouseY, int Time);
+	void DragBeginEvent(int PartsNumber);
+	void DragingEvent(int PartsNumber, int MouseX, int MouseY);
+	void DragEndEvent(int PartsNumber);
+	void DropEnterEvent(int DropUINumber, int DragUINumber);
+	void DropedEvent(int DropUINumber, int DragUINumber);
+	void DropLeaveEvent(int DropUINumber, int DragUINumber);
+	void KeyTriggerEvent(int PartsNumber, int KeyCode);
+	void KeyDownEvent(int PartsNumber, int KeyCode);
+	void KeyPressEvent(int PartsNumber, int KeyCode);
+	void KeyUpEvent(int PartsNumber, int KeyCode);
+	void SelectedEvent(int PartsNumber, int nSelectedIndex);
+	void CreatedEvent(int PartsNumber);
+	void LostFocusEvent(int PartsNumber);
+	void SetPos(int PosX, int PosY);
+	void SetZ(int PosZ);
+	int GetX();
+	int GetY();
+	int GetZ();
+	void SetSize(int Width, int Height);
+	void SetLineHeight(int Height);
+	void SetBoxHeight(int Height);
+	int GetWidth();
+	int GetHeight();
+	int GetLineHeight();
+	int GetBoxHeight();
+	void SetMarginForBox(int Width, int Height);
+	int GetWidthMarginFromBox();
+	int GetHeightMarginFromBox();
+	void SetMarginForList(int Width, int Height);
+	int GetWidthMarginFromList();
+	int GetHeightMarginFromList();
+	void SetShow(bool Show);
+	bool IsShow();
+	void SetBoxCGName(string Name);
+	string GetBoxCGName();
+	void SetListCGName(string Name);
+	string GetListCGName();
+	void SetFontPropertyForBox(ref CASCharSpriteProperty FontProperty);
+	void GetFontPropertyFromBox(ref CASCharSpriteProperty FontProperty);
+	void SetFontPropertyForList(ref CASCharSpriteProperty FontProperty);
+	void GetFontPropertyFromList(ref CASCharSpriteProperty FontProperty);
+	void AddItem(string _Item_);
+	string GetItem(int Index);
+	void ClearItem();
+	int Numof();
+	void Select(int Index);
+	int SelectedIndex();
+	string SelectedItem();
+	void AddMouseMoveEvent(DG_MouseMoveHandler DelegateObject);
+	void EraseMouseMoveEvent(DG_MouseMoveHandler DelegateObject);
+	void AddMouseLeaveEvent(unknown_delegate DelegateObject);
+	void EraseMouseLeaveEvent(unknown_delegate DelegateObject);
+	void AddMouseEnterEvent(unknown_delegate DelegateObject);
+	void EraseMouseEnterEvent(unknown_delegate DelegateObject);
+	void AddMouseClickEvent(DG_MouseClickHandler DelegateObject);
+	void EraseMouseClickEvent(DG_MouseClickHandler DelegateObject);
+	void AddMouseWheelEvent(DG_MouseWheelHandler DelegateObject);
+	void EraseMouseWheelEvent(DG_MouseWheelHandler DelegateObject);
+	void AddMouseOnEvent(unknown_delegate DelegateObject);
+	void EraseMouseOnEvent(unknown_delegate DelegateObject);
+	void AddDragBeginEvent(DG_DragBeginHandler DelegateObject);
+	void EraseDragBeginEvent(DG_DragBeginHandler DelegateObject);
+	void AddDragingEvent(DG_DragingHandler DelegateObject);
+	void EraseDragingEvent(DG_DragingHandler DelegateObject);
+	void AddDragEndEvent(DG_DragEndHandler DelegateObject);
+	void EraseDragEndEvent(DG_DragEndHandler DelegateObject);
+	void AddDropEnterEvent(DG_DropEnterHandler DelegateObject);
+	void EraseDropEnterEvent(DG_DropEnterHandler DelegateObject);
+	void AddDropedEvent(DG_DropedHandler DelegateObject);
+	void EraseDropedEvent(DG_DropedHandler DelegateObject);
+	void AddDropLeaveEvent(DG_DropLeaveHandler DelegateObject);
+	void EraseDropLeaveEvent(DG_DropLeaveHandler DelegateObject);
+	void AddKeyTriggerEvent(DG_KeyTriggerHandler DelegateObject);
+	void EraseKeyTriggerEvent(DG_KeyTriggerHandler DelegateObject);
+	void AddKeyDownEvent(DG_KeyDownHandler DelegateObject);
+	void EraseKeyDownEvent(DG_KeyDownHandler DelegateObject);
+	void AddKeyPressEvent(DG_KeyPressHandler DelegateObject);
+	void EraseKeyPressEvent(DG_KeyPressHandler DelegateObject);
+	void AddKeyUpEvent(DG_KeyUpHandler DelegateObject);
+	void EraseKeyUpEvent(DG_KeyUpHandler DelegateObject);
+	void AddScrollEvent(unknown_delegate DelegateObject);
+	void EraseScrollEvent(unknown_delegate DelegateObject);
+	void AddSelectedEvent(DG_SelectedHandler DelegateObject);
+	void EraseSelectedEvent(DG_SelectedHandler DelegateObject);
+};
+
+class CPartsRadioButton
+{
+public:
+	array@int m_CheckBoxNumberList;
+
+	CPartsRadioButton();
+	~CPartsRadioButton();
+	void ChangeEvent(int PartsNumber);
+	void Clear();
+	void AddCheckBox(int PartsNumber);
+	void EraseCheckBox(int PartsNumber);
+};
+
+class CAS3DInstance
+{
+public:
+	ref CAS3DLayer m_Layer;
+	int m_InstanceNumber;
+
+	CAS3DInstance();
+	~CAS3DInstance();
+	bool Create(ref CAS3DLayer Layer);
+	void Release();
+	int GetInstance();
+	bool SetType(int nType);
+	bool Save(string FileName);
+	bool Load(string Name);
+	bool IsExistData(string Name);
+	string GetName();
+	bool SetPos(float fX, float fY, float fZ);
+	bool SetPosX(float fX);
+	bool SetPosY(float fY);
+	bool SetPosZ(float fZ);
+	float GetPosX();
+	float GetPosY();
+	float GetPosZ();
+	bool SetAngle(float fAngle);
+	bool SetAngleP(float fAngleP);
+	bool SetAngleB(float fAngleB);
+	float GetAngle();
+	float GetAngleP();
+	float GetAngleB();
+	bool SetScale(float fScale);
+	float GetScale();
+	bool SetZBias(float fZBias);
+	float GetZBias();
+	bool SetVertexPos(int nIndex, float fX, float fY, float fZ);
+	bool SetVertexUV(int Index, float U, float V);
+	bool SetDiffuse(float fR, float fG, float fB);
+	bool GetDiffuse(ref float ColorR, ref float ColorG, ref float ColorB);
+	bool SetAmbient(float Red, float Green, float Blue);
+	bool GetAmbient(ref float ColorR, ref float ColorG, ref float ColorB);
+	bool SetGlobeDiffuse(float fR, float fG, float fB);
+	bool SetSpecular(float fSpecular);
+	bool SetAlpha(float Alpha);
+	float GetAlpha();
+	bool SetGrayscaleRate(float GrayscaleRate);
+	float GetGrayscaleRate();
+	bool SetAttenuationNear(float fNear);
+	bool SetAttenuationFar(float fFar);
+	bool SetShow(bool bFlag);
+	bool IsShow();
+	bool SetDrawShadow(bool bFlag);
+	bool SetDrawBackShadow(bool bFlag);
+	bool SetMakeShadow(bool bFlag);
+	bool SetDrawBump(bool bFlag);
+	bool GetDrawShadow();
+	bool GetDrawBackShadow();
+	bool GetDrawMakeShadow();
+	bool GetDrawBump();
+	bool SetDrawParam(int DrawParam, int Value);
+	int GetMotionState();
+	float GetMotionFrame();
+	bool LoadMotion(string Name);
+	bool SetMotionFrame(float fFrame);
+	bool SetMotionState(int nState);
+	bool SetMotionFrameRange(float fBeginFrame, float fEndFrame);
+	bool SetMotionLoopFrameRange(float fBeginFrame, float fEndFrame);
+	bool LoadNextMotion(string Name);
+	bool SetNextMotionState(int nState);
+	bool SetNextMotionFrame(float fFrame);
+	bool SetNextMotionFrameRange(float fBeginFrame, float fEndFrame);
+	bool SetNextMotionLoopFrameRange(float fBeginFrame, float fEndFrame);
+	bool SetMotionBlendRate(float fRate);
+	bool SetMotionBlend(bool bMotionBlend);
+	bool IsMotionBlend();
+	bool GetMotionBlendPutTime();
+	bool SetMotionBlendPutTime(bool bFlag);
+	bool SwapMotion();
+	bool FreeNextMotion();
+	int GetNumofMaterial();
+	bool GetMaterialName(int nNum, ref string Name);
+	float GetMaterialParam(int nMaterial, int nType);
+	bool SetMaterialParam(int nMaterial, int nType, float fParam);
+	bool SaveAddMaterialData();
+	bool SetPointPos(int nIndex, float fX, float fY, float fZ);
+	bool GetPointPos(int nIndex, ref float pfX, ref float pfY, ref float pfZ);
+	bool SetColumnPos(float fX, float fY, float fZ);
+	bool SetColumnHeight(float fHeight);
+	bool SetColumnRadius(float fRadius);
+	bool SetColumnAngle(float fAngle);
+	bool SetColumnAngleP(float fAngleP);
+	bool SetColumnAngleB(float fAngleB);
+	bool GetColumnPos(ref float fX, ref float fY, ref float fZ);
+	float GetColumnHeight();
+	float GetColumnRadius();
+	float GetColumnAngle();
+	float GetColumnAngleP();
+	float GetColumnAngleB();
+	bool GetDrawColumn();
+	bool SetDrawColumn(bool bDraw);
+	bool SetTarget(int nIndex, int nTarget);
+	int GetTarget(int nIndex);
+	float GetFPS();
+	bool SetFPS(float fFPS);
+	int GetNumofBone();
+	bool GetBoneName(int BoneIndex, ref string pIName);
+	bool GetBoneParentIndex(int BoneIndex, ref int pParentBoneIndex);
+	int GetBoneIndex(string pIName);
+	bool TransLocalPosToWorldPosByBone(int nBone, CASVector3D OffsetPos, ref CASVector3D ResultPos);
+	bool SaveBoneFile();
+	bool IsBoneCanIK(int BoneIndex);
+	bool SetBoneCanIK(int BoneIndex, bool CanIK);
+	bool GetBoneEulerAngle(int BoneIndex, ref CASVector3D EulerAngle);
+	bool GetBoneMinEulerAngle(int BoneIndex, ref CASVector3D EulerAngle);
+	bool GetBoneMaxEulerAngle(int BoneIndex, ref CASVector3D EulerAngle);
+	bool SetBoneMinEulerAngle(int BoneIndex, CASVector3D EulerAngle);
+	bool SetBoneMaxEulerAngle(int BoneIndex, CASVector3D EulerAngle);
+	bool SetBoneMass(int BoneIndex, float Mass);
+	bool SetBoneAirResistance(int BoneIndex, float AirResistance);
+	bool SetBoneRestitutionCoefficient(int BoneIndex, float RestitutionCoefficient);
+	float GetBoneMass(int BoneIndex);
+	float GetBoneAirResistance(int BoneIndex);
+	float GetBoneRestitutionCoefficient(int BoneIndex);
+	int GetNumofBoneCollisionShapeList();
+	int GetBoneCollisionShapeType(int Index);
+	bool GetBoneCollisionShapePoint(int Index, ref CASVector3D Point);
+	bool GetBoneCollisionShapePoint2(int Index, ref CASVector3D Point);
+	float GetBoneCollisionShapeRadius(int Index);
+	int GetBoneCollisionShapeLinkedBoneIndex(int Index);
+	bool SetBoneCollisionShapeType(int Index, int Type);
+	bool SetBoneCollisionShapePoint(int Index, CASVector3D Point);
+	bool SetBoneCollisionShapePoint2(int Index, CASVector3D Point);
+	bool SetBoneCollisionShapeRadius(int Index, float Radius);
+	bool SetBoneCollisionShapeLinkedBoneIndex(int Index, int BoneIndex);
+	bool AddBoneCollisionShape();
+	bool EraseBoneCollisionShape(int Index);
+	int GetNumofPolygon();
+	int GetNumofVertex();
+	int GetNumofNormal();
+	int GetNumofMesh();
+	bool GetMeshName(int MeshNumber, ref string pIName);
+	int GetMeshMaterialIndex(int MeshNumber);
+	int GetMeshMaterialID(int MeshNumber);
+	int GetMeshNumofPolygon(int MeshNumber);
+	bool IsMeshAlphaBlending(int MeshNumber);
+	int GetTextureMemorySize();
+	string GetInfoText();
+	string GetMaterialInfoText();
+	bool CalcHeightDetection(float X, float Z, ref float Height);
+	float GetSoftFogEdgeLength();
+	bool SetSoftFogEdgeLength(float fLength);
+	float GetShadowVolumeBoneRadius();
+	bool SetShadowVolumeBoneRadius(float fRadius);
+	bool LoadLightParam();
+	bool StoreLightParam();
+	bool GetDebugDrawShadowVolume();
+	bool SetDebugDrawShadowVolume(bool bFlag);
+	bool CreateDebugBoneList(ref CAS3DInstance BoneInstance, int OnCursorIndex, int SelectedIndex);
+	bool CreateDebugBoneCollision(ref CAS3DInstance BoneInstance, int OnCursorIndex, int SelectedIndex);
+	bool SaveEffect();
+	bool GetEffectFrameRange(ref int pnBeginFrame, ref int pnEndFrame);
+	bool SetSpecularReflectRate(float fRate);
+	bool SetFresnelReflectRate(float fRate);
+	float GetSpecularReflectRate();
+	float GetFresnelReflectRate();
+	bool CalcIntersectEyeVector(int ViewX, int ViewY, ref float X, ref float Y, ref float Z);
+	float Calc2DDetectionHeight(float X, float Z);
+	bool CalcInstance2DDetection(float X0, float Y0, float Z0, float X1, float Y1, float Z1, ref float X2, ref float Y2, ref float Z2, float Radius);
+	bool FindInstancePath(float StartX, float StartY, float StartZ, float GoalX, float GoalY, float GoalZ);
+	bool CalcPathFinderIntersectEyeVec(int nMouseX, int nMouseY, ref float pfX, ref float pfY, ref float pfZ);
+	bool OptimizePathLine();
+	bool GetPathLine(ref array@float pIXArray, ref array@float pIYArray, ref array@float pIZArray);
+	bool CreateInstancePathLineList(ref CAS3DInstance PathInstance);
+	bool ClearLineList();
+	bool AddLineList(CASVector3D Pos1, CASVector3D Pos2);
+	bool AddColorLineList(CASVector3D Pos1, int Color1, CASVector3D Pos2, int Color2);
+};
+
+class CAS3DLayer
+{
+public:
+	CASParts m_3DLayerParts;
+
+	CAS3DLayer();
+	~CAS3DLayer();
+	bool Create();
+	void Release();
+	int GetPluginNumber();
+	bool SetZ(int Z);
+	int CreateInstance();
+	bool ReleaseInstance(int nInstance);
+	void SetCameraPos(float fX, float fY, float fZ);
+	void SetCameraAngle(float fAngle);
+	void SetCameraAngleP(float fAngleP);
+	void SetCameraAngleB(float fAngleB);
+	bool GetCameraPos(ref float X, ref float Y, ref float Z);
+	bool GetCameraAngle(ref float Angle);
+	bool GetCameraAngleP(ref float AngleP);
+	bool GetCameraAngleB(ref float AngleB);
+	bool GetCameraXVector(ref float X, ref float Y, ref float Z);
+	bool GetCameraYVector(ref float X, ref float Y, ref float Z);
+	bool GetCameraZVector(ref float X, ref float Y, ref float Z);
+	bool SetDrawDOF(bool DrawDOF);
+	bool SetDOF_L(float DOF_L);
+	bool SetDOF_F(float DOF_F);
+	bool SetDOF_f(float DOF_f);
+	bool IsDrawDOF();
+	float GetDOF_L();
+	float GetDOF_F();
+	float GetDOF_f();
+	float GetShadowBias(int nNum);
+	float GetShadowTargetDistance(int nNum);
+	bool SetShadowMapType(int nType);
+	bool SetShadowMapLightLookPos(float fX, float fY, float fZ);
+	bool SetShadowMapLightDir(float fX, float fY, float fZ);
+	bool SetShadowBox(float fX, float fY, float fZ, float fSizeX, float fSizeY, float fSizeZ);
+	bool SetShadowBias(int nNum, float fShadowBias);
+	bool SetShadowSlopeBias(float fShadowSlopeBias);
+	bool SetShadowFilterMag(float fShadowFilterMag);
+	bool SetShadowTargetDistance(int nNum, float fDistance);
+	bool SetShadowMapResolutionLevel(int nLevel);
+	int GetShadowMapResolutionLevel();
+	float GetShadowSplitDepth(int nNum);
+	bool SetShadowSplitDepth(int nNum, float fDepth);
+	bool SetFogType(int nType);
+	bool SetFogNear(float fNear);
+	bool SetFogFar(float fFar);
+	bool SetFogColor(float fR, float fG, float fB);
+	int GetFogType();
+	float GetFogNear();
+	float GetFogFar();
+	void GetFogColor(ref float pfR, ref float pfG, ref float pfB);
+	bool SetDrawTextureFog(bool bDraw);
+	bool GetDrawTextureFog();
+	bool SetOptionAntiAliasing(int nFlag);
+	bool SetViewport(int nX, int nY, int nWidth, int nHeight);
+	bool SetProjection(float fWidth, float fHeight, float fNear, float fFar, float fDeg);
+	bool SetParallelProjection(float Width, float Height, float Near, float Far, float Mag);
+	float GetBrightness();
+	void SetBrightness(float fBrightness);
+	int GetShaderDebugMode();
+	bool SetDebugMode(int DebugModeType, int Mode);
+	int GetDebugMode(int DebugModeType);
+	bool SetVertexBlendMode(int nMode);
+	int GetTextureFilterMode();
+	bool SetRenderMode(int nMode);
+	bool SetDrawOption(int DrawOption, int Param);
+	int GetDrawOption(int DrawOption);
+	bool SetShadowMode(int nMode);
+	bool SetBumpMode(int nMode);
+	bool SetFogMode(int nMode);
+	bool SetSpecularMode(int nMode);
+	bool SetLightMapMode(int nMode);
+	bool SetSoftFogEdgeMode(int nMode);
+	bool SetSSAOMode(int nMode);
+	bool SetShaderDebugMode(int nMode);
+	int GetTextureResolutionLevel();
+	bool SetTextureResolutionLevel(int nLevel);
+	bool SetTextureFilterMode(int nMode);
+	int GetRenderMode();
+	int GetShadowMode();
+	int GetBumpMode();
+	int GetVertexBlendMode();
+	int GetFogMode();
+	int GetSpecularMode();
+	int GetLightMapMode();
+	int GetSoftFogEdgeMode();
+	int GetSSAOMode();
+	bool GetUsePower2Texture();
+	bool SetUsePower2Texture(bool bUse);
+	bool GetGlobalAmbient(ref float fR, ref float fG, ref float fB);
+	bool SetGlobalAmbient(float fR, float fG, float fB);
+	int GetBloomMode();
+	bool SetBloomMode(int nMode);
+	int GetGlareMode();
+	bool SetGlareMode(int nMode);
+	float GetPostEffectFilterY();
+	float GetPostEffectFilterCb();
+	float GetPostEffectFilterCr();
+	bool SetPostEffectFilterY(float fY);
+	bool SetPostEffectFilterCb(float fCb);
+	bool SetPostEffectFilterCr(float fCr);
+	bool GetBackCGName(int nNum, ref string pICGName);
+	int GetBackCGNum(int nNum);
+	float GetBackCGBlendRate(int nNum);
+	float GetBackCGDestPosX(int nNum);
+	float GetBackCGDestPosY(int nNum);
+	float GetBackCGMag(int nNum);
+	float GetBackCGQuakeMag(int nNum);
+	bool GetBackCGShow(int nNum);
+	bool SetBackCGName(int nNum, string pICGName);
+	bool SetBackCGNum(int nNum, int nCGNum);
+	bool SetBackCGBlendRate(int nNum, float fBlendRate);
+	bool SetBackCGDestPos(int nNum, float fX, float fY);
+	bool SetBackCGMag(int nNum, float fMag);
+	bool SetBackCGQuakeMag(int nNum, float fQuakeMag);
+	bool SetBackCGShow(int nNum, bool bShow);
+	float GetGlareBrightnessParam(int nIndex);
+	bool SetGlareBrightnessParam(int nIndex, float fParam);
+	bool ResetLightParam();
+	bool SetLightParam(int Type, float Value);
+	float GetLightParam(int Type);
+	void SetHemisphereLightVector(float X, float Y, float Z);
+	void SetHemisphereLightSkyColor(float ColorR, float ColorG, float ColorB);
+	void SetHemisphereLightMiddleColor(float ColorR, float ColorG, float ColorB);
+	void SetHemisphereLightGroundColor(float ColorR, float ColorG, float ColorB);
+	float GetHemisphereLightVectorX();
+	float GetHemisphereLightVectorY();
+	float GetHemisphereLightVectorZ();
+	float GetHemisphereLightSkyColorR();
+	float GetHemisphereLightSkyColorG();
+	float GetHemisphereLightSkyColorB();
+	float GetHemisphereLightMiddleColorR();
+	float GetHemisphereLightMiddleColorG();
+	float GetHemisphereLightMiddleColorB();
+	float GetHemisphereLightGroundColorR();
+	float GetHemisphereLightGroundColorG();
+	float GetHemisphereLightGroundColorB();
+	void SetLightScatteringLightVector(float X, float Y, float Z);
+	void SetLightScatteringLightColor(float ColorR, float ColorG, float ColorB);
+	void SetLightScatteringSunColor(float ColorR, float ColorG, float ColorB);
+	void SetLightScatteringBetaR(float BetaR);
+	void SetLightScatteringBetaM(float BetaM);
+	void SetLightScatteringG(float G);
+	void SetLightScatteringDistance(float Distance);
+	float GetLightScatteringLightVectorX();
+	float GetLightScatteringLightVectorY();
+	float GetLightScatteringLightVectorZ();
+	float GetLightScatteringLightColorR();
+	float GetLightScatteringLightColorG();
+	float GetLightScatteringLightColorB();
+	float GetLightScatteringSunColorR();
+	float GetLightScatteringSunColorG();
+	float GetLightScatteringSunColorB();
+	float GetLightScatteringBetaR();
+	float GetLightScatteringBetaM();
+	float GetLightScatteringG();
+	float GetLightScatteringDistance();
+	void SetToneMappingExposureBias(float ExposureBias);
+	void SetToneMappingWhitePoint(float WhitePoint);
+	void SetToneMappingShoulderStrength(float ShoulderStrength);
+	void SetToneMappingLinearStrength(float LinearStrength);
+	void SetToneMappingLinearAngle(float LinearAngle);
+	void SetToneMappingToeStrength(float ToeStrength);
+	void SetToneMappingToeNumerator(float ToeNumerator);
+	void SetToneMappingToeDenominator(float ToeDenominator);
+	float GetToneMappingExposureBias();
+	float GetToneMappingWhitePoint();
+	float GetToneMappingShoulderStrength();
+	float GetToneMappingLinearStrength();
+	float GetToneMappingLinearAngle();
+	float GetToneMappingToeStrength();
+	float GetToneMappingToeNumerator();
+	float GetToneMappingToeDenominator();
+	float GetSSAOParam(int nType);
+	bool SetSSAOParam(int nType, float fParam);
+	void SetSSAONumofRound(float NumofRound);
+	void SetSSAOMinLength(float MinLength);
+	void SetSSAOMaxLength(float MaxLength);
+	void SetSSAOMinDistance(float MinDistance);
+	void SetSSAOMaxDistance(float MaxDistance);
+	void SetSSAOColor(float ColorR, float ColorG, float ColorB);
+	void SetSSAOAlpha(float Alpha);
+	float GetSSAONumofRound();
+	float GetSSAOMinLength();
+	float GetSSAOMaxLength();
+	float GetSSAOMinDistance();
+	float GetSSAOMaxDistance();
+	float GetSSAOColorR();
+	float GetSSAOColorG();
+	float GetSSAOColorB();
+	float GetSSAOAlpha();
+	bool IsLoading();
+	int GetDebugInfoMode();
+	bool SetDebugInfoMode(int nMode);
+	void SetThreadLoadingMode(bool Mode);
+	bool IsThreadLoadingMode();
+	bool TransformPosToViewPos(float X, float Y, float Z, ref int ViewX, ref int ViewY);
+	bool ClearCache();
+	bool Suspend();
+	bool IsSuspend();
+	bool Resume();
+	bool DrawToMainSurface();
+};
+
+class CASMatrix
+{
+public:
+	array@float@2 m[4][4];
+
+	float det2x2(float a1, float a2, float b1, float b2);
+	float det3x3(float a1, float a2, float a3, float b1, float b2, float b3, float c1, float c2, float c3);
+	void Set(float a11, float a12, float a13, float a14, float a21, float a22, float a23, float a24, float a31, float a32, float a33, float a34, float a41, float a42, float a43, float a44);
+	void SetMove(float fX, float fY, float fZ);
+	void SetScale(float fX, float fY, float fZ);
+	void SetRotH(float fAngle);
+	void SetRotP(float fAngle);
+	void SetRotB(float fAngle);
+	void MulMatrix(CASMatrix a);
+	void GetInverse(ref CASMatrix Result);
+};
+
+class CASProjection
+{
+public:
+	float fWidth;
+	float fHeight;
+	float fNear;
+	float fFar;
+	float fDeg;
+
+	void Set(float fWidth_, float fHeight_, float fNear_, float fFar_, float fDeg_);
+	void SetNear(float Near);
+	void SetFar(float Far);
+	void SetDegree(float Degree);
+	float GetWidth();
+	float GetHeight();
+	float GetNear();
+	float GetFar();
+	float GetDegree();
+	CASMatrix GetMatrix();
+};
+
+class CASVector3D
+{
+public:
+	float fX;
+	float fY;
+	float fZ;
+
+	void Set(float X, float Y, float Z);
+	float GetX();
+	float GetY();
+	float GetZ();
+	CASVector3D AddVector(CASVector3D Obj);
+	CASVector3D SubVector(CASVector3D Obj);
+	float DotVector(CASVector3D Obj);
+	CASVector3D CrossVector(CASVector3D Obj);
+	CASVector3D MulMatrix(CASMatrix m);
+	CASVector3D MulScalar(float Scalar);
+	void Normalize();
+	CASVector3D GetNormal();
+	float DistanceVector(CASVector3D Obj);
+	float LengthVector();
+	float LengthVectorSq();
+};
+
+class CASGameNetService
+{
+public:
+	int m_UserIDFileID;
+	string m_ServerURL;
+	int m_UserID;
+
+	CASGameNetService();
+	void SetServerURL(string ServerURL);
+	bool IsExistUserID();
+	bool BeginCreateUserID();
+	bool IsEndCreateUserID();
+	void StopCreateUserID();
+	bool EndCreateUserID();
+	string GetUserIDFileName();
+	bool LoadUserIDFile(ref int UserID);
+	bool SaveUserIDFile(int UserID);
+	void SetUserID(int UserID);
+	string TransDelimiter(string Text);
+	bool BeginSendCommand(string Command, array@string ParamList);
+	bool IsEndSendCommand();
+	void StopSendCommand();
+	bool EndSendCommand(ref string Result);
+};
+
+class CDrawMovie
+{
+public:
+	int m_nSprite;
+	array@int m_anKeyCode;
+	array@bool m_abKeyDown;
+	CASClick m_EscapeKeyClick;
+	int m_nBackColorR;
+	int m_nBackColorG;
+	int m_nBackColorB;
+	int m_nInnerVolumeRate;
+
+	CDrawMovie();
+	~CDrawMovie();
+	void Release();
+	bool _CreateSprite(int nWidth, int nHeight);
+	bool InitPlugin();
+	bool IsClick();
+	bool Play(string FileName, int nWidth, int nHeight, bool bKeyCancel);
+	void SetBackColor(int nR, int nG, int nB);
+	void SetInnerVolumeRate(int nInnerVolumeRate);
+};
+
+class CASInputText
+{
+public:
+	bool m_End;
+	CASParts m_BaseParts;
+	string m_InputText;
+	CASCharSpriteProperty m_CharProperty;
+	int m_AreaNumber;
+	CASClick m_LeftKeyClick;
+	CASClick m_RightKeyClick;
+	CASClick m_EnterKeyClick;
+	CASClick m_EscapeKeyClick;
+	CASClick m_RButtonClick;
+	CASClick m_HomeKeyClick;
+	CASClick m_EndKeyClick;
+	CASClick m_BackSpaceKeyClick;
+	CASClick m_DeleteKeyClick;
+	CASParts m_PrevTextParts;
+	CASParts m_NextTextParts;
+	CASParts m_CursorParts;
+	string m_PrevText;
+	string m_NextText;
+	string m_OldPrevText;
+	string m_OldNextText;
+	bool m_Converts;
+	bool m_Inputs;
+	bool m_OpenIME;
+
+	CASInputText();
+	void Begin(int AreaNumber, string BeginText, bool OpenIME);
+	void Update();
+	void End();
+	bool IsEnd();
+	string GetInputText();
+	void UpdateCursorPos(ref 文字入力エリア_t a, int OffsetX, int OffsetY);
+	void ClipText(ref 文字入力エリア_t InputStringArea, ref string PrevText, ref string NextText);
+	bool ShiftRight(ref string SrcText, ref string DestText);
+	bool ShiftLeft(ref string SrcText, ref string DestText);
+	bool IsConverting();
+};
+
+class CMessageText
+{
+public:
+	int nType;
+	int MessageWindowNumber;
+	int nMsgNum;
+	string MessageText;
+	int Ｍフォント;
+	int Ｍサイズ;
+	float Ｍ太さ;
+	int ＭＲ;
+	int ＭＧ;
+	int ＭＢ;
+	int Ｍ速度;
+	int Ｍ配置;
+	float Ｍ縁取り幅;
+	int Ｍ縁取りＲ;
+	int Ｍ縁取りＧ;
+	int Ｍ縁取りＢ;
+	int nVoice;
+	int nQuakeSpriteType;
+	int nQuakeSpriteID;
+	int nQuakeWidth;
+	int nQuakeHeight;
+	int nQuakeTime;
+	string EventFuncName;
+};
+
+class CMessageTextModel
+{
+public:
+	array@CMessageText _m_MessageList;
+	CReadMessageTextManager m_ReadMessageTextManager;
+
+	CMessageTextModel();
+	void Clear();
+	void ClearMessageText(int MessageWindowNumber);
+	void AddMessageText(int _index, string _text);
+	void AddNewLine();
+	void AddVoice(int VoiceNumber);
+	void AddC();
+	void AddVibrationScreen(int _nWidth, int _nHeight, int _nTime);
+	int GetNumofMessage();
+	ref CMessageText GetMessage(int Index);
+	int GetMessageTextLength();
+	int GetLastMessageNumber();
+	int GetLastVoiceNumber();
+	bool IsExistVoice();
+	void SetMessageReadFlag();
+	int _GetFont();
+	int _GetFontSize();
+	int _GetFontColorR();
+	int _GetFontColorG();
+	int _GetFontColorB();
+	float _GetFontWeight();
+	float CalcFontWeight(int Weight);
+	float GetEdgeWeight();
+	int _GetFontShadowColorR();
+	int _GetFontShadowColorG();
+	int _GetFontShadowColorB();
+	int _GetFontPositionMode();
+	void DebugOutputMessageText();
+	void DebugMessageTextToClipboard();
+};
+
+class CMessageDrawParts
+{
+public:
+	int m_nTime;
+	int m_MessageWindowNumber;
+	bool m_bFixed;
+	int m_PartsNumber;
+
+	CMessageDrawParts();
+	~CMessageDrawParts();
+	void SetCharSprite(int nTime, int MessageWindowNumber);
+	void SetFixed();
+	int GetTime();
+	int GetMessageWindowNumber();
+	bool IsFixed();
+	void SetAlphaRate(int AlphaRate);
+	int GetAlphaRate();
+	void SetPos(int X, int Y);
+	void SetZ(int Z);
+	void SetShow(bool Show);
+	void UpdateZByMessageWindowZChanged();
+	void SetText(string Text);
+	void SetFontProperty(ref CASCharSpriteProperty Property);
+	void SetFont(int Type);
+	void SetFontSize(int Size);
+	void SetFontBoldWeight(float Weight);
+	void SetFontEdgeWeight(float Weight);
+	void SetFontColor(int ColorR, int ColorG, int ColorB);
+	void SetFontEdgeColor(int ColorR, int ColorG, int ColorB);
+	void SetFontCharSpace(int Space);
+};
+
+class SDrawChar
+{
+public:
+	int nType;
+	int MessageWindowNumber;
+	int nX;
+	int nY;
+	int nWidth;
+	int nHeight;
+	int CharSpace;
+	string CharText;
+	CASCharSpriteProperty Property;
+	int nTime;
+	int nVoice;
+	int nQuakeSpriteType;
+	int nQuakeSpriteID;
+	int nQuakeWidth;
+	int nQuakeHeight;
+	int nQuakeTime;
+};
+
+class CMessageTextView
+{
+public:
+	array@SDrawChar m_DrawCharList;
+	int m_DrawX;
+	int m_DrawY;
+	int m_DrawEndX;
+	int m_DrawEndY;
+	int m_DrawSpriteFadeTotalTime;
+	array@CMessageDrawParts m_MessageDrawParts;
+
+	CMessageTextView();
+	void Clear();
+	void CreateDrawCharList(ref CMessageTextModel MessageTextModel);
+	void GetHomePosition(int MessageWindowNumber, ref int DrawX, ref int DrawY);
+	int CalcMaxCharHeight(ref CMessageTextModel MessageTextModel, int Begin, int End, int MessageWindowNumber);
+	void CreateDrawChar(ref CMessageTextModel MessageTextModel, int Begin, int End, int MaxCharHeight, ref int Time);
+	void CreateDrawCharFromMessage(ref CMessageText Message, int MaxCharHeight, ref int Time, int CharSpeed);
+	void FreezeDrawCharListBeforeC();
+	void SetCharSpritePropertyFromDrawMessage(ref CASCharSpriteProperty Property, ref CMessageText DrawMessage);
+	int CalcCharSpeed(ref CMessageText Message);
+	void Draw(ref CMessageTextModel MessageTextModel);
+	void DrawAll(ref CMessageTextModel MessageTextModel);
+	int CalcTotalTime();
+	void DrawCharList();
+	bool IsFinishedDrawCharListFadeIn();
+	void UpdateDrawCharListAlphaRate(float fTime, float fTimeLength);
+	void FixAllDrawCharListAlphaRate();
+	void DrawCharListAll();
+	bool DrawChar(ref SDrawChar _Char, bool _bEffect, bool bAlphaFadeInFinishedCheck);
+	bool IsKeysDown();
+	bool IsJoyKeysDown();
+	bool IsWheelRotate();
+	void ClearMessageTextAndSetHome(int MessageWindowNumber);
+	void SetShow(bool bShow);
+	int GetDrawEndX();
+	int GetDrawEndY();
+	void UpdateZByMessageWindowZChanged();
+};
+
+class _CMsgKeyWait
+{
+public:
+	bool _m_exit;
+	int _m_snd_click;
+	int _m_snd_cursor;
+	int _m_wheel_time;
+	int _m_auto_mode_time_length;
+	int _m_auto_mode_time_start;
+	bool m_bExistVoiceInMessage;
+	CASTimer m_AutoModeTimer;
+	sys_btn_fnc_t _m_crsr_sys_btn;
+	sys_btn_fnc_t m_FirstKeyDownSystemButton;
+	bool m_LButtonDown;
+	bool m_ReturnKeyDown;
+	bool m_RButtonDown;
+	bool m_EscapeKeyDown;
+	bool m_SpaceKeyDown;
+	bool m_AKeyDown;
+	bool m_SKeyDown;
+	bool m_MButtonDown;
+	bool m_ZKeyDown;
+	bool m_PageUpKeyDown;
+	bool m_HomeKeyDown;
+	bool m_BackspaceKeyDown;
+	bool m_ShiftCKeyDown;
+	bool m_UpKeyDown;
+	bool m_DownKeyDown;
+	bool m_LButtonThrough;
+	bool m_ReturnKeyThrough;
+	bool m_DownKeyThrough;
+	CASJoyClickAssignedKey m_StepMessageJoyClick;
+	CASJoyClickAssignedKey m_HideMessageWindowJoyClick;
+	CASJoyClickAssignedKey m_OpenBackLog;
+	CASJoyClickAssignedKey m_OpenBackScene;
+	array@CASJoyClickAssignedKey m_JoyClickForCallbackList;
+
+	void _SetSndClick(int _snd);
+	void _SetSndCursor(int _snd);
+	_CMsgKeyWait();
+	void _Execute(bool _ignore_skip_mode, int nTextEndX, int nTextEndY);
+	void _Prepare(bool _ignore_skip_mode);
+	void InitJoyClick(bool _ignore_skip_mode);
+	void _Loop(bool _ignore_skip_mode, int nTextEndX, int nTextEndY);
+	void _Update(bool _ignore_skip_mode, int nTextEndX, int nTextEndY);
+	void _OnAutoMode();
+	void _OnReadSkipMode();
+	void _OnPlainMode(bool _ignore_skip_mode);
+	bool CheckReleaseModeByClick(int nMessageMode);
+	bool CheckKeyClick(int nMessageMode);
+	bool IsAllKeyUp();
+	bool CheckJoyClick(int MessageMode);
+	bool IsAllJoyKeyUp();
+	bool CheckSystemButton();
+	void InitAutoModeTimer();
+	bool _IsAutoModeTimeOut();
+	void _ComputeAutoModeTimeLength();
+	void _DoCommand(sys_btn_fnc_t _f);
+	void _Cleanup();
+	bool _IsSetQuakeScreen();
+	void _ExecuteQuakeScreen();
+	void _PlaySndClick();
+	void _PlaySndCursor();
+	void _OnRButton();
+	void _OnSpaceKey();
+	void _OnBackspaceKey();
+	void _OnEscapeKey();
+	void OnShiftCKeyClick();
+	void _CheckSystemButtonOnCursor();
+	void _ClearKeyDownFlag();
+	void CheckKeyThroughFlag();
+	void ClearKeyThroughFlag();
+};
+
+class _CMsgKeyWaitAnime
+{
+public:
+	bool _m_show;
+	CMessageWindowModel m_MessageWindowModel;
+	string _m_n_created_基準ＣＧ名;
+	int _m_n_created_開始番号;
+	int _m_n_created_マーク枚数;
+	string m_CreatedFlatName;
+	CASParts m_Parts;
+
+	void _Init(ref CMessageWindowModel _area_data);
+	void _Create();
+	bool _IsIdentity();
+	void _Delete();
+	void _UpdatePos(int nTextEndX, int nTextEndY);
+	void _SetShow(bool _show, int nMessageMode);
+	bool IsShow();
+};
+
+class SReadMessageTextInfo
+{
+public:
+	int m_MessageNumber;
+	bool m_ReserveErase;
+};
+
+class CReadMessageTextManager
+{
+public:
+	array@SReadMessageTextInfo m_ReadMessageTextQueue;
+
+	CReadMessageTextManager();
+	void SetReadMessage(int MessageNumber);
+	void EraseMessageNumber(int MessageNumber);
+};
+
+class CSystemButtonModelMap
+{
+public:
+	array@CSystemButtonModelList m_SystemButtonModelMap;
+	CASRect m_DummyRect;
+
+	void SetButtonModel(int MessageWindowNumber, sys_btn_fnc_t CommandFunc, int X, int Y, int Z, string PlainCGName, string OnCursorCGName, string KeyDownCGName, bool PixelDecide);
+	void Clear(int MessageWindowNumber);
+	void ClearButtonModelByMessageWindowNumber(int MessageWindowNumber);
+	void SetButtonModelByMessageWindowNumber(int MessageWindowNumber, sys_btn_fnc_t CommandFunc, int X, int Y, int Z, string PlainCGName, string OnCursorCGName, string KeyDownCGName, bool PixelDecide);
+	void SetButtonModelForReminisceMode(int MessageWindowNumber, sys_btn_fnc_t CommandFunc, string CoverCGName);
+	void SetButtonModelByMessageWindowNumberForReminisceMode(int MessageWindowNumber, sys_btn_fnc_t CommandFunc, string CoverCGName);
+	void SetDisableCG(int MessageWindowNumber, sys_btn_fnc_t CommandFunc, string DisableCGName);
+	void SetIsEnableSystemButtonFunc(int MessageWindowNumber, sys_btn_fnc_t CommandFunc, FTIsEnableSystemButton Func);
+	void EnlargeModelList(int MessageWindowNumber);
+	int GetButtonCount(int MessageWindowNumber);
+	sys_btn_fnc_t GetFunction(int MessageWindowNumber, int ButtonIndex);
+	int GetX(int MessageWindowNumber, int ButtonIndex);
+	int GetY(int MessageWindowNumber, int ButtonIndex);
+	int GetZ(int MessageWindowNumber, int ButtonIndex);
+	string GetPlainCGName(int MessageWindowNumber, int ButtonIndex);
+	string GetOnCursorCGName(int MessageWindowNumber, int ButtonIndex);
+	string GetKeyDownCGName(int MessageWindowNumber, int ButtonIndex);
+	string GetDisableCGName(int MessageWindowNumber, int ButtonIndex);
+	string GetCoverCGName(int MessageWindowNumber, int ButtonIndex);
+	bool IsInvalidByReminisceMode(int MessageWindowNumber, int ButtonIndex);
+	bool IsEnable(int MessageWindowNumber, int ButtonIndex);
+	void SetVisibleRect(int MessageWindowNumber, sys_btn_fnc_t CommandFunc, CASRect VisibleRect);
+	void SetOneVisibleRect(int MessageWindowNumber, sys_btn_fnc_t CommandFunc, CASRect VisibleRect);
+	ref CASRect GetVisibleRectByIndex(int MessageWindowNumber, int Index);
+	bool IsPixelDecide(int MessageWindowNumber, int ButtonIndex);
+	bool AsserteButtonIndex(int MessageWindowNumber);
+};
+
+class CSystemButtonModelList
+{
+public:
+	array@CSystemButtonModel m_SystemButtonModelList;
+	CASRect m_DummyRect;
+
+	void SetButtonModel(sys_btn_fnc_t CommandFunc, int _x, int _y, int _z, string PlainCGName, string OnCursorCGName, string KeyDownCGName, bool PixelDecide);
+	void SetButtonModelForReminisceMode(sys_btn_fnc_t CommandFunc, string CoverCGName);
+	void SetDisableCG(sys_btn_fnc_t CommandFunc, string DisableCGName);
+	void SetIsEnableSystemButtonFunc(sys_btn_fnc_t CommandFunc, FTIsEnableSystemButton Func);
+	void Clear();
+	int GetButtonCount();
+	int FindOrNewIndex(sys_btn_fnc_t CommandFunc);
+	int FindFunction(sys_btn_fnc_t CommandFunc);
+	bool IsEnable(int ButtonIndex);
+	sys_btn_fnc_t GetFunction(int ButtonIndex);
+	int GetX(int ButtonIndex);
+	int GetY(int ButtonIndex);
+	int GetZ(int ButtonIndex);
+	string GetPlainCGName(int ButtonIndex);
+	string GetOnCursorCGName(int ButtonIndex);
+	string GetKeyDownCGName(int ButtonIndex);
+	string GetDisableCGName(int ButtonIndex);
+	string GetCoverCGName(int ButtonIndex);
+	bool IsInvalidByReminisceMode(int ButtonIndex);
+	bool AsserteButtonIndex(int ButtonIndex);
+	ref CASRect GetVisibleRect(sys_btn_fnc_t CommandFunc);
+	ref CASRect GetVisibleRectByIndex(int ButtonIndex);
+	bool IsPixelDecide(int ButtonIndex);
+};
+
+class CSystemButtonModel
+{
+public:
+	sys_btn_fnc_t m_FunctionObject;
+	int m_X;
+	int m_Y;
+	int m_Z;
+	string m_PlainCGName;
+	string m_OnCursorCGName;
+	string m_KeyDownCGName;
+	string m_DisableCGName;
+	string m_CoverCGName;
+	bool m_InvalidByReminisceMode;
+	FTIsEnableSystemButton m_IsEnableSystemButtonFunc;
+	bool m_PixelDecide;
+	CASRect m_VisibleRect;
+
+	CSystemButtonModel();
+	void SetButtonModel(int X, int Y, int Z, string PlainCGName, string OnCursorCGName, string KeyDownCGName, sys_btn_fnc_t CommandFunc, bool PixelDecide);
+	void SetButtonModelForReminisceMode(string CoverCGName);
+	void SetDisableCG(string CGName);
+	void SetIsEnableSystemButtonFunc(FTIsEnableSystemButton Func);
+	bool IsEnable();
+	sys_btn_fnc_t GetFunction();
+	int GetX();
+	int GetY();
+	int GetZ();
+	string GetPlainCGName();
+	string GetOnCursorCGName();
+	string GetKeyDownCGName();
+	string GetDisableCGName();
+	string GetCoverCGName();
+	bool IsInvalidByReminisceMode();
+	ref CASRect GetVisibleRect();
+	bool IsPixelDecide();
+};
+
+class CSystemButtonViewList
+{
+public:
+	int m_MessageWindowNumber;
+	array@CSystemButtonView m_ViewList;
+	int m_SelectButtonID;
+	bool m_Show;
+
+	CSystemButtonViewList();
+	void Clear();
+	void SetMessageWindowNumber(int MessageWindowNumber);
+	void Create();
+	void Update();
+	int GetMessageWindowNumber();
+	sys_btn_fnc_t GetSelectedFunc();
+	void Hide();
+	void Show();
+	void SetShow(bool ShowFlg);
+	bool IsShow();
+};
+
+class CSystemButtonView
+{
+public:
+	bool m_FirstUpdate;
+	int m_ButtonIndex;
+	int m_State;
+	CASParts m_Parts;
+	bool m_Show;
+
+	CSystemButtonView();
+	void Create(int ButtonIndex);
+	void Delete();
+	void RecreateButtonByState(int MessageWindowNumber, int ButtonIndex, int State);
+	void Update();
+	int UpdateState();
+	void SetShow(bool Show);
+	bool IsSelecting();
+};
+
+class CMessageWindowModel
+{
+public:
+	string m_CGName;
+	string m_FlatFileName;
+	int m_X;
+	int m_Y;
+	bool m_InitializePosX;
+	bool m_InitializePosY;
+	int m_FontSize;
+	float m_FontEdgeWeight;
+	CASColor m_InactiveWindowMultipleColor;
+	string m_KeyWaitMarkFlatName;
+	int m_FlatShowWaitFrameNumber;
+	int 効果番号;
+	int 効果時間;
+	int 余白上;
+	int 余白右;
+	int 余白下;
+	int 余白左;
+	int 字間;
+	int 行間;
+	string 基準ＣＧ名;
+	int 開始番号;
+	int マーク枚数;
+	int マーク速度;
+	int マークＸ;
+	int マークＹ;
+	int マークＸフラグ;
+	int マークＹフラグ;
+	int フォント;
+	int _文字太さ;
+	int 文字Ｒ;
+	int 文字Ｇ;
+	int 文字Ｂ;
+	int 文字速度;
+	int 文字配置;
+	int 飾Ｒ;
+	int 飾Ｇ;
+	int 飾Ｂ;
+	string オートモードマーク＿ＣＧ基準名;
+	string オートモードマーク＿フラット名;
+	int オートモードマーク＿ＣＧ開始番号;
+	int オートモードマーク＿ＣＧ枚数;
+	int オートモードマーク＿Ｘ;
+	int オートモードマーク＿Ｙ;
+	int オートモードマーク＿Ｚ;
+	int オートモードマーク＿ＣＧ切り替え時間;
+	string スキップモードマーク＿ＣＧ基準名;
+	string スキップモードマーク＿フラット名;
+	int スキップモードマーク＿ＣＧ開始番号;
+	int スキップモードマーク＿ＣＧ枚数;
+	int スキップモードマーク＿Ｘ;
+	int スキップモードマーク＿Ｙ;
+	int スキップモードマーク＿Ｚ;
+	int スキップモードマーク＿ＣＧ切り替え時間;
+
+	CMessageWindowModel();
+	void SetCGName(string CGName);
+	void SetFlatFileName(string FlatFileName);
+	void SetX(int X);
+	void SetY(int Y);
+	void SetFontSize(int FontSize);
+	string GetCGName();
+	string GetFlatFileName();
+	int GetX();
+	int GetY();
+	int GetFontSize();
+	void SetEdgeWeight(float EdgeWeight);
+	float GetEdgeWeight();
+	void SetInactiveMultipleColor(CASColor Color);
+	CASColor GetInactiveMultipleColor();
+	void SetKeyWaitMarkFlatName(string FlatName);
+	string GetKeyWaitMarkFlatName();
+};
+
+class CMessageWindowModelManager
+{
+public:
+	int m_Z;
+	array@CMessageWindowModel m_ModelList;
+
+	CMessageWindowModelManager();
+	bool Init();
+	void SetZ(int Z);
+	int GetZ();
+	ref CMessageWindowModel GetMessageWindow(int MessageWindowNumber);
+};
+
+class CMessageWindowStatusManager
+{
+public:
+	array@int m_ShowingMessageWindowList;
+
+	CMessageWindowStatusManager();
+	void Clear();
+	void ShowMessageWindow(int MessageWindowNumber);
+	void HideMessageWindow(int MessageWindowNumber);
+	void GetShowingMessageWindowList(ref array@int ShowingMessageWindowList);
+	int GetActiveMessageWindowNumber();
+	bool IsExistActiveMessageWindow();
+};
+
+class CMessageWindow
+{
+public:
+	int m_MessageWindowNumber;
+	bool m_Exist;
+	bool m_Active;
+	int m_OffsetZ;
+	CASColor m_InactiveMultipleColor;
+	bool m_Flat;
+
+	CMessageWindow();
+	~CMessageWindow();
+	void Release();
+	bool IsExist();
+	bool Create(int MessageWindowNumber);
+	int GetMessageWindowNumber();
+	void SetShow(bool Show);
+	bool IsShow();
+	void UpdatePos();
+	void SetOffsetZ(int OffsetZ);
+	int GetOffsetZ();
+	void UpdateZ();
+	void UpdateAlpha();
+	void UpdateMulColor();
+	void UpdateActiveState(bool Active);
+	bool IsFlat();
+	bool IsOverFlatWaitFrame();
+	void BackFlatBeginFrame();
+	void StepFlatFinalFrame();
+	int GetPartsNumber();
+};
+
+class CMessageWindowManager
+{
+public:
+	array@CMessageWindow m_MessageWindowList;
+	bool m_HideAll;
+	bool m_PrevShowSystemButton;
+	bool m_PrevShowKeyWaitAnime;
+
+	CMessageWindowManager();
+	~CMessageWindowManager();
+	void Update(ref CMessageWindowStatusManager StatusManager);
+	int FindMessageWindow(int MessageWindowNumber);
+	void CreateByShowingList(ref array@int ShowingList);
+	void Create(int MessageWindowNumber, int OffsetZ, bool ActiveState);
+	void HideAll();
+	void ShowAll();
+	bool IsShowAll();
+	void ClearByShowingList(ref array@int ShowingList);
+	int GetOffsetZ(int MessageWindowNumber);
+	int GetShowingMaxOffsetZ();
+	void GC();
+	void UpdateAlpha();
+	void UpdateMulColor();
+	void WaitShowFlat();
+	void StepAllFlatFinalFrame();
+};
+
+class CModeCGModel
+{
+public:
+	string m_CGName;
+	string m_AutoModeFlatName;
+	int m_nX;
+	int m_nY;
+	int m_nZ;
+	bool m_bShow;
+	int m_CGBeginNumber;
+	int m_CGCount;
+	int m_CGSwitchTime;
+
+	CModeCGModel();
+	void Clear();
+	string GetCG();
+	string GetFlatName();
+	int GetX();
+	int GetY();
+	int GetZ();
+	bool GetShow();
+	int GetCGBeginNumber();
+	int GetCGCount();
+	int GetCGSwitchTime();
+	void SetCG(string Name);
+	void SetFlatName(string Name);
+	void SetX(int _nX);
+	void SetY(int _nY);
+	void SetZ(int _nZ);
+	void SetShow(bool _bShow);
+	void SetCGBeginNumber(int Number);
+	void SetCGCount(int Count);
+	void SetCGSwitchTime(int Time);
+};
+
+class CModeCGView
+{
+public:
+	CASParts m_ModeView;
+	CModeCGModel m_Info;
+
+	CModeCGView();
+	~CModeCGView();
+	void Create(CModeCGModel Info);
+	void Release();
+	void SetShow(bool Show);
+};
+
+class CBackLogModel
+{
+public:
+	string m_BackCG;
+	int m_nTextX;
+	int m_nTextY;
+	int m_nNumofTextColumn;
+	int m_nNumofTextLine;
+	bool m_bUseTaskBar;
+	int m_nFontSize;
+	array@CASCharSpriteProperty m_TextPropertyList;
+	int m_nCharSpace;
+	int m_nLineSpace;
+	string m_ReturnButtonCG;
+	string m_ReturnButtonUnderCursorCG;
+	string m_ReturnButtonKeyDownCG;
+	string m_ReturnButtonDisableCG;
+	int m_nReturnButtonX;
+	int m_nReturnButtonY;
+	string m_ScrollBoxCG;
+	string m_ScrollBoxUnderCursorCG;
+	string m_ScrollBoxKeyDownCG;
+	int m_nScrollBoxAreaX;
+	int m_nScrollBoxAreaY;
+	int m_nScrollBoxAreaWidth;
+	int m_nScrollBoxAreaHeight;
+	string m_UpButtonCG;
+	string m_UpButtonUnderCursorCG;
+	string m_UpButtonKeyDownCG;
+	string m_UpButtonDisableCG;
+	int m_nUpButtonX;
+	int m_nUpButtonY;
+	string m_DownButtonCG;
+	string m_DownButtonUnderCursorCG;
+	string m_DownButtonKeyDownCG;
+	string m_DownButtonDisableCG;
+	int m_nDownButtonX;
+	int m_nDownButtonY;
+	int m_nDecideSound;
+	int m_nUnderCursorSound;
+	int m_nCancelSound;
+
+	CBackLogModel();
+	void SetDefaultTextPropertyList();
+	void SetBackCG(string BackCG);
+	void SetTextPos(int nX, int nY);
+	void SetNumofTextColumn(int nNumofTextColumn);
+	void SetNumofTextLine(int nNumofTextLine);
+	void SetUseTaskBar(bool bUseTaskBar);
+	void SetFontSize(int nFontSize);
+	void SetCharSpace(int nCharSpace);
+	void SetLineSpace(int nLineSpace);
+	void SetReturnButtonCG(string ReturnButtonCG);
+	void SetReturnButtonUnderCursorCG(string ReturnButtonUnderCursorCG);
+	void SetReturnButtonKeyDownCG(string ReturnButtonKeyDownCG);
+	void SetReturnButtonDisableCG(string ReturnButtonDisableCG);
+	void SetReturnButtonPos(int nX, int nY);
+	void SetScrollBoxCG(string ScrollBoxCG);
+	void SetScrollBoxUnderCursorCG(string ScrollBoxUnderCursorCG);
+	void SetScrollBoxKeyDownCG(string ScrollBoxKeyDownCG);
+	void SetScrollBoxAreaRect(int nX, int nY, int nWidth, int nHeight);
+	void SetUpButtonCG(string UpButtonCG);
+	void SetUpButtonUnderCursorCG(string UpButtonUnderCursorCG);
+	void SetUpButtonKeyDownCG(string UpButtonKeyDownCG);
+	void SetUpButtonDisableCG(string UpButtonDisableCG);
+	void SetUpButtonPos(int nX, int nY);
+	void SetDownButtonCG(string DownButtonCG);
+	void SetDownButtonUnderCursorCG(string DownButtonUnderCursorCG);
+	void SetDownButtonKeyDownCG(string DownButtonKeyDownCG);
+	void SetDownButtonDisableCG(string DownButtonDisableCG);
+	void SetDownButtonPos(int nX, int nY);
+	string GetBackCG();
+	int GetTextX();
+	int GetTextY();
+	int GetNumofTextColumn();
+	int GetNumofTextLine();
+	bool GetUseTaskBar();
+	int GetFontSize();
+	ref CASCharSpriteProperty GetTextProperty(int Type);
+	int GetCharSpace();
+	int GetLineSpace();
+	string GetReturnButtonCG();
+	string GetReturnButtonUnderCursorCG();
+	string GetReturnButtonKeyDownCG();
+	string GetReturnButtonDisableCG();
+	int GetReturnButtonX();
+	int GetReturnButtonY();
+	string GetScrollBoxCG();
+	string GetScrollBoxUnderCursorCG();
+	string GetScrollBoxKeyDownCG();
+	int GetScrollBoxAreaX();
+	int GetScrollBoxAreaY();
+	int GetScrollBoxAreaWidth();
+	int GetScrollBoxAreaHeight();
+	string GetUpButtonCG();
+	string GetUpButtonUnderCursorCG();
+	string GetUpButtonKeyDownCG();
+	string GetUpButtonDisableCG();
+	int GetUpButtonX();
+	int GetUpButtonY();
+	string GetDownButtonCG();
+	string GetDownButtonUnderCursorCG();
+	string GetDownButtonKeyDownCG();
+	string GetDownButtonDisableCG();
+	int GetDownButtonX();
+	int GetDownButtonY();
+	int GetFontHeight();
+	void SetDecideSound(int nSound);
+	void SetUnderCursorSound(int nSound);
+	void SetCancelSound(int nSound);
+	int GetDecideSound();
+	int GetUnderCursorSound();
+	int GetCancelSound();
+};
+
+class SBackLogViewText
+{
+public:
+	string m_Text;
+	bool m_Separator;
+	array@int VoiceNumberList;
+};
+
+class CBackLogView
+{
+public:
+	CBackLogModel m_BackLogModel;
+	array@SBackLogViewText m_LogTextList;
+	int m_ButtonStartDelay;
+	int m_LineSpace;
+	int m_LinesPerPage;
+	int m_ScrollTotalLines;
+	CASParts m_BackParts;
+	array@CASParts m_TextPartsList;
+	array@CASRect m_VoiceDecideRectList;
+	bool m_Redraw;
+	array@CASParts m_ExitButtonList;
+	int m_ExitButtonState;
+	CASClick m_ExitButtonLButtonClick;
+	array@CASParts m_ScrollBoxPartsList;
+	int m_ScrollBoxState;
+	bool m_ScrollBoxShow;
+	int m_OffsetInScrollBoxY;
+	int m_PrevDragScrollBoxMouseY;
+	array@CASParts m_UpButtonPartsList;
+	int m_UpButtonState;
+	array@CASParts m_DownButtonPartsList;
+	int m_DownButtonState;
+	bool m_Playing;
+	array@int m_PlayingVoiceNumberList;
+	int m_PlayingVoiceIndex;
+	bool m_ShiftCKeyDown;
+
+	CBackLogView();
+	~CBackLogView();
+	void Run(CBackLogModel BackLogModel);
+	void prepare();
+	void CreateBackSprite();
+	void CreateReturnButtonSprite();
+	void CreateScrollBoxSprite();
+	void CreateUpButtonSprite();
+	void CreateDownButtonSprite();
+	void GetIndexRange(int Index, ref int Begin, ref int End);
+	void CreateTextSprite(ref CASParts TextSprite, ref CASRect VoiceDecideRect, int MsgLogIndex, int X, int Y, int CurBegin, int CurEnd, int CurVoice, int PlayingBegin, int PlayingEnd, int PlayingVoice, ref int Height);
+	void Draw(int New, int Old, int CurrentIndex, int nVoicePlayingIndex, bool bVoicePlaying);
+	bool PlayVoice(ref array@int VoiceNumberList);
+	bool CheckPlayingVoice();
+	void view();
+	bool IsScrollBoxAreaUnderCursor();
+	void BeginDragScrollBox();
+	void UpdateScrollPosByMousePos(ref float ViewTextLine);
+	void UpdateScrollBoxPosByViewTextLine(float ViewTextLine);
+	void UpdateScrollBox(bool Dragging, bool LButtonDown);
+	bool IsMouseCursorInRectScrollBox();
+	void SetShowScrollBox(bool Show);
+	int GetButtonState(bool OnCursor, bool LButtonDown);
+	bool CheckReturnButton(bool Dragging);
+	bool IsMouseCursorInRectExitButton();
+	bool IsUpButtonUnderCursor();
+	void UpdateUpButton(int ViewTextLine, bool Dragging, bool LButtonDown);
+	bool IsDownButtonUnderCursor();
+	void UpdateDownButton(int ViewTextLine, bool Dragging, bool LButtonDown);
+	int get_index_at_mouse_pos(int Top);
+	void CreateBacklogTextList();
+	void AddBacklogText(int ADVLog);
+	SBackLogViewText GetBacklog(int Num);
+	void PlayDecideSound();
+	void PlayOnCursorSound();
+	void PlayCancelSound();
+	void ClipScrollPos(ref float ScrollPos);
+	void CheckShiftCKey(int ViewTextLine);
+	void DebugOutputMessageText(int ViewTextLineIndex);
+	void DebugMessageTextToClipboard(int ViewTextLineIndex);
+};
+
+class CASBackSceneDocument
+{
+public:
+	array@_CButtonCgInfo _m_bt[6];
+	array@_CButtonCgInfo@2 m_ButtonListByMessageWindow;
+	string _m_caption_text;
+	CASPos _m_caption_text_pos;
+	CASPos _m_caption_numeral_pos;
+	CASPos _m_caption_max_numeral_pos;
+	sact_text_metrics_t _m_caption_text_tm;
+	sact_text_metrics_t _m_caption_numeral_tm;
+	array@CASPos m_CaptionNumberPosListByMessageWindow;
+	array@CASPos m_CaptionMaxNumberPosListByMessageWindow;
+	int m_nPageNumberCharSpace;
+	string m_SceneSliderBackCG;
+	CASPos m_SceneSliderBackPos;
+	string m_SceneSliderBoxCG;
+	string m_SceneSliderBoxOnCursorCG;
+	string m_SceneSliderBoxKeyDownCG;
+	string m_SceneSliderBoxDisableCG;
+	int m_SceneSliderBoxClickSE;
+	int m_SceneSliderBoxOnCursorSE;
+	CASRect m_SceneSliderRect;
+	CASRect m_SceneSliderShowRect;
+
+	void _SetCaptionTextPos(int _x, int _y);
+	void _SetCaptionText(string _text);
+	void _SetCaptionNumeralTM(sact_text_metrics_t _tm);
+	void _SetCaptionTextTM(sact_text_metrics_t _tm);
+	string _GetCaptionText();
+	CASPos _GetCaptionTextPos();
+	sact_text_metrics_t _GetCaptionNumeralTM();
+	sact_text_metrics_t _GetCaptionTextTM();
+	CASBackSceneDocument();
+	void _SetBtn(int _id, int _x, int _y, int _z, string _cg1, string _cg2, string KeyDownCGName, string DisableCGName);
+	void SetButtonByMessageWindow(int MessageWindowNumber, int ButtonIndex, int X, int Y, int Z, string CGName, string OnCursorCGName, string KeyDownCGName, string DisableCGName);
+	void _SetBtnSound(int _id, int _click, int _cursor);
+	_CButtonCgInfo _GetButton(int _id);
+	_CButtonCgInfo GetButtonByMessageWindow(int MessageWindowNumber, int ButtonIndex);
+	bool _asserte_button_id(int _id);
+	void _SetCaptionNumeralPos(int _x, int _y);
+	void _SetCaptionMaxNumeralPos(int _x, int _y);
+	void SetCaptionNumeralPosByMessageWindow(int MessageWindowNumber, int X, int Y);
+	void SetCaptionMaxNumeralPosByMessageWindow(int MessageWindowNumber, int X, int Y);
+	CASPos GetCaptionNumeralPosByMessageWindow(int MessageWindowNumber);
+	CASPos GetCaptionMaxNumeralPosByMessageWindow(int MessageWindowNumber);
+	void SetPageNumberCharSpace(int nCharSpace);
+	int GetPageNumberCharSpace();
+	void SetSceneSliderBackCG(string CG);
+	void SetSceneSliderBackPos(CASPos Pos);
+	void SetSceneSliderBoxCG(string CG, string OnCursorCG, string KeyDownCG, string DisableCG);
+	void SetSceneSliderRect(CASRect Rect);
+	void SetSceneSliderShowRect(CASRect Rect);
+	string GetSceneSliderBackCG();
+	CASPos GetSceneSliderBackPos();
+	string GetSceneSliderBoxCG();
+	string GetSceneSliderBoxOnCursorCG();
+	string GetSceneSliderBoxKeyDownCG();
+	string GetSceneSliderBoxDisableCG();
+	void SetSceneSliderBoxSE(int ClickSE, int OnCursorSE);
+	int GetSceneSliderBoxClickSE();
+	int GetSceneSliderBoxOnCursorSE();
+	CASRect GetSceneSliderRect();
+	CASRect GetSceneSliderShowRect();
+};
+
+class CASBackSceneButton
+{
+public:
+	array@CASParts m_PartsList;
+	bool m_bKeyDown;
+	bool m_bOnCursor;
+	bool m_bEnable;
+	bool m_Show;
+	int m_State;
+
+	CASBackSceneButton();
+	void CreateCGButton(string KeyUpCG, string KeyDownCG, string KeyUpOnCursorCG, string KeyDownOnCursorCG, string DisableCG);
+	void Release();
+	void SetPos(int nX, int nY);
+	void SetZ(int nZ);
+	void SetZByBaseZ(int nZ, int BaseZ);
+	void SetShow(bool Show);
+	void SetEnable(bool bEnable);
+	bool IsEnable();
+	int GetWidth();
+	int GetHeight();
+	void UpdateState(bool CheckOnCursor);
+	bool IsMouseCursorIn();
+	bool IsMouseCursorInRect();
+};
+
+class CASBackSceneVerticalSlider
+{
+public:
+	array@CASParts m_BoxPartsList;
+	int m_OffsetBoxY;
+	CASRect m_SliderRect;
+	bool m_bDragging;
+	bool m_LButtonDown;
+	int m_State;
+	bool m_Show;
+	int m_ClickSE;
+	int m_OnCursorSE;
+
+	CASBackSceneVerticalSlider();
+	void Init();
+	void Release();
+	void SetRect(int nX, int nY, int nWidth, int nHeight);
+	void CreateSampleSprite(int nWidth, int nHeight);
+	void SetCG(string CG, string OnCursorCG, string KeyDownCG, string DisableCG);
+	void SetZ(int nZ);
+	void SetZByBaseZ(int nZ, int BaseZ);
+	void SetShow(bool bShow);
+	void SetBoxPosByRate(float fRate);
+	float GetRateByBoxPos();
+	void CreateConstructionBoxSprite(ref CASParts ConstructionSprite, int nWidth, int nHeight, int State);
+	void UpdateState();
+	bool CheckBeginDrag();
+	void UpdateDraggingBox();
+	CASRect GetRect();
+	bool IsDragging();
+	bool IsMouseCursorInRect();
+	void SetClickSE(int ClickSE);
+	void SetOnCursorSE(int OnCursorSE);
+};
+
+class CASBackSceneView
+{
+public:
+	int m_Index;
+	画面保管_t m_SaveScene;
+	bool m_Exit;
+	int m_CurrentButtonID;
+	string m_CaptionText;
+	string m_CaptionNumeral;
+	bool m_PrevShowMsgKeyWaitAnime;
+	bool m_IsKeyPress;
+	CASTimer m_Timer;
+	CASParts m_PageNumberTextParts;
+	CASParts m_MaxPageNumberTextParts;
+	array@CASBackSceneButton m_ButtonList;
+	CASBackSceneVerticalSlider m_SceneSlider;
+	CASParts m_SceneSliderBackParts;
+	float m_SceneSliderRate;
+	CASRect m_SceneSliderShowRect;
+	CASClick m_LButtonPress;
+	CASClick m_LButtonClick;
+	CASClick m_RButtonClick;
+	CASClick m_EscapeKeyClick;
+	CASClick m_SpaceKeyClick;
+	CASClick m_BackSpaceKeyClick;
+	CASClick m_ZKeyClick;
+	CASClick m_HomeKeyPress;
+	CASClick m_EndKeyPress;
+	CASClick m_UpKeyPress;
+	CASClick mDownKeyPress;
+	CASClick m_PageUpKeyPress;
+	CASClick m_PageDownKeyPress;
+	CASClick m_HomeKeyClick;
+	CASClick m_EndKeyClick;
+	CASClick m_UpKeyClick;
+	CASClick mDownKeyClick;
+	CASClick m_PageUpKeyClick;
+	CASClick m_PageDownKeyClick;
+	CASJoyClickAssignedKey m_JoyPrevBackScene;
+	CASJoyClickAssignedKey m_JoyNextBackScene;
+	CASJoyClickAssignedKey m_JoyPressPrevBackScene;
+	CASJoyClickAssignedKey m_JoyPressNextBackScene;
+	CASJoyClickAssignedKey m_JoyPrevBackSceneClick;
+	CASJoyClickAssignedKey m_JoyNextBackSceneClick;
+	CASJoyClickAssignedKey m_JoyPressPrevBackSceneClick;
+	CASJoyClickAssignedKey m_JoyPressNextBackSceneClick;
+	CASJoyClickAssignedKey m_JoyHideWindow;
+	CASJoyClickAssignedKey m_JoyCancel;
+	CASJoyClickAssignedKey m_JoyReplayVoice;
+	bool m_ShiftCKeyDown;
+	int m_Focus;
+
+	CASBackSceneView();
+	void Execute();
+	void Open();
+	void Close();
+	void Loop();
+	void Update();
+	void CreateUI(int MessageWindowNumber);
+	void ReleaseUI();
+	void CreateSceneSliderBackSprite();
+	void CreateSceneSlider();
+	void UpdateSceneSlider();
+	void DoNext(int PrevCount);
+	void DoPrev(int PrevCount);
+	void CreateButton(int MessageWindowNumber);
+	void UpdateButton();
+	void CheckLButtonClick();
+	void DoExit();
+	void DoPlayVoice();
+	void Redraw();
+	void SetSceneIndex(int _index);
+	void UpdatePageNumberTextParts(int MessageWindowNumber);
+	void UpdateMaxPageNumberTextParts(int MessageWindowNumber);
+	int GetSceneIndex();
+	void PlayClickSound(int _id);
+	void PlayCursorSound(int _id);
+	float GetSceneSliderRateByIndex();
+	void UpdateSceneSliderRateByIndex();
+	void UpdateIndexBySceneSliderRate();
+	void HideMessageWindow();
+};
+
+class CConfigUI
+{
+public:
+	int m_SelectTabNumber;
+	int m_SelectEndButtonNumber;
+	int m_ButtonMessageSpeed;
+	CConfigUIMessageSpeedTab m_TabMessageSpeed;
+	int m_ButtonMessage;
+	CConfigUIMessageTab m_TabMessage;
+	int m_ButtonMessageWindow;
+	CConfigUIMessageWindowTab m_TabMessageWindow;
+	int m_ButtonSound;
+	CConfigUISoundTab m_TabSound;
+	int m_ButtonInput;
+	CConfigUIInputTab m_TabInput;
+	int m_ButtonWindow;
+	CConfigUIWindowTab m_TabWindow;
+	int m_ButtonNetwork;
+	CConfigUINetworkTab m_TabNetwork;
+	int m_Button3D;
+	CConfigUI3DTab m_Tab3D;
+	int m_ButtonDebug;
+	CConfigUIDebugTab m_TabDebug;
+	int m_ButtonEnd;
+	int m_ButtonTitle;
+	int m_ButtonGame;
+
+	CConfigUI();
+	~CConfigUI();
+	void CreateUI();
+	void Release();
+	bool IsEnd();
+	bool IsBackTitle();
+	bool IsExit();
+	void CreateMessageSpeed();
+	void CreateMessage();
+	void CreateMessageWindow();
+	void CreateSound();
+	void CreateInput();
+	void CreateWindow();
+	void CreateNetwork();
+	void Create3D();
+	void CreateDebug();
+	void CreateEnd();
+	void CreateTitle();
+	void CreateGame();
+	void ClickTabEvent(int PartsNumber, int MouseX, int MouseY);
+	void ClickEndButtonEvent(int PartsNumber, int MouseX, int MouseY);
+	void CreateTab(int PartsNumber);
+	void ReleaseTab(int PartsNumber);
+};
+
+class CConfigUI3DTab
+{
+public:
+	int m_BG;
+	int m_MainList;
+	int m_SubList;
+	int m_TextBG;
+	int m_TextLabel;
+	array@int m_SelectList;
+
+	CConfigUI3DTab();
+	~CConfigUI3DTab();
+	void Create();
+	void Release();
+	void CreateUI();
+	void CreateBG();
+	void CreateMainList();
+	void CreateSubList();
+	void CreateTextBG();
+	void CreateTextLabel();
+	void SelectedMainList(int Number, int Selected);
+	void SelectedSubList(int Number, int Selected);
+	void LoadSetting();
+	void SaveSetting();
+	void SetReignSetting(int nType, int nSelect);
+};
+
+class CConfigUIDebugTab
+{
+public:
+	int m_BG;
+	int m_ShowFPSCheckBox;
+	int m_Direct3DModeCheckBox;
+	int m_AntiAliasingLabel;
+	CPartsComboBox m_AntiAliasingComboBox;
+	int m_ShowMemoryCheckBox;
+	int m_ShowFillCheckBox;
+	int m_ShowVoicePlayingCheckBox;
+	int m_ShowGimicSEPlayingCheckBox;
+	int m_ShowBackVoicePlayingCheckBox;
+	int m_ShowVideoMemorySizeCheckBox;
+
+	CConfigUIDebugTab();
+	~CConfigUIDebugTab();
+	void Create();
+	void Release();
+	void CreateUI();
+	void CreateBG();
+	void CreateShowFPSCheckBox();
+	void CreateDirect3DModeCheckBox();
+	void CreateAntiAliasingLabel();
+	void CreateAntiAliasingComboBox();
+	void CreateShowMemoryCheckBox();
+	void CreateShowFillCheckBox();
+	void CreateShowVoicePlayingCheckBox();
+	void CreateShowGimicSEPlayingCheckBox();
+	void CreateShowBackVoicePlayingCheckBox();
+	void CreateShowVideoMemorySizeCheckBox();
+	void ChangedCheckShowFPS(int Number);
+	void ChangedCheckDirect3DMode(int Number);
+	void SelectedAntiAliasing(int Number, int Selected);
+	void ChangedCheckShowMemory(int Number);
+	void ChangedCheckShowFill(int Number);
+	void ChangedCheckShowVoicePlaying(int Number);
+	void ChangedCheckShowGimicSEPlaying(int Number);
+	void ChangedCheckShowBackVoicePlaying(int Number);
+	void ChangedCheckShowVideoMemorySize(int Number);
+};
+
+class CConfigUIInputTab
+{
+public:
+	int m_BG;
+	int m_ShowMouseCursorLabel;
+	int m_HideUnmoveMouseCursorCheckBox;
+	int m_HideKeyOrJoypadInputMouseCursorCheckBox;
+	int m_HideStepMessageMouseCursorCheckBox;
+	int m_UpRollMouseWheelLabel;
+	CPartsRadioButton m_UpRollMouseWheelRadioButton;
+	int m_BackLogCheckBox;
+	int m_BackSceneCheckBox;
+	int m_QuickSaveConfirmCheckBox;
+	int m_QuickLoadConfirmCheckBox;
+	int m_SaveConfirmCheckBox;
+	int m_LoadConfirmCheckBox;
+	int m_BackToTitleConfirmCheckBox;
+	int m_CloseGameConfirmCheckBox;
+	int m_MoveMouseCursorSpeedLabel;
+	CPartsComboBox m_MoveMouseCursorSpeedComboBox;
+
+	CConfigUIInputTab();
+	~CConfigUIInputTab();
+	void Create();
+	void Release();
+	void CreateUI();
+	void CreateBG();
+	void CreateShowMouseCursorLabel();
+	void CreateHideUnmoveMouseCursorCheckBox();
+	void CreateHideKeyOrJoypadInputMouseCursorCheckBox();
+	void CreateHideStepMessageMouseCursorCheckBox();
+	void CreateUpRollMouseWheelLabel();
+	void CreateBackLogCheckBox();
+	void CreateBackSceneCheckBox();
+	void CreateQuickSaveConfirmCheckBox();
+	void CreateQuickLoadConfirmCheckBox();
+	void CreateSaveConfirmCheckBox();
+	void CreateLoadConfirmCheckBox();
+	void CreateBackToTitleConfirmCheckBox();
+	void CreateCloseGameConfirmCheckBox();
+	void CreateMoveMouseCursorSpeedLabel();
+	void CreateMoveMouseCursorSpeedComboBox();
+	void ChangedCheckHideUnmoveMouseCursor(int Number);
+	void ChangedCheckHideKeyOrJoypadInputMouseCursor(int Number);
+	void ChangedCheckHideStepMessageMouseCursor(int Number);
+	void ChangedCheckBackLog(int Number);
+	void ChangedCheckBackScene(int Number);
+	void ChangedCheckQuickSaveConfirm(int Number);
+	void ChangedCheckQuickLoadConfirm(int Number);
+	void ChangedCheckSaveConfirm(int Number);
+	void ChangedCheckLoadConfirm(int Number);
+	void ChangedCheckBackToTitleConfirm(int Number);
+	void ChangedCheckCloseGameConfirm(int Number);
+	void SelectedMoveMouseCursorSpeed(int Number, int Selected);
+};
+
+class CConfigUIMessageSpeedTab
+{
+public:
+	int m_BG;
+	int m_MessageSpeedLabel;
+	CConfigUISlider m_MessageSpeedSlider;
+	int m_AutoModeWaitTimeLabel;
+	CConfigUISlider m_AutoModeWaitTimeSlider;
+	int m_ReadTextWaitTimeLabel;
+	CConfigUISlider m_ReadTextWaitTimeSlider;
+	int m_FrameSkipCheckBox;
+	int m_SampleCheckBox;
+	int m_SampleLabel;
+	int m_SampleTimer;
+
+	CConfigUIMessageSpeedTab();
+	~CConfigUIMessageSpeedTab();
+	void Create();
+	void Release();
+	void CreateUI();
+	void CreateBG();
+	void CreateMessageSpeed();
+	void CreateAutoModeWaitTime();
+	void CreateReadTextWaitTime();
+	void CreateFrameSkip();
+	void CreateSample();
+	void UpdateSampleMessage(int PassedTime);
+	void ResetRateMessageSpeed(int Number, int MouseX, int MouseY);
+	void ResetRateAutoModeWaitTime(int Number, int MouseX, int MouseY);
+	void ResetRateReadTextWaitTime(int Number, int MouseX, int MouseY);
+	void ChangedRateMessageSpeed(int Number);
+	void ChangedRateAutoModeWaitTime(int Number);
+	void ChangedRateReadTextWaitTime(int Number);
+	void ChangedCheckFrameSkip(int Number);
+	void ChangedCheckSample(int Number);
+};
+
+class CConfigUIMessageTab
+{
+public:
+	int m_BG;
+	int m_SkipModeLabel;
+	int m_ReleaseSkipModeByClickCheckBox;
+	int m_ReleaseSkipModeByShowChoicesCheckBox;
+	int m_ReleaseSkipModeByReadMessageCheckBox;
+	int m_SkipFullMessageCheckBox;
+	int m_AutoModeLabel;
+	int m_ReleaseAutoModeByClickCheckBox;
+	int m_ReleaseAutoModeByShowChoicesCheckBox;
+	int m_StopScreensaverByAutoModeCheckBox;
+	int m_EtcLabel;
+	int m_AnimationWindowCheckBox;
+	int m_ReadMessageTextColorLabel;
+	int m_ReadMessageTextColorSampleLabel;
+	array@int m_ReadTextColorButtonList;
+	int m_BackMessageTextColorLabel;
+	int m_BackMessageTextColorSampleLabel;
+	array@int m_BackTextColorButtonList;
+
+	CConfigUIMessageTab();
+	~CConfigUIMessageTab();
+	void Create();
+	void Release();
+	void CreateUI();
+	void CreateBG();
+	void CreateSkipMode();
+	void CreateAutoMode();
+	void CreateEtc();
+	void CreateReadMessageTextColor();
+	void CreateBackMessageTextColor();
+	void ChangedCheckReleaseSkipModeByClick(int Number);
+	void ChangedCheckReleaseSkipModeByShowChoices(int Number);
+	void ChangedCheckSkipFullMessage(int Number);
+	void ChangedCheckReleaseSkipModeByReadMessage(int Number);
+	void ChangedCheckReleaseAutoModeByClick(int Number);
+	void ChangedCheckReleaseAutoModeByShowChoices(int Number);
+	void ChangedCheckStopScreensaverByAutoMode(int Number);
+	void ChangedCheckAnimationWindow(int Number);
+	void ClickReadTextColorButtonEvent(int PartsNumber, int MouseX, int MouseY);
+	void ClickBackTextColorButtonEvent(int PartsNumber, int MouseX, int MouseY);
+};
+
+class CConfigUIMessageWindowTab
+{
+public:
+	int m_BG;
+	int m_MulColorLabel;
+	CConfigUISlider m_MulColorSlider;
+	int m_AlphaRateLabel;
+	CConfigUISlider m_AlphaRateSlider;
+
+	CConfigUIMessageWindowTab();
+	~CConfigUIMessageWindowTab();
+	void Create();
+	void Release();
+	void CreateUI();
+	void CreateBG();
+	void CreateMulColor();
+	void CreateAlphaRate();
+	void ResetRateMulColor(int Number, int MouseX, int MouseY);
+	void ResetRateAlphaRate(int Number, int MouseX, int MouseY);
+	void ChangedRateMulColor(int Number);
+	void ChangedRateAlphaRate(int Number);
+};
+
+class CConfigUINetworkTab
+{
+public:
+	int m_BG;
+	int m_AccessNetworkCheckBox;
+
+	CConfigUINetworkTab();
+	~CConfigUINetworkTab();
+	void Create();
+	void Release();
+	void CreateUI();
+	void CreateBG();
+	void CreateAccessNetwork();
+	void ChangedCheckAccessNetwork(int Number);
+};
+
+class SConfigUIVolumeData
+{
+public:
+	int Group;
+	int LabelNumber;
+	int CheckNumber;
+	CConfigUISlider Slider;
+};
+
+class CConfigUISoundTab
+{
+public:
+	int m_BG;
+	array@SConfigUIVolumeData m_VolumeContentList;
+	int m_StopVoiceByStatusCheckBox;
+	int m_BGMFadeByVoiceCheckBox;
+	int m_MuteByInactiveWindowCheckBox;
+
+	CConfigUISoundTab();
+	~CConfigUISoundTab();
+	void Create();
+	void Release();
+	void CreateUI();
+	void CreateBG();
+	void CreateVolumeContent();
+	void CreateStopVoiceByStatus();
+	void CreateBGMFadeByVoice();
+	void CreateMuteByInactiveWindow();
+	void ChangedMute(int Number);
+	void ResetVolumeRate(int Number, int MouseX, int MouseY);
+	void ChangedVolumeRate(int Number);
+	void ChangedCheckStopVoiceByStatus(int Number);
+	void ChangedCheckBGMFadeByVoice(int Number);
+	void ChangedCheckMuteByInactiveWindow(int Number);
+};
+
+class CConfigUIWindowTab
+{
+public:
+	int m_BG;
+	int m_WindowModeCheckBox;
+	int m_FullModeCheckBox;
+	CPartsRadioButton m_WindowModeRadioButton;
+	int m_FullModeRateLabel;
+	int m_DefaultRateCheckBox;
+	int m_FixRateCheckBox;
+	CPartsRadioButton m_FullModeRateRadioButton;
+	int m_ScalingTypeLabel;
+	int m_DefaultScalingCheckBox;
+	int m_BicubicScalingCheckBox;
+	CPartsRadioButton m_ScalingTypeRadioButton;
+	int m_WaitVSyncCheckBox;
+	int m_RecordPosSizeCheckBox;
+	int m_MinimizeByFullScreenInactiveCheckBox;
+	int m_SleepByInactiveCheckBox;
+	int m_OverFrameRateSleepCheckBox;
+	int m_TextBG;
+	int m_TextLabel;
+	int m_ResetWindowButton;
+
+	CConfigUIWindowTab();
+	~CConfigUIWindowTab();
+	void Create();
+	void Release();
+	void CreateUI();
+	void CreateBG();
+	void CreateWindowModeCheckBox();
+	void CreateFullModeCheckBox();
+	void CreateFullModeRateLabel();
+	void CreateDefaultRateCheckBox();
+	void CreateFixRateCheckBox();
+	void CreateScalingTypeLabel();
+	void CreateDefaultScalingCheckBox();
+	void CreateBicubicScalingCheckBox();
+	void CreateWaitVSyncCheckBox();
+	void CreateRecordPosSizeCheckBox();
+	void CreateMinimizeByFullScreenInactiveCheckBox();
+	void CreateSleepByInactiveCheckBox();
+	void CreateOverFrameRateSleepCheckBox();
+	void CreateTextBG();
+	void CreateTextLabel();
+	void CreateResetButton();
+	void ChangedCheckWindowMode(int Number);
+	void ChangedCheckFullMode(int Number);
+	void UpdateWindowMode(int PassedTime);
+	void ChangedCheckDefaultRate(int Number);
+	void ChangedCheckFixRate(int Number);
+	void ChangedCheckDefaultScaling(int Number);
+	void ChangedCheckBicubicScaling(int Number);
+	void ChangedCheckWaitVSync(int Number);
+	void ChangedCheckRecordPosSize(int Number);
+	void ChangedCheckMinimizeByFullScreenInactive(int Number);
+	void ChangedCheckSleepByInactive(int Number);
+	void ChangedCheckOverFrameRateSleep(int Number);
+	void MouseEnter(int Number, int MouseX, int MouseY);
+	void MouseLeave(int Number, int MouseX, int MouseY);
+	void MouseClick(int Number, int MouseX, int MouseY);
+};
+
+class CConfigUISlider
+{
+public:
+	int m_SliderNumber;
+	int m_InitializeButton;
+	int m_ScrollBar;
+	DG_ChangedHandler m_ChangedRateEvent;
+	DG_MouseClickHandler m_InitializeButtonClickEvent;
+
+	CConfigUISlider();
+	~CConfigUISlider();
+	bool IsExist();
+	void Create();
+	void Release();
+	void SetButtonPos(int PosX, int PosY);
+	void SetButtonZ(int PosZ);
+	int GetButtonX();
+	int GetButtonY();
+	int GetButtonZ();
+	void SetButtonSize(int Width, int Height);
+	int GetButtonWidth();
+	int GetButtonHeight();
+	void SetButtonShow(bool Show);
+	bool IsButtonShow();
+	void SetButtonDrag(bool Drag);
+	bool IsButtonDrag();
+	void SetButtonEnable(bool Enable);
+	bool IsButtonEnable();
+	void SetButtonPixelDecide(bool PixelDecide);
+	bool IsButtonPixelDecide();
+	void SetButtonColor(int Red, int Green, int Blue);
+	int GetButtonR();
+	int GetButtonG();
+	int GetButtonB();
+	void SetButtonFontProperty(ref CASCharSpriteProperty FontProperty);
+	void GetButtonFontProperty(ref CASCharSpriteProperty FontProperty);
+	void SetButtonOnCursorSoundNumber(int SoundNo);
+	void SetButtonClickSoundNumber(int SoundNo);
+	int GetButtonOnCursorSoundNumber();
+	int GetButtonClickSoundNumber();
+	void SetButtonCGName(string CGName);
+	string GetButtonCGName();
+	void SetButtonText(string Text);
+	string GetButtonText();
+	void SetHScrollbarPos(int PosX, int PosY);
+	void SetHScrollbarZ(int PosZ);
+	int GetHScrollbarX();
+	int GetHScrollbarY();
+	int GetHScrollbarZ();
+	void SetHScrollbarShow(bool Show);
+	bool IsHScrollbarShow();
+	void SetHScrollbarOnCursorSoundNumber(int Number);
+	void SetHScrollbarClickSoundNumber(int Number);
+	int GetHScrollbarOnCursorSoundNumber();
+	int GetHScrollbarClickSoundNumber();
+	void SetHScrollbarWidth(int Width);
+	void SetHScrollbarHeight(int Height);
+	void SetHScrollbarLeftWidth(int Width);
+	void SetHScrollbarRightWidth(int Width);
+	int GetHScrollbarWidth();
+	int GetHScrollbarHeight();
+	int GetHScrollbarLeftWidth();
+	int GetHScrollbarRightWidth();
+	void SetHScrollbarTotalSize(int TotalSize);
+	void SetHScrollbarViewSize(int ViewSize);
+	void SetHScrollbarScrollPos(int ScrollPos);
+	void SetHScrollbarMoveSizeByButton(int Size);
+	int GetHScrollbarTotalSize();
+	int GetHScrollbarViewSize();
+	int GetHScrollbarScrollPos();
+	int GetHScrollbarMoveSizeByButton();
+	void SetHScrollbarCGName(string CGName);
+	string GetHScrollbarCGName();
+	float GetRate();
+	void SetRate(float Rate);
+	void SetEnable(bool Enable);
+	int GetPartsNumber();
+	void AddInitializeButtonClickEvent(DG_MouseClickHandler DelegateObject);
+	void AddChangeRateEvent(DG_ChangedHandler DelegateObject);
+	void InitializeButtonClickEvent(int PartsNumber, int MouseX, int MouseY);
+	void ScrollEvent(int PartsNumber, int ScrollPos);
+};
+
+class CAS3DSetting
+{
+public:
+	int m_RenderMode;
+	int m_LightingMode;
+	int m_AntiAliasingMode;
+	int m_Edge;
+	int m_ShadowMode;
+	int m_ShadowMapResolutionLevel;
+	int m_BumpMode;
+	int m_BloomMode;
+	int m_GlareMode;
+	int m_FogMode;
+	int m_SpecularMode;
+	int m_LightMapMode;
+	int m_SoftFogEdgeMode;
+	int m_SSAOMode;
+	int m_VertexBlendMode;
+	int m_TextureResolutionLevel;
+	int m_TextureFilterMode;
+	int m_DOFMode;
+
+	CAS3DSetting();
+	bool Load();
+	bool Save();
+	bool ExistReignSaveFile();
+	string GetSaveFileName();
+	int GetRenderMode();
+	int GetLightingMode();
+	int GetAntiAliasingMode();
+	int GetEdge();
+	int GetShadowMode();
+	int GetShadowMapResolutionLevel();
+	int GetBumpMode();
+	int GetBloomMode();
+	int GetGlareMode();
+	int GetFogMode();
+	int GetSpecularMode();
+	int GetLightMapMode();
+	int GetSoftFogEdgeMode();
+	int GetSSAOMode();
+	int GetVertexBlendMode();
+	int GetTextureResolutionLevel();
+	int GetTextureFilterMode();
+	int GetDOFMode();
+	void SetRenderMode(int nRenderMode);
+	void SetLightingMode(int LightingMode);
+	void SetAntiAliasingMode(int AntiAliasingMode);
+	void SetEdge(int Edge);
+	void SetShadowMode(int nShadowMode);
+	void SetShadowMapResolutionLevel(int nShadowMapResolutionLevel);
+	void SetBumpMode(int nBumpMode);
+	void SetBloomMode(int nBloomMode);
+	void SetGlareMode(int nGlareMode);
+	void SetFogMode(int nFogMode);
+	void SetSpecularMode(int nSpecularMode);
+	void SetLightMapMode(int nLightMapMode);
+	void SetSoftFogEdgeMode(int nSoftFogEdgeMode);
+	void SetSSAOMode(int nSSAOMode);
+	void SetVertexBlendMode(int nVertexBlendMode);
+	void SetTextureResolutionLevel(int nTextureResolutionLevel);
+	void SetTextureFilterMode(int nTextureFilterMode);
+	void SetDOFMode(int DOFMode);
+};
+
+class CMenuViewItem
+{
+public:
+	int m_nX;
+	int m_nY;
+	int m_nAreaWidth;
+	int m_nAreaHeight;
+	bool m_bEnableSel;
+	CASParts m_TextParts;
+	CASParts m_SelectedTextParts;
+	CASParts m_SeparatorParts;
+	CASParts m_CursorParts;
+
+	bool _IsEnableSel();
+	CMenuViewItem();
+	~CMenuViewItem();
+	void Release();
+	void SetShow(bool bShow);
+	bool _IsMousePtIn();
+	void SetSelectedState(bool bSelected);
+	void _Create(ref 選択肢_t _data, ref sact_text_metrics_t tm1, ref sact_text_metrics_t tm2, ref sact_text_metrics_t tm3, float fBoldWeight, float fSelectedBoldWeight, float fUnselectableBoldWeight, int nCharSpace, int nSelectedCharSpace, int nUnselectableCharSpace, int _z, int _BaseZ, int _x, int _y, int _w);
+	void CreateTextParts(int nX, int nY, int nZ, int nBaseZ, int nWidth, int nHeight, ref 選択肢_t MenuInfo, ref sact_text_metrics_t TextMetrics, ref sact_text_metrics_t SelectedTextMetrics, ref sact_text_metrics_t UnselectableTextMetrics, float fBoldWeight, float fSelectedBoldWeight, float fUnselectableBoldWeight, int nCharSpace, int nSelectedCharSpace, int nUnselectableCharSpace, bool bEnableSel);
+	void CreateTextPartsItem(ref CASParts TextParts, int nX, int nY, int nZ, int nBaseZ, int nWidth, int nHeight, ref 選択肢_t MenuInfo, ref sact_text_metrics_t TextMetrics, float fBoldWeight, int nCharSpace);
+	void CreateSeparator(int nX, int nY, int nZ, int nBaseZ, int nWidth, int nHeight, int nR, int nG, int nB);
+	void CreateCursor(int nX, int nY, int nZ, int nBaseZ, int nWidth, int nHeight, int nCursorType, int nCursorR, int nCursorG, int nCursorB, int nCursorA);
+	int GetX();
+	int GetY();
+};
+
+class CMenuView
+{
+public:
+	bool _m_bCreate;
+	SYS_選択_result_t _m_result;
+	int _m_ox;
+	int _m_oy;
+	int _m_total_w;
+	int _m_total_h;
+	CASParts m_BackParts;
+	CASParts m_CGCursorParts;
+	array@CMenuViewItem _m_item;
+	int _m_sel_item;
+	bool _m_click;
+	bool _m_cancel_click;
+	int _m_move;
+	bool _m_exit;
+	sact_text_metrics_t _m_tm1;
+	sact_text_metrics_t _m_tm2;
+	sact_text_metrics_t _m_tm3;
+	float m_fBoldWeight;
+	float m_fSelectedBoldWeight;
+	float m_fUnselectableBoldWeight;
+	int m_nCharSpace;
+	int m_nSelectedCharSpace;
+	int m_nUnselectableCharSpace;
+	CASClick m_LButtonClick;
+	CASClick m_EnterKeyClick;
+	CASClick m_RButtonClick;
+	CASClick m_SpaceKeyClick;
+	CASClick m_EscapeKeyClick;
+	CASClick m_PageUpKeyClick;
+	CASClick m_HomeKeyClick;
+	CASClick m_UpKeyPress;
+	CASClick m_DownKeyPress;
+	int m_PrevMouseX;
+	int m_PrevMouseY;
+	array@CASClick m_SelectClick;
+
+	SYS_選択_result_t _GetResult();
+	CMenuView();
+	bool _IsCreate();
+	void _Release();
+	void _Clear();
+	void _Execute(bool _キャンセルあり, int _キャンセル値);
+	void _Open();
+	void _Close();
+	void SetShow(bool bShow);
+	void _Loop(bool _キャンセルあり, int _キャンセル値);
+	void _Update(bool _キャンセルあり, int _キャンセル値);
+	void _SetResultValue();
+	void CreateCGCursor();
+	void _CreateItems(ref 選択エリア_t _area);
+	void _ClearItem();
+	void _CalcAreaMetrics();
+	int CalcMaxWidth(ref sact_text_metrics_t tm, float Weight);
+	void _CalcAreaSize();
+	void _CalcAreaPos();
+	void _SetAreaPos左上();
+	void _SetAreaPos中上();
+	void _SetAreaPos右上();
+	void _SetAreaPos左中();
+	void _SetAreaPos中中();
+	void _SetAreaPos右中();
+	void _SetAreaPos左下();
+	void _SetAreaPos中下();
+	void _SetAreaPos右下();
+	void _SetAreaZ();
+	void _CreateFrame();
+	void _SetTextMetrics();
+	void _ShowFrame();
+	int _ComputeCurSelByMouse();
+	int _ComputeCurSelByKey();
+	void _UpdateItem(int _hilite_index);
+	int _GetNextItem(int _o);
+	int _GetPrevItem(int _o);
+};
+
+class CMenuViewManager
+{
+public:
+	array@CMenuView _m_MenuViewList;
+
+	SYS_選択_result_t _Execute(bool _キャンセルあり, int _キャンセル値);
+	int _CreateHandle();
+	void _DeleteHandle(int _nHandle);
+	void SetShow(bool bShow);
+};
+
+class _CSystemSound
+{
+public:
+	int m_index;
+	array@_CSystemSoundChannel m_ch[6];
+
+	_CSystemSound();
+	void _Play(int _snd);
+	void _ClearCache();
+	bool IsPlay();
+};
+
+class _CSystemSoundChannel
+{
+public:
+	int m_chn;
+	int m_snd;
+
+	_CSystemSoundChannel();
+	void _SetChannel(int _ch);
+	bool _Prepare(int _snd);
+	bool IsPlay();
+	void _Play();
+	void _Unprepare();
+};
+
+class CVolumeCap
+{
+public:
+	int m_CapVolume;
+	int m_FadeOutTime;
+	int m_WaitForFadeInTime;
+	int m_FadeInTime;
+
+	CVolumeCap();
+	void Set(int CapVolume, int FadeOutTime, int WaitForFadeInTime, int FadeInTime);
+	int GetCapVolume();
+	int GetFadeOutTime();
+	int GetWaitForFadeInTime();
+	int GetFadeInTime();
+};
+
+class CBGMVolumeCapManager
+{
+public:
+	CVolumeCap m_CurrentBGMVolumeCap;
+	int m_CurrentBGMVolumeCapRate;
+	bool m_bRunBGMFadeByVoice;
+	bool m_bWaitingBGMFadeByVoice;
+	CASTimer m_WaitingBGMFadeByVoiceTimer;
+	array@int m_PlayChannelList;
+
+	CBGMVolumeCapManager();
+	bool IsPlayList();
+	bool IsWaitingBGMFadeByVoice();
+	bool SeachCalcVolumeList(int GroupNumber);
+	void BeginBGMFade(int Channel, int SoundNumber);
+	void UpdateBGMFade();
+	void ResetBGM();
+	int GetCurrentBGMVolumeCapRate();
+};
+
+class CSoundVolumeCapManager
+{
+public:
+	CVolumeCap m_CurrentSoundVolumeCap;
+	bool m_bWaitingSoundFadeByVoice;
+	CASTimer m_WaitingSoundFadeByVoiceTimer;
+	int m_PlayChannel;
+
+	CSoundVolumeCapManager();
+	bool IsWaitingSoundFadeByVoice();
+	bool SeachCalcVolumeList(int GroupNumber);
+	void ResetPlayListVolume(int myIndex);
+	void BeginSoundFade(int Channel, int SoundNumber);
+	void UpdateSoundFade(int Index);
+	void UpdateSoundShuffle(int Index);
+	void UpdateSound();
+};
+
+class CBackUpSoundData
+{
+public:
+	int m_音楽;
+	int m_一時停止中;
+	int m_BGMVolume;
+	array@BackSE_t m_TempBackVoiceList;
+	bool m_bTemp;
+
+	void SoundDataToTemp();
+	void TempToSoundData();
+	bool IsTemp();
+};
+
+class _CMouseWheel
+{
+public:
+	int _m_fore;
+	int _m_back;
+
+	bool _IsFore();
+	bool _IsBack();
+	int GetForeCount();
+	int GetBackCount();
+	int _GetDelta();
+	_CMouseWheel();
+	void _Update(bool _bClear);
+	void _Clear();
+};
+
+class CASEffectKeyCancelKey
+{
+public:
+	int m_nKey;
+	bool m_bFirstKeyDownCancel;
+
+	CASEffectKeyCancelKey();
+	bool Init(int nKey, bool bFirstKeyDownCancel);
+	bool IsKeyDown();
+	int GetKey();
+};
+
+class CASEffectKeyCancelChecker
+{
+public:
+	array@CASEffectKeyCancelKey m_KeyList;
+	bool m_ClickCanceled;
+
+	CASEffectKeyCancelChecker();
+	bool Init();
+	bool IsCancel();
+	bool IsClickCanceled();
+};
+
+class CSampleSaveView
+{
+public:
+	void Run();
+};
+
+class CSampleLoadView
+{
+public:
+	void Run();
+};
+
+class CASDebugFPS
+{
+public:
+	CASParts m_Text;
+	float m_FPS;
+	bool m_Show;
+	CASCharSpriteProperty m_TextProperty;
+	CASTimer m_Timer;
+
+	CASDebugFPS();
+	void SetShow(bool Show);
+	bool GetShow();
+	void Update();
+	bool IsShowLeft();
+};
+
+class CASDebugMemorySize
+{
+public:
+	CASParts m_Text;
+	bool m_Show;
+	int m_AllowedMemorySize;
+	int m_CurrentAllocatedMemorySize;
+	int m_MaxAllocatedMemorySize;
+	CASCharSpriteProperty m_TextProperty;
+	CASTimer m_Timer;
+
+	CASDebugMemorySize();
+	void SetShow(bool Show);
+	bool GetShow();
+	void Update();
+	bool IsShowLeft();
+	bool IsCompulsorilyShow();
+};
+
+class CASDebugFillRate
+{
+public:
+	CASParts m_Text;
+	bool m_Show;
+	int m_AllowedFillRate;
+	int m_CurrentFillRate;
+	int m_MaxFillRate;
+	CASCharSpriteProperty m_TextProperty;
+	CASTimer m_Timer;
+
+	CASDebugFillRate();
+	void SetShow(bool Show);
+	bool GetShow();
+	void Update();
+	bool IsShowLeft();
+	bool IsCompulsorilyShow();
+};
+
+class CASDebugVoicePlaying
+{
+public:
+	CASParts m_Text;
+	bool m_Show;
+	bool m_Play;
+	CASCharSpriteProperty m_TextProperty;
+
+	CASDebugVoicePlaying();
+	void SetText(CASColor Color);
+	void SetShow(bool Show);
+	bool IsShow();
+	void SetPlay(bool Play);
+	void SetPos(int X, int Y);
+	void Update();
+};
+
+class CASDebugVideoMemorySize
+{
+public:
+	int m_UseSize;
+	int m_UseMaxSize;
+	int m_AllowedMemorySize;
+	CASParts m_Text;
+	bool m_Show;
+	CASCharSpriteProperty m_TextProperty;
+	CASTimer m_Timer;
+
+	CASDebugVideoMemorySize();
+	void SetShow(bool Show);
+	bool GetShow();
+	void Update();
+	bool IsShowLeft();
+	bool IsCompulsorilyShow();
+};
+
+class CMoveCursorDummy
+{
+public:
+	void Callback();
+};
+
+class LogViewer
+{
+public:
+	int handle_;
+	array@string log;
+
+	void init(string title);
+	void add(string val);
+	void clear();
+};
+
+class KeyInput
+{
+public:
+	array@int monitoringKey_;
+	array@ButtonState bs_;
+	array@RepeatKeyState rep_;
+
+	KeyInput();
+	void update();
+	bool isDown(int vKey);
+	bool isPress(int vKey);
+	bool isPressWithRepeat(int vKey);
+	int indexFromVirtualKey(int vKey);
+};
+
+class RepeatKeyState
+{
+public:
+	int pressedFrameCount_;
+	bool isPress_;
+
+	RepeatKeyState();
+	bool isPress();
+	void update(bool newState);
+};
+
+class ButtonState
+{
+public:
+	bool isLastDown_;
+	bool isDown_;
+	bool isPress_;
+	bool isForcePress_;
+	bool onUpIgnore_;
+
+	ButtonState();
+	bool isDown();
+	bool isPress();
+	void update(bool newState);
+	void forceClick();
+	void setNextMouseUpIgnore();
+	bool onDown();
+};
+
+class MouseInput
+{
+public:
+	int x_;
+	int y_;
+	int lastX_;
+	int lastY_;
+	bool isCursorChanged_;
+	int wheelVal_;
+	array@ButtonState btn_[2];
+	array@int distanceX_[8];
+	array@int distanceY_[8];
+	int distanceIndex_;
+	int objectIdOnDown_;
+	int objectIdOnUp_;
+
+	MouseInput();
+	void update();
+	void updateCursorPos();
+	void updateDistance();
+	void updateButtonState();
+	void updateWheel();
+	void setPos(int x, int y);
+	void setNextMouseUpIgnore();
+	void forceClick(int n);
+	bool isCursorChanged();
+	bool isClick(int button);
+	bool isClickWithFocus();
+	bool isDown(int button);
+	bool onDown(int button);
+	int getX();
+	int getY();
+	int getWheel();
+	int getMouseXSpeedAverage();
+	int getMouseYSpeedAverage();
+	bool isMouseXSpeedUp();
+};
+
+class Parts
+{
+public:
+	int partsNumber_;
+	int type_;
+	float scaling_;
+	int rot_;
+	float yFlip_;
+	float xFlip_;
+	int sleepLevel_;
+	bool isShow_;
+	string text_;
+	int alpha_;
+	int number_;
+	bool isNonSleep_;
+	int z_;
+	int baseZ_;
+	bool isMotion_;
+	LocalTimer motionTimer_;
+	array@MotionInfomation motions_;
+	bool isLoopMotionActive_;
+	LocalTimer loopMotionTimer_;
+	LoopMotionInfomation loopMotion_;
+
+	Parts();
+	void init(string cgName, int loadingMode);
+	void initAsText(string text, int size, bool isEdge, int type, int r, int g, int b);
+	void initAsPlaneImage(int w, int h, int r, int g, int b, int a);
+	void initAsCgPlaneImage(string cgName, int r, int g, int b);
+	void initAsNumber(string cgName, ref NumberPartsInfomation info);
+	void initAsDummy();
+	void initAsUserStructure();
+	void setNumber(int num);
+	void setParent(int parent);
+	void setOrigin(int val);
+	void setPos(int x, int y, int z);
+	void setScaling(float per);
+	void setRot(float rot);
+	void setYFlip(float rot);
+	void setXFlip(float rot);
+	void setShow(bool val);
+	void setAlpha(int val);
+	void setCgRange(int x, int y, int w, int h);
+	void setCgRangeRect(int l, int t, int r, int b);
+	void setDrawFilter(int filterType);
+	void setAddColorValue(int r, int g, int b);
+	void setMultiColorValue(int r, int g, int b);
+	int getX();
+	int getY();
+	int getZ();
+	int getWidth();
+	int getHeight();
+	int getAlpha();
+	int getRot();
+	float getScaling();
+	bool isShow();
+	void finalizeMotion();
+	void runMotion(MotionInfomation motionInfo);
+	void runMotionArray(ref array@MotionInfomation motions);
+	void updateMotionState();
+	bool isMotion();
+	int getPartsNumber();
+	void release();
+	void setLoopMotion(ref LoopMotionInfomation loopMotion);
+	void setActiveLoopMotion(bool val);
+	void sleep(bool val, bool updateShowState);
+	void setNonSleep(bool val);
+	float getYFlip();
+	float getXFlip();
+	~Parts();
+	void onMotionFinish();
+	void onMotion(int now);
+	void updateLoopMotion(int nowTime);
+	void addMotion(MotionInfomation motionInfo);
+	void addMotionArray(ref array@MotionInfomation motions);
+	void startMotion();
+	void setMotionLastFrame(ref MotionInfomation m);
+	void playMotionSound(ref MotionInfomation motionInfo);
+	void setMotionDefaultValue(ref MotionInfomation motionInfo);
+	void clear();
+	int getScreenX();
+	int getScreenY();
+	void setZBasePos(int zbase);
+	void applyInitializeOption();
+	bool isInitialized();
+	int getNumber();
+};
+
+class PartsNumberProvider
+{
+public:
+	array@int list_;
+	array@int emptyList_;
+	int max_;
+
+	PartsNumberProvider();
+	int getNumber();
+	void releaseNumber(int number);
+};
+
+class NumberPartsInfomation
+{
+public:
+	string cg_;
+	array@int w_[12];
+	bool isUseComma_;
+	int span_;
+	int digit_;
+
+	NumberPartsInfomation();
+	void setCgName(string cgName);
+	void setWidth(int w0, int w1, int w2, int w3, int w4, int w5, int w6, int w7, int w8, int w9, int wMinus, int wComma);
+	void setUseComma(bool val);
+	void setSpan(int val);
+	string getCgName();
+	int getWidth(int index);
+	bool isUseComma();
+	int getSpan();
+	void setSameWidth(int w);
+	void setDigit(int val);
+	int getDigit();
+};
+
+class MotionInfomation
+{
+public:
+	array@MotionKey key_;
+	int time_;
+	int delay_;
+	int swingCount_;
+	int soundNumber_;
+	int loopSoundNumber_;
+
+	MotionInfomation();
+	void clear();
+	void setMove(int fromX, int fromY, int toX, int toY, int motionType);
+	void setMoveTo(int toX, int toY, int motionType);
+	void setSwingCount(int val);
+	void setAlpha(int from, int to, int motionType);
+	void setRot(int from, int to, int motionType);
+	void setYFlip(int from, int to, int motionType);
+	void setXFlip(int from, int to, int motionType);
+	void setScaling(int from, int to, int motionType);
+	void setShakeLevel(int from, int to, int motionType);
+	void setSwingX(int from, int to, int motionType);
+	void setSwingY(int from, int to, int motionType);
+	void setCgRangeMove(int fromLeft, int fromTop, int fromRight, int fromBottom, int toLeft, int toTop, int toRight, int toBottom, int motionType);
+	void setNumberMove(int from, int to, int motionType);
+	void setSpecular(int from, int to, int motionType);
+	void setTime(int time, int delay);
+	int getTime();
+	int getDelay();
+	int getSwingCount();
+	int getMotionTypeXY();
+	int getMotionTypeAlpha();
+	int getMotionTypeRot();
+	int getMotionTypeYFlip();
+	int getMotionTypeXFlip();
+	int getMotionTypeScaling();
+	int getFromX();
+	int getFromY();
+	int getToX();
+	int getToY();
+	int getFromAlpha();
+	int getToAlpha();
+	int getFromRot();
+	int getToRot();
+	int getFromYFlip();
+	int getToYFlip();
+	int getFromXFlip();
+	int getToXFlip();
+	int getFromScaling();
+	int getToScaling();
+	int getMotionTypeShakeLevel();
+	int getFromShakeLevel();
+	int getToShakeLevel();
+	int getMotionTypeSwingX();
+	int getFromSwingX();
+	int getToSwingX();
+	int getMotionTypeSwingY();
+	int getFromSwingY();
+	int getToSwingY();
+	int getFromCgRangeLeft();
+	int getFromCgRangeTop();
+	int getFromCgRangeRight();
+	int getFromCgRangeBottom();
+	int getToCgRangeLeft();
+	int getToCgRangeTop();
+	int getToCgRangeRight();
+	int getToCgRangeBottom();
+	int getMotionTypeCgRange();
+	int getFromNumber();
+	int getToNumber();
+	int getMotionTypeNumber();
+	int getFromSpecular();
+	int getToSpecular();
+	int getMotionTypeSpecular();
+	void setSoundNumber(int number);
+	int getSoundNumber();
+	void setLoopSoundNumber(int number);
+	int getLoopSoundNumber();
+};
+
+class MotionKey
+{
+public:
+	int from;
+	int to;
+	int motionType;
+
+	MotionKey();
+};
+
+class LoopMotionInfomation
+{
+public:
+	array@LoopMotionKey key_[4];
+
+	void set(int key, int offset, int moveRange, int loopTime, int loopMotionType);
+	int get(int key, int nowTime);
+	bool isEnable(int key);
+};
+
+class LoopMotionKey
+{
+public:
+	int offset;
+	int moveRange;
+	int loopTime;
+	int loopMotionType;
+
+	LoopMotionKey();
+};
+
+class PartsInitializeOption
+{
+public:
+	array@int sleepLevel_;
+	array@int additionalZPos_;
+
+	PartsInitializeOption();
+	void setSleepLevel(int val);
+	int getSleepLevel();
+};
+
+class Music
+{
+public:
+	int forcePlayMusic_;
+	int nowPlay_;
+	int lastPlay_;
+	FuncOnMusicPlay handler_;
+
+	Music();
+	void play(int musicNumber, int fadeTime);
+	void fadeOut(int fadeTime);
+	void playLastPlayedMusic();
+	int getPlayingMusicNumber();
+	int getLastPlayedMusicNumber();
+	int getLength();
+	int getPlayingPosition();
+	void forcePlay(int number);
+	void innerPlay(int number, int type, int time);
+	void addHandlerFunc(string funcName);
+};
+
+class SystemSound
+{
+public:
+	array@SoundInfomation info_[6];
+	CASTimer timer_;
+
+	SystemSound();
+	void play(int number, bool reuse);
+	void stopSound(int number);
+	void playVoice(int number);
+	int getPassedTimeFromLastPlay(int number);
+	int getEmptyChannel();
+	int getOldestChannel();
+	void innerPlay(int ch, int number);
+	int getPreparedSoundChannel(int number);
+};
+
+class SoundInfomation
+{
+public:
+	int playStartTime;
+	int number;
+
+	SoundInfomation();
+};
+
+class LoopSound
+{
+public:
+	int sound_;
+	int stack_;
+
+	void playSound(int soundNumber);
+	void stopSound(int soundNumber);
+	void innerPlay(int number);
+};
+
+class GlobalGameTimer
+{
+public:
+	int lastTime_;
+	int gameLocalTime_;
+	float scaling_;
+	CASTimer timer_;
+
+	GlobalGameTimer();
+	void update();
+	int getTime();
+	void setTimeScaling(float val);
+	void setGlobalScaling(float val);
+	float getScaling();
+	float getGlobalScaling();
+};
+
+class LocalTimer
+{
+public:
+	int start_;
+
+	LocalTimer();
+	void reset();
+	int getTime();
+};
+
+class FrameManager
+{
+public:
+	int lastTime_;
+	float defaultScaling_;
+	CASTimer timer_;
+
+	FrameManager();
+	void updateView();
+	void setDefaultTimeScaling(float val);
+	void updateFrame();
+	void setSkippedButtonTimeScaling();
+	void udpateInputDevices();
+};
+
+class AutoModeTimer
+{
+public:
+	int lastTime_;
+
+	AutoModeTimer();
+	void reset();
+	bool isSkipFrame();
+};
+
+class GameObject
+{
+public:
+	int id_;
+	int sleepLevel_;
+	string objectName_;
+	bool isNonSleep_;
+	DG_UpdateMethod update_;
+	DG_FocusedMethod focused_;
+
+	GameObject();
+	bool isAlive();
+	void setNonSleepObject(bool val);
+	bool isNonSleepObject();
+	void addSleepLevel();
+	void decSleepLevel();
+	bool isSleep();
+	void setId(int id);
+	void setUpdateMethod(DG_UpdateMethod cbUpdate);
+	void setFocusedMethod(DG_FocusedMethod cbFocused);
+	void setSleepLevel(int val);
+	int getId();
+	int getSleepLevel();
+	bool callUpdateMethod();
+	bool callFocuedMethod();
+	void setObjectName(string val);
+	string getObjectName();
+};
+
+class GameObjectManager
+{
+public:
+	array@GameObject gameObject_;
+	int objectId_;
+
+	int addFocusObject(DG_UpdateMethod cbUpdate, DG_FocusedMethod cbFocused);
+	int add(DG_UpdateMethod cbUpdate);
+	int addNonSleepObject(DG_UpdateMethod cbUpdate);
+	int getNewObjectId();
+	void setSleepLevel(int id, int level);
+	int getSleepLevel(int id);
+	void update();
+	void sleep(bool val);
+	void sleepWithAsraFade(bool val);
+	void halfSleep(bool val);
+	void sleepGameObject(bool val);
+	int getFocusedObjectId();
+};
+
+class Pos3D
+{
+public:
+	float x;
+	float y;
+	float z;
+	float w;
+};
+
+class ChipDepositoryArranger
+{
+public:
+	int state_;
+	bool isEnableAnotherDepository_;
+	bool isShowChangeDepository_;
+	bool isActive_;
+	bool isLowerPosition_;
+	bool isEnableShowInfomation_;
+	int depositoryIndex_;
+	ref ChipDepository depository_;
+	ref ChipDepository another_;
+	ChipDepositoryView chipView_;
+	array@StyledButton btn_[5];
+	int gameObjectId_;
+
+	ChipDepositoryArranger();
+	void init(int depositoryIndex, bool isLowerPosition, bool isShowMoveChipToAnotherDepositoryButton, bool isShowChangeDepositoryButton);
+	void update();
+	void fadeIn(bool val);
+	void checkClicked();
+	void initButton();
+	string getAnotherDepositoryString();
+	string getMoveAnotherDepositoryString();
+	void setButtonPos();
+	void updateButtonState();
+	bool isContainBetChipDepositoryDisable();
+	int getBetCount();
+	int getClickedButton();
+	void moveSelectedChip();
+	void eraseSelectedChip();
+	void fadeObject(bool val);
+	void setActive(bool val);
+	bool isClickChangeDepositoryButton();
+	bool isMotion();
+	void showChipInfomation();
+	void sortChip();
+	void setEnableShowInfomation(bool val);
+	void onEvent(int type, int value);
+};
+
+class DepositoryBackground
+{
+public:
+	int state_;
+	int lastPage_;
+	Parts parent_;
+	array@Parts parts_[13];
+	DG_SwipeScrollerGetPage getPage_;
+	int remainder_;
+	int groupCount_;
+	bool isLowerPosition_;
+	int depositoryIndex_;
+	int gameObjectId_;
+	int x_;
+	int y_;
+
+	int getX();
+	int getY();
+	DepositoryBackground();
+	void init(DG_SwipeScrollerGetPage getPage, bool isLowerPosition, int depositoryIndex, int groupCount, int remainder);
+	void initParts();
+	void update();
+	void fadeIn(bool val);
+	bool isIgnoreFadeMotion(bool val);
+	void initPartsIndicatorGroupBg();
+	void initPartsNgFrame();
+	string getBgCgName(bool isLower, int depIndex);
+	void updateNgFrameShowState();
+	bool isMotion();
+	int getParentPartsNumber();
+};
+
+class ChipDepositoryView
+{
+public:
+	ref ChipDepository instance_;
+	int chipMode_;
+	int depositoryIndex_;
+	bool isLowerPosition_;
+	int state_;
+	int clickedChipIndex_;
+	SwipeScroller ss_;
+	array@ChipInstanceView chip_;
+	ChipIndicatorList indicatorList_;
+	DepositoryScrollButton btnScroll_;
+	DepositoryBackground bg_;
+	int gameObjectId_;
+	bool isUpdatedParameterOnSleep_;
+
+	ChipDepositoryView();
+	void update();
+	void init(int depositoryIndex, int chipMode, bool isLowerPosition);
+	void initButton();
+	void initChip();
+	void fadeIn(bool val);
+	void setChipPosition();
+	void resetView();
+	void setChipShow(bool val);
+	void jumpPage(int pg);
+	int getClickedChipIndex();
+	int getClickedIndex();
+	int getXPos();
+	int getYPos();
+	void onEvent(int eventType, int info);
+	void eraseChip(int index);
+	void addChip(int index);
+	string getBgCgName(bool isLower, int depIndex);
+	bool isMotion();
+	void setOperatable(bool val);
+};
+
+class ChipIndicator
+{
+public:
+	int state_;
+	Parts parent_;
+	array@Parts parts_[1];
+	ref ChipInstance instance_;
+	int gameObjectId_;
+
+	ChipIndicator();
+	void init(ref ChipInstance instance);
+	void update();
+	void setPos(int x, int y);
+	void fadeIn(bool val);
+	void setShowClock();
+	void onEvent(int type);
+	void setParent(int parentPartsNumber);
+};
+
+class ChipIndicatorList
+{
+public:
+	int state_;
+	int xPos_;
+	int yPos_;
+	int count_;
+	int groupCount_;
+	int gameObjectId_;
+	bool isUpdatedParameterOnSleep_;
+	ref ChipDepository instance_;
+	Parts parent_;
+	array@Parts parts_[1];
+	array@ChipIndicator indicator_;
+
+	ChipIndicatorList();
+	void update();
+	void init(ref ChipDepository instance, int yPos);
+	void initParts();
+	void initIndicator();
+	void resetView();
+	void setIndicatorPos();
+	void fadeIn(bool val);
+	void setFloatingPage(float page);
+	int getClickedGroup();
+	void onEvent(int type, int info);
+	void setParent(int parentPartsNumber);
+	bool isHover();
+};
+
+class ChipInstanceView
+{
+public:
+	ref ChipInstance instance_;
+	int mode_;
+	int state_;
+	bool last_;
+	bool isHover_;
+	bool isClick_;
+	bool isOperatable_;
+	int x_;
+	int y_;
+	int w_;
+	int h_;
+	Parts parent_;
+	array@Parts parts_[10];
+	int gameObjectId_;
+
+	ChipInstanceView();
+	int getGameObjectId();
+	void init(ref ChipInstance instance, int mode);
+	void initParts();
+	void initDebugParts();
+	void update();
+	void setPartsOrigin();
+	void setPartsShow();
+	void setPartsPos();
+	void setPos(int x, int y);
+	void setShow(bool val);
+	void fadeIn(bool val, int delayTime);
+	void setParent(int number);
+	void setShowTimeRemain();
+	void setShowBet();
+	void setShowDisable();
+	void setShowDisableParts(int n);
+	bool isClick();
+	bool isHover();
+	void onEvent(int type);
+	bool getHoverState();
+	void updateHoverState();
+	void updateHoverPartsState();
+	string getId();
+	void updateClick();
+	void setOperatable(bool val);
+};
+
+class SwipeScroller
+{
+public:
+	int state_;
+	bool isHover_;
+	int height_;
+	int snapSpan_;
+	int mouseDownPos_;
+	int dragStartPos_;
+	int snapStartPos_;
+	int snapEndPos_;
+	int yPos_;
+	int page_;
+	int pageCount_;
+	bool isLockScroll_;
+	Parts scrollParent_;
+	LocalTimer timer_;
+	DG_OnChangePage changePageHandler_;
+	int gameObjectId_;
+
+	SwipeScroller();
+	bool isHover();
+	void init(int height, int snapSpan, int yPos, int pageCount);
+	void update();
+	void fadeIn(bool val);
+	void fadeWithMotion(bool val, MotionInfomation m);
+	int getPage();
+	void scrollPage(bool isNextPage);
+	void jumpPage(int pg);
+	void snapPage();
+	int getParentPartsNumber();
+	float getFloatingPage();
+	int getYPos();
+	int getXPos();
+	bool isAvairableNextPage();
+	bool isAvairablePrevPage();
+	void checkMouseWheel();
+	void lockScroll(bool val);
+	void setBaseZ(int baseZ);
+	void setPageCount(int pageCount);
+	void addChangePageHandler(DG_OnChangePage changePageHandler);
+	bool isMotion();
+	int getPageCount();
+};
+
+class DepositoryScrollButton
+{
+public:
+	ref SwipeScroller ss_;
+	array@StyledButton btnLR_[2];
+	bool isLowerPosition_;
+	int gameObjectId_;
+	bool isEnable_;
+
+	DepositoryScrollButton();
+	void init(ref SwipeScroller ss, bool isLowerPosition);
+	void initButton();
+	void setButtonShow();
+	void setButtonPos();
+	void update();
+	int getClickedButton();
+	void setParent(int parentPartsNumber);
+	void setEnable(bool val);
+};
+
+class SystemMenu
+{
+public:
+	array@int menuList_;
+	int state_;
+	int clickedButtonIndex_;
+	Parts partsBg_;
+	array@StyledButton btn_;
+
+	SystemMenu();
+	void run(ref array@int menuList);
+	int update();
+	void init();
+	void fadeObject(bool val);
+	void fadeBg(bool val);
+	int getClickedButton();
+	int getResult();
+};
+
+class StyledButton
+{
+public:
+	int x_;
+	int y_;
+	int z_;
+	int w_;
+	int h_;
+	bool lastHover_;
+	bool isEnable_;
+	bool isHover_;
+	bool isSelected_;
+	bool isClick_;
+	int sound_;
+	int origin_;
+	int state_;
+	string cgBase_;
+	string text_;
+	Parts parent_;
+	array@Parts parts_[4];
+	int gameObjectId_;
+
+	StyledButton();
+	void update();
+	void init(string cgBase, string text, int sound);
+	void initParts();
+	void setTextLeftAlign(int left);
+	void fadeIn(bool val);
+	bool isHover();
+	bool isShow();
+	bool isClick();
+	void setPos(int x, int y, int z);
+	void setParent(int parentPartsNumber);
+	void setPartsShowState();
+	void setShow(bool val);
+	void setEnable(bool val);
+	void setSelected(bool val);
+	void setBaseZ(int baseZ);
+	void runClickEffectMotion();
+	void updateHover();
+	void updateClick();
+	void updateChildPartsShowState();
+	bool isEnable();
+	bool isCollide();
+	bool isMotion();
+};
+
+class Position
+{
+public:
+	int x;
+	int y;
+	int z;
+};
+
+class AutoSaveAlert
+{
+public:
+	LocalTimer timer_;
+	int state_;
+	int gameObjectId_;
+	Parts parent_;
+	array@Parts parts_[1];
+
+	AutoSaveAlert();
+	void init();
+	void update();
+	void fadeIn(bool val);
+	void run();
+	bool isIgnoreFadeMotion(bool val);
+	bool isMotionFinish();
+	void initParts();
+	void setPartsPos();
+	bool isFinish();
+	void setPartsShow();
+	void setPartsNonSleep();
+};
+
+class ChipInfomation
+{
+public:
+	int state_;
+	Parts parent_;
+	array@Parts parts_[9];
+	array@ChipParam chipParam_;
+	int gameObjectId_;
+
+	ChipInfomation();
+	void update();
+	void init(string chipId, bool isShowPrice);
+	void initParts(string id);
+	void initParam(string id, bool isShowPrice);
+	void setPartsShow();
+	void setPartsPos();
+	void addChipParam(string caption, int value);
+	void fadeIn(bool val);
+	bool isMotion();
+};
+
+class ChipParam
+{
+public:
+	int state_;
+	Parts parent_;
+	array@Parts parts_[2];
+	int gameObjectId_;
+
+	ChipParam();
+	void init(string caption, int value, bool isBigNumber);
+	void update();
+	void setParent(int parentPartsNumber);
+	void setPartsOrigin();
+	void setPartsPos();
+	void initParts(string caption, bool isBigNumber);
+	void setPos(int x, int y);
+	void setPartsShow();
+};
+
+class Hallucination
+{
+public:
+	int x_;
+	int y_;
+	Parts parent_;
+	array@Parts parts_[1];
+	LocalTimer timer_;
+	int gameObjectId_;
+
+	Hallucination();
+	void init();
+	void initParts();
+	void setPos(int x, int y);
+	void getPos(ref int x, ref int y);
+	void update();
+};
+
+class SceneMap
+{
+public:
+	int state_;
+	string id_;
+	ref Map map_;
+	string selectedPlaceId_;
+	array@PlaceButton placeBtn_;
+	Parts partsBg_;
+	GameTimeView gameTimeView_;
+	StyledButton btnOpenCamp_;
+	StyledButton btnSystemMenu_;
+	HpView hpView_;
+
+	SceneMap();
+	void init(string mapId);
+	void initBg();
+	void initPlaceButton();
+	void initStyledButton();
+	void run();
+	int getMapImageType();
+	void getAvailablePlaceIdList(ref array@string list);
+	int update();
+	string getSelectedPlaceId();
+	int getClickedButton();
+	void callAdvOnMapStart();
+	void fadeButton(bool val);
+	void fadeInGameParts(bool val);
+	void fadeInBg(bool val);
+	void checkOpenCamp();
+	void checkOpenSystemMenu();
+	void playMusic();
+	void checkPlaceButtonClick();
+};
+
+class PlaceButton
+{
+public:
+	int state_;
+	string id_;
+	ref Place pl_;
+	bool isHover_;
+	bool isSelectable_;
+	bool lastHover_;
+	PlaceButtonPlate plate_;
+	PlaceButtonLightingArea lightingArea_;
+	int gameObjectId_;
+
+	PlaceButton();
+	void init(string placeId);
+	void initParts();
+	void update();
+	void fadeIn(bool val, int delay);
+	bool isClick();
+	bool isHover();
+	string getId();
+	void updateHoverState();
+	void updatePartsShowType();
+	void setPartsShowType(int type);
+	void setPartsPos();
+	bool getHoverState();
+};
+
+class PlaceButtonLightingArea
+{
+public:
+	int state_;
+	int w_;
+	int h_;
+	bool isHover_;
+	int gameObjectId_;
+	array@Parts parts_[2];
+	Parts parent_;
+
+	PlaceButtonLightingArea();
+	void setPos(int x, int y);
+	void init(string imageName);
+	void setPartsShowType(int type, bool hover);
+	void fadeIn(bool val);
+	void update();
+	bool isHover();
+	void setSubPartsShowState();
+};
+
+class PlaceButtonPlate
+{
+public:
+	int state_;
+	int w_;
+	int h_;
+	int x_;
+	int y_;
+	int gameObjectId_;
+	array@Parts parts_[2];
+	Parts parent_;
+
+	PlaceButtonPlate();
+	void setPos(int x, int y);
+	void init(string imageName);
+	void initParts(string imageName);
+	void setPartsOrigin();
+	void setSubPartsShowState();
+	void setPartsShowType(int type, bool hover);
+	void fadeIn(bool val, int delay);
+	void update();
+	bool isHover();
+};
+
+class GameTimeView
+{
+public:
+	int state_;
+	Parts parent_;
+	array@Parts parts_[4];
+	int gameObjectId_;
+
+	GameTimeView();
+	void initParts();
+	void updateTimeBallPos();
+	void getTimeBallPos(ref int x, ref int y);
+	void update();
+	void fadeIn(bool val);
+	void setPartsPos();
+	void setChildPartsShowState();
+	void onEvent(int type, int val);
+	void updateParts();
+};
+
+class SceneDungeon
+{
+public:
+	int state_;
+	int restoreState_;
+	int stateBeforeCamp_;
+	int playerPosX_;
+	int playerPosY_;
+	string id_;
+	int musicNumber_;
+	string clickedCardId_;
+	ref Dungeon dg_;
+	DungeonChipView chipView_;
+	DungeonCardList cardList_;
+	DungeonName dungeonName_;
+	DungeonBg dungeonBg_;
+	StatusView statusView_;
+	GameTimeView gameTimeView_;
+	StyledButton btnOpenCamp_;
+	StyledButton btnSystemMenu_;
+	DungeonPlayer playerView_;
+	CardSelectableRange cardRange_;
+	LocalTimer timer_;
+
+	SceneDungeon();
+	void run();
+	int update();
+	void init(string id, int x, int y);
+	void initObject();
+	void initButton();
+	void setButtonPos();
+	void fadeMainObject(bool val);
+	void fadeButton(bool val);
+	void fadeDelayedShowObject(bool val);
+	void fadeObjectForCamp(bool val);
+	void setPlayerPosX(int val, bool isSwing);
+	void setPlayerPosY(int val);
+	void checkGameOver();
+	void checkOpenCamp();
+	bool isRandomMove();
+	int getRandomMoveTo();
+	void onPlayerEvent(int type, int val);
+	void checkOpenSystemMenu();
+	void callWalkCallback();
+	int callCardCallback(string cardId);
+	void cardCallbackPreEvent(string cardId);
+	void cardCallbackPostEvent(string cardId);
+	void exitScene();
+	void oneTimeFadeOut();
+	string getId();
+	void addGetChipHandler();
+	void clearGetChipHandler();
+	void onStartGetChip();
+	int isReadyOpenGetChip();
+	void onEndGetChip();
+	void runCardEvent();
+	void showNextCard();
+};
+
+class DungeonChipView
+{
+public:
+	ChipDepositoryView chipView_;
+	int gameObjectId_;
+
+	DungeonChipView();
+	void fadeIn(bool val);
+	void update();
+	string callItemCallback(string id);
+	bool isMotion();
+	void setOperatable(bool val);
+};
+
+class CardView
+{
+public:
+	string id_;
+	int state_;
+	bool isHover_;
+	int lightRange_;
+	int viewDepthMax_;
+	float x_;
+	float y_;
+	int dungeonDepth_;
+	float toY_;
+	ref Card instance_;
+	bool isSelectable_;
+	bool isCardDown_;
+	LocalTimer timer_;
+	Parts parent_;
+	array@Parts parts_[3];
+	int gameObjectId_;
+
+	CardView();
+	void update();
+	void init(string id, int lighted, int depth);
+	void initParts();
+	void setPartsOrigin();
+	void setPartsVisible();
+	int getPartsAlpha();
+	void setPartsLighting();
+	void setShow(bool val);
+	void setSelectable(bool val);
+	void setLighted(int lighted);
+	void setCardDown(bool val);
+	void setAbstructPosition(float x, float y);
+	void fadeIn(bool val, int delayTime);
+	void flip();
+	void moveFront();
+	bool isClick();
+	bool isCardDown();
+	string getId();
+	bool isMotion();
+	bool isHover();
+	void updatePartsShowState();
+	MotionInfomation getFlipMotion(int start, int end);
+	void updateHoverState();
+	bool isPartsHover();
+	float getWidth();
+	int calcXPos();
+	int calcYPos();
+	int calcZPos();
+	float calcScaling();
+	void finalizeMotion();
+	bool isFinishMoveFront();
+};
+
+class DungeonCardList
+{
+public:
+	array@CardView@2 card_[6][5];
+	ref Dungeon dungeon_;
+	int playerPosX_;
+	int playerPosY_;
+	int frontIndex_;
+
+	DungeonCardList();
+	void init(ref Dungeon dungeon, int x, int y);
+	void changeViewDepth();
+	void createFirstCard();
+	void fadeInCard(bool isDelayed);
+	void slideOtherCard();
+	void fadeOutFrontCard(int selected);
+	void roundFrontCard();
+	void setCardSelectable();
+	bool isSelectableCard(string cardId, int xPos, int line);
+	void getSelectableCardIndexList(ref array@int indexList);
+	bool getCardOpenState(int dungeonX, int dungeonLine);
+	int getClickedCard();
+	void setPlayerPosX(int pos);
+	void setPlayerPosY(int pos);
+	bool isCardDown();
+	string getPlayerPosCardId();
+	void flipCard();
+	bool isFinishMoveFront();
+	void updateCardFrontPos();
+	int getViewRange();
+	void initCardView(ref CardView c, int dungeonX, int dungeonLine, int abstructYPos);
+	void fadeOut();
+	void finalizeMotion();
+	void fadeIn();
+	void fadeInWithDelay();
+};
+
+class DungeonName
+{
+public:
+	int state_;
+	string name_;
+	Parts parent_;
+	array@Parts parts_[1];
+	int gameObjectId_;
+
+	DungeonName();
+	void init(string imageName);
+	void initParts();
+	void setPartsOrigin();
+	void setPartsShow();
+	void update();
+	void fadeIn(bool val);
+	void moveToTop();
+};
+
+class DungeonPlayer
+{
+public:
+	int state_;
+	int pos_;
+	Parts parent_;
+	array@Parts parts_[1];
+	int gameObjectId_;
+
+	DungeonPlayer();
+	void update();
+	void init();
+	void initParts();
+	void setPartsOrigin();
+	void setPartsShow();
+	void fadeIn(bool val);
+	int getXPos(int p);
+	void setDungeonPos(int moveTo, bool isSwing);
+	void setMoveMotion(int from, int to, bool isSwing);
+	bool isIgnoreFadeMotion(bool val);
+};
+
+class DungeonBg
+{
+public:
+	int state_;
+	Parts parent_;
+	array@Parts parts_[1];
+	int gameObjectId_;
+
+	DungeonBg();
+	void init(string imageName);
+	void update();
+	void fadeIn(bool val);
+	bool isIgnoreFadeMotion(bool val);
+	bool isFinish();
+};
+
+class CardSelectableRange
+{
+public:
+	int state_;
+	LocalTimer timer_;
+	Parts parent_;
+	array@Parts parts_[5];
+	int gameObjectId_;
+
+	CardSelectableRange();
+	void init(int x);
+	void setPartsShow();
+	void setPlayerPos(int x);
+	void update();
+	void updatePartsBlink();
+	void fadeIn(bool val);
+	bool isIgnoreFadeMotion(bool val);
+};
+
+class DamageInfomation
+{
+public:
+	int damage;
+	bool isCritical;
+};
+
+class SceneBattle
+{
+public:
+	string monsterId_;
+	string dropChip_;
+	ref Monster monster_;
+	int state_;
+	int turn_;
+	int lhx_;
+	int lhy_;
+	LocalTimer timer_;
+	Parts partsBg_;
+	array@DamageInfomation damage_[2];
+	BattleChipDepository chipDepositoryView_;
+	HpView hpView_;
+	BattleLogView logView_;
+	BattleResultView resultView_;
+	BattleTutorial tutorial_;
+	MonsterName monsterName_;
+	array@AttackChipEffect chipEffect_[2];
+	array@BattleCharacterView battleCharacterView_[2];
+	array@DamageNumber damageNumber_[2];
+	bool isEscape_;
+	StyledButton btnBattleStart_;
+	StyledButton btnEscape_;
+
+	SceneBattle();
+	~SceneBattle();
+	void run();
+	int update();
+	void init(string monsterId, string bgImage);
+	void initObject(string bgImage);
+	void initButton();
+	void setButtonPos();
+	void initBg(string bgImage);
+	void resetDamageNumber();
+	void setReadyEnemyAttackChipEffect();
+	void setReadyPlayerAttackChipEffect();
+	void callOnStartBattleCallback();
+	void callOnTurnEndCallback();
+	void useChip();
+	DamageInfomation calcDamageToPlayer();
+	DamageInfomation calcDamageToEnemy();
+	void runDamageNumber();
+	int getBattleResult();
+	void calcDamage();
+	void addDamageLog();
+	void decHp();
+	bool isFinishChipEffectMotion();
+	bool isFinishBattleCharacterViewMotion();
+	void fadeIn(bool val);
+	void fadeButton(bool val);
+	void runCharacterDown();
+	void calcDropItem();
+	void addBattleEndLog();
+	int openEscapeDialog();
+	void saveStatistics();
+	void setEnableOperatableObjectGroup(bool val);
+	bool isEnableEscapeButton();
+	bool isShowEscapeButton();
+	void addResult();
+};
+
+class BattleCharacterView
+{
+public:
+	float lastRatio_;
+	int state_;
+	ref Monster instance_;
+	bool isPlayer_;
+	Parts parent_;
+	array@Parts parts_[3];
+	int gameObjectId_;
+
+	BattleCharacterView();
+	void init(ref Monster instance);
+	void initParts();
+	string getBaseCgName();
+	void setPartsPos(string cgName);
+	void getCharacterStartPos(ref int x, ref int y, bool isPlayer);
+	void getCharacterFadeInPos(ref int x, ref int y, bool isPlayer);
+	void fadeIn(bool val);
+	void down();
+	void update();
+	void updatePartsShowState();
+	void shake();
+	bool isMotion();
+};
+
+class DamageNumber
+{
+public:
+	int state_;
+	int type_;
+	int damage_;
+	int x_;
+	int y_;
+	bool isCritical_;
+	array@Position numberPos_[5];
+	Parts parent_;
+	array@Parts parts_[6];
+	int gameObjectId_;
+
+	DamageNumber();
+	void init(int type, int damage, bool isCritical);
+	void run();
+	void update();
+	bool isFinish();
+	void setNumber(int value);
+	void setScaling(float val);
+	void setNumberPartsScaledPos(float val);
+};
+
+class BattleLogView
+{
+public:
+	int state_;
+	ref LogManager log_;
+	Parts parent_;
+	array@Parts partsText_;
+	int gameObjectId_;
+
+	BattleLogView();
+	void update();
+	void cutLogTextParts();
+	void finalizeLogMotion();
+	void onEvent(string msg, int type);
+	void fadeIn(bool val);
+	void moveExistLogText();
+	void addNewLogText(ref Parts p, string msg, int type);
+	void fadeInNewLogText(ref Parts p);
+};
+
+class AttackChipEffect
+{
+public:
+	int x_;
+	int y_;
+	bool isPlayer_;
+	bool isCritical_;
+	int state_;
+	array@Parts partsChip_;
+	Parts partsEffect_;
+	int gameObjectId_;
+
+	AttackChipEffect();
+	void init(ref array@string chipImageName, bool isPlayer, bool isCritical);
+	void initChipImage(ref array@string chipImageName);
+	void getChipAttackToPos(ref int x, ref int y, bool isPlayer);
+	void fadeIn(bool val);
+	void createFadeInMotion(ref array@MotionInfomation m, int index, int count);
+	void attack();
+	void setChipAttackMotion();
+	void setEffectMotion();
+	void update();
+	void getChipFadeInFromPos(ref int x, ref int y, bool isPlayer, int index);
+	void getChipFadeInToPos(ref int x, ref int y, bool isPlayer, int index);
+	bool isMotion();
+	int getHitSoundNumber(bool isUseCritical);
+	void setCritical(bool isCritical);
+};
+
+class BattleResultView
+{
+public:
+	int state_;
+	string monsterId_;
+	int gameObjectId_;
+	int resultCount_;
+	bool isItemGet_;
+	array@BattleResultBonus bonus_;
+	Parts parent_;
+	array@Parts parts_;
+
+	BattleResultView();
+	void init(string monsterId, bool isItemGet);
+	void update();
+	void fadeIn(bool val);
+	MotionInfomation getMotion(bool val);
+	void run(string monsterId, bool isItemGet);
+	void fadeBonus(bool val);
+	bool isIgnoreFadeMotion(bool val);
+	bool isMotionFinish();
+	void initParts();
+	void setNumber();
+	void setPartsOrigin();
+	void setPartsPos();
+	bool isFinish();
+	void setPartsShow();
+	void initBonus();
+	void finalizeBonusMotion();
+	void countResultValue();
+	void countNumber(int partsIndex, int from, int to);
+};
+
+class WinLoseView
+{
+public:
+	int state_;
+	int exp_;
+	int gold_;
+	int gameObjectId_;
+	bool isWin_;
+	Parts parent_;
+	array@Parts parts_[1];
+
+	WinLoseView();
+	void init();
+	void update();
+	void fadeIn(bool val);
+	void run(bool isWin);
+	bool isIgnoreFadeMotion(bool val);
+	bool isMotionFinish();
+	void initParts();
+	void setPartsPos();
+	bool isFinish();
+	void setPartsShow();
+};
+
+class MonsterName
+{
+public:
+	int state_;
+	int exp_;
+	int gold_;
+	int gameObjectId_;
+	string name_;
+	Parts parent_;
+	array@Parts parts_[2];
+
+	MonsterName();
+	void init();
+	void update();
+	void fadeIn(bool val);
+	void run(string name);
+	bool isIgnoreFadeMotion(bool val);
+	bool isMotionFinish();
+	void initParts();
+	void setPartsOrigin();
+	void setPartsPos();
+	bool isFinish();
+	void setPartsShow();
+	void fadeOut();
+};
+
+class BattleResultBonus
+{
+public:
+	Parts parent_;
+	array@Parts parts_[2];
+	int x_;
+	int y_;
+	int val_;
+	int gameObjectId_;
+
+	BattleResultBonus();
+	void init(string name, int val);
+	void initParts(string name);
+	void setPartsPos();
+	void setPartsShow();
+	void setParent(int parentPartsNumber);
+	void fadeIn(bool val, int delay);
+	void countUpNumber(int delay);
+	void setPos(int x, int y);
+	void update();
+	void finalize();
+};
+
+class BattleChipDepository
+{
+public:
+	ref ChipDepository dep_;
+	StyledButton btnBetAll_;
+	StyledButton btnUnbetAll_;
+	ChipDepositoryView chipView_;
+	int gameObjectId_;
+
+	BattleChipDepository();
+	void init();
+	void update();
+	void checkChipBet();
+	void betAllChip();
+	void unbetAllChip();
+	void setOperatable(bool val);
+	void fadeIn(bool val);
+};
+
+class BattleTutorial
+{
+public:
+	int state_;
+	int gameObjectId_;
+	Parts parts_;
+
+	BattleTutorial();
+	void init();
+	void update();
+	void fadeIn(bool val);
+};
+
+class SceneDepository
+{
+public:
+	int state_;
+	Parts partsBg_;
+	StyledButton btnExit_;
+	array@ChipDepositoryArranger arranger_[2];
+
+	SceneDepository();
+	void init();
+	void run();
+	int update();
+	void fadeObject(bool val);
+};
+
+class SceneStatus
+{
+public:
+	int state_;
+	StatusDetail statusDetail_;
+	StyledButton btnExit_;
+	StyledButton btnDungeonExit_;
+	ChipDepositoryArranger arranger_;
+	bool isShowExitToTownMap_;
+	bool isEnableExitToTownMap_;
+
+	SceneStatus();
+	void run(bool isShowExitToTownMap);
+	int update();
+	void init();
+	void fadeObject(bool val);
+};
+
+class StatusDetail
+{
+public:
+	int state_;
+	int lhx_;
+	int lhy_;
+	Parts parent_;
+	array@Parts parts_[9];
+	array@StatusDetailSkill skill_;
+	array@StatusDetailBadCondition badCondition_;
+	array@Parts partsMemo_;
+	int gameObjectId_;
+
+	StatusDetail();
+	~StatusDetail();
+	void init();
+	void initParts();
+	void initPartsSkill();
+	void initPartsBadCondition();
+	void initPartsMemo();
+	void setPartsPos();
+	void setNumberValue();
+	void setPartsShow();
+	void fadeIn(bool val);
+	void update();
+	bool isMotion();
+	void onEvent(int type, int value);
+};
+
+class StatusView
+{
+public:
+	int offsetY_;
+	HpView hpView_;
+	Parts parent_;
+	array@Parts parts_[5];
+	array@BadConditionView badCondition_;
+	int state_;
+	int gameObjectId_;
+
+	StatusView();
+	void init(int offsetY);
+	~StatusView();
+	void initParts();
+	void setPartsPos();
+	void setPartsOrigin();
+	void setPartsShow();
+	void update();
+	void onEvent(int type, int value);
+	void fadeIn(bool val);
+	void updatePartsNumber();
+	void initBadCondition();
+	void addBadCondition(string id);
+	void eraseBadCondition(string id);
+	void eraseHideBadCondition();
+};
+
+class HpView
+{
+public:
+	int state_;
+	Parts parent_;
+	int w_;
+	array@Parts parts_[4];
+	int gameObjectId_;
+
+	HpView();
+	~HpView();
+	void init();
+	void update();
+	void setPartsState();
+	void updatePartsState();
+	void moveChangePartsState();
+	void onEvent(int type, int val);
+	void fadeIn(bool val);
+	void setOffsetY(int offsetY);
+};
+
+class BadConditionView
+{
+public:
+	string id_;
+	int x_;
+	int state_;
+	int gameObjectId_;
+	int insideY_;
+	int offsetY_;
+	int index_;
+	Parts parent_;
+	array@Parts parts_[2];
+
+	BadConditionView();
+	void init(string id);
+	void setInsideYPos(int y);
+	void update();
+	void fadeIn(bool val);
+	bool isIgnoreFadeMotion(bool val);
+	bool isMotionFinish();
+	void initParts();
+	void setPartsPos();
+	bool isFinish();
+	void setPartsShow();
+	string getType();
+	bool isHide();
+	void setOffsetY(int offsetY);
+	int getInsideYPos();
+};
+
+class StatusDetailBadCondition
+{
+public:
+	Parts parent_;
+	array@Parts parts_[2];
+	bool isHover_;
+	string id_;
+	int gameObjectId_;
+
+	StatusDetailBadCondition();
+	void init(string badConditionId);
+	void initParts();
+	void setParent(int parentPartsNumber);
+	void update();
+	bool isHover();
+	void setPos(int x, int y);
+};
+
+class StatusDetailSkill
+{
+public:
+	Parts parent_;
+	array@Parts parts_[2];
+	bool isHover_;
+	string id_;
+	int gameObjectId_;
+
+	StatusDetailSkill();
+	void init(string skillId);
+	void initParts();
+	void setParent(int parentPartsNumber);
+	void update();
+	bool isHover();
+	void setPos(int x, int y);
+};
+
+class SceneShop
+{
+public:
+	int state_;
+	int selectedStockIndex_;
+	ref ShopChipStock stock_;
+	ShopChipStockView shopStockView_;
+	array@ChipDepositoryArranger arranger_[2];
+	StyledButton btnExit_;
+	ShopChipChoiceConfimation confirmation_;
+	StatusView statusView_;
+
+	SceneShop();
+	void init(int stockIndex);
+	void run();
+	int update();
+	void checkActiveButtonClick();
+	void setActiveArranger(int val);
+	void fadeIn(bool val);
+	void buyItem(ref ShopChipInstance inst, int depositoryIndex);
+	void setEnableOperatableObject(bool val);
+};
+
+class ShopChipInstanceView
+{
+public:
+	ref ShopChipInstance instance_;
+	int state_;
+	bool isHover_;
+	bool isOperatable_;
+	int x_;
+	int y_;
+	bool lastHover_;
+	bool isClick_;
+	Parts parent_;
+	array@Parts parts_[7];
+	int gameObjectId_;
+
+	ShopChipInstanceView();
+	void init(ref ShopChipInstance instance);
+	void initParts();
+	void initDebugParts();
+	void setPartsPos();
+	void setPartsOrigin();
+	void setPartsShow();
+	void update();
+	void setPos(int x, int y);
+	void fadeIn(bool val);
+	bool isClick();
+	void setShow(bool val);
+	void setParent(int number);
+	void updateHover();
+	void updateClick();
+	bool isHover();
+	void updatePartsShowState();
+	void setOperatable(bool val);
+};
+
+class ShopChipStockView
+{
+public:
+	ref ShopChipStock instance_;
+	int state_;
+	int clickedChipIndex_;
+	int pageCount_;
+	DepositoryBackground bg_;
+	SwipeScroller ss_;
+	DepositoryScrollButton btnScroll_;
+	array@ShopChipInstanceView chip_;
+	ChipIndicatorList indicatorList_;
+	ChipDepository depDummy_;
+	int gameObjectId_;
+
+	ShopChipStockView();
+	void init(ref ShopChipStock instance, int yPos);
+	void updateLRButtonState();
+	void initButton();
+	void update();
+	void fadeIn(bool val, int time);
+	void fadeInFast();
+	void initChip();
+	void jumpPage(int pg);
+	int getClickedChipIndex();
+	int getClickedIndex();
+	void setChipPosition();
+	void setChipShow(bool val);
+	void createDummyDepository();
+	void setOperatable(bool val);
+};
+
+class ShopChipChoiceConfimation
+{
+public:
+	bool isDepositDisable_;
+	int selected_;
+	int price_;
+	string id_;
+	int state_;
+	array@StyledButton btn_[3];
+	ChipInfomation chipInfo_;
+	int gameObjectId_;
+
+	ShopChipChoiceConfimation();
+	void init(ref ShopChipInstance instance);
+	void run();
+	void update();
+	bool isFinish();
+	int getSelection();
+	void initButton();
+	void setButtonPos();
+	int getButtonClicked();
+	void fadeObject(bool val);
+	void fadeButton(bool val);
+	void onEvent(int event, int info);
+	void updateButtonState();
+	bool isConfirmed();
+};
+
+class SelectionItem
+{
+public:
+	int id;
+	string name;
+	bool isMainRoute;
+	int position;
+};
+
+class AdvSelection
+{
+public:
+	array@SelectionItem item_;
+
+	void clear();
+	void add(int id, string name, bool isMainRoute);
+	void getItemList(ref array@SelectionItem item);
+	int getGroupObjectCount(int group);
+};
+
+class SelectionButton
+{
+public:
+	int x_;
+	int y_;
+	int w_;
+	int h_;
+	bool isEnable_;
+	bool lastHover_;
+	bool isClick_;
+	bool isHover_;
+	int state_;
+	bool isSelected_;
+	Parts parent_;
+	array@Parts parts_[4];
+	int gameObjectId_;
+
+	SelectionButton();
+	void init(string cgName, string caption);
+	void setSelected(bool val);
+	void update();
+	bool isShow();
+	bool isHover();
+	void fadeIn(bool val, int fadeInType, int fadeInDelay);
+	void getFadeInMotionInfomation(ref array@MotionInfomation m, int fadeInType, int fadeInDelay);
+	void getFadeOutMotionInfomation(ref array@MotionInfomation m, int fadeInType);
+	bool isClick();
+	void setPos(int x, int y, int z);
+	void setShow(bool val);
+	void setEnable(bool val);
+	bool isEnable();
+	void updateHover();
+	void updateChildPartsShowState();
+	void setPartsShowState();
+	void runClickEffectMotion();
+	void updateClick();
+};
+
+class SceneAdvSelection
+{
+public:
+	int state_;
+	int clickedButton_;
+	int selectedSubGroup_;
+	int result_;
+	array@SelectionItem item_;
+	array@SelectionButton btnCategory_;
+	array@SelectionButton btnSubGroup_;
+	Parts partsBg_;
+	StyledButton btnSystemMenu_;
+
+	SceneAdvSelection();
+	void init();
+	void initGroupButton();
+	void initSubGroupButton();
+	int update();
+	void run(ref array@SelectionItem item);
+	int getResult();
+	void clear();
+	int getButtonClicked();
+	int getCategoryButtonClicked();
+	void fadeCategoryButton(bool val, bool immediately);
+	void fadeInSubGroupButton(int group, bool immediately);
+	void hideSubGroupButton();
+	void hideCategoryButton();
+	void fadeOutSubGroupButton();
+	void setCategoryButtonSelected(int btnIndex);
+	void initBg();
+	void fadeObject(bool val);
+	void checkSystemMenuClick();
+	void updateAutoModeMark();
+	void updateSkipModeMark();
+};
+
+class DialogInfomation
+{
+public:
+	int answerType;
+	int type;
+	int sound;
+	string caption;
+	string imageName;
+	string chipId;
+	array@string desc[3];
+};
+
+class Dialog
+{
+public:
+	int state_;
+	Parts parent_;
+	array@Parts parts_[7];
+	Parts partsFade_;
+	array@StyledButton btn_;
+	int answerType_;
+	int captionColoType_;
+	string chipId_;
+	string imageName_;
+	string caption_;
+	int result_;
+	array@string descText_;
+	int gameObjectId_;
+
+	Dialog();
+	void init();
+	void run(ref DialogInfomation di);
+	int update();
+	void setImageName(string imageName);
+	void setChipId(string id);
+	void setCaption(string caption);
+	void setDesc(array@string desc);
+	void setPartsShow();
+	void setPartsPos();
+	bool isFinish();
+	void fadeIn(bool val);
+	void setCaptionColorType(int type);
+	void getColor(ref int r, ref int g, ref int b);
+	void initParts();
+	void initButton();
+	void setButtonPos();
+	int getResult();
+	void fadeButton(bool val);
+	void setAnswerType(int type);
+	int getClickedButton();
+	void checkButtonClick();
+	void setDialogInfomation(ref DialogInfomation di);
+};
+
+class SceneChipInfomation
+{
+public:
+	int state_;
+	ChipInfomation chipInfo_;
+
+	void run(string chipId);
+	int update();
+};
+
+class SceneGetChipConfimation
+{
+public:
+	int state_;
+	bool isDungeon_;
+	bool isDisposable_;
+	string id_;
+	int result_;
+	array@ChipDepositoryArranger arranger_;
+	GetChipChoiceConfimation confirmation_;
+
+	SceneGetChipConfimation();
+	void run(string chipId, bool isDungeon);
+	int getResult();
+	void init();
+	int update();
+	void fadeObject(bool val);
+};
+
+class SceneUseChipConfimation
+{
+public:
+	int state_;
+	bool isDungeon_;
+	string id_;
+	int result_;
+	UseChipConfimation confirmation_;
+
+	SceneUseChipConfimation();
+	void run(string chipId);
+	int getResult();
+	void init();
+	int update();
+	void fadeObject(bool val);
+};
+
+class GetChipChoiceConfimation
+{
+public:
+	bool isDisposable_;
+	bool isDepositoryDisable_;
+	int selected_;
+	int state_;
+	array@StyledButton btn_[3];
+	ChipInfomation chipInfo_;
+	Parts background_;
+	string id_;
+	int gameObjectId_;
+
+	GetChipChoiceConfimation();
+	void run();
+	void update();
+	void init(string id, bool isDisposable);
+	void initButton();
+	void setButtonPos();
+	void fadeObject(bool val);
+	void fadeButton(bool val);
+	void onEvent(int event, int info);
+	void updateButtonState();
+	bool isToDepositoryEnable();
+	int getButtonClicked();
+	int getSelection();
+	bool isMotion();
+	bool isConfirmed();
+};
+
+class UseChipConfimation
+{
+public:
+	int selected_;
+	int state_;
+	array@StyledButton btn_[2];
+	ChipInfomation chipInfo_;
+	Parts background_;
+	string id_;
+	int gameObjectId_;
+
+	UseChipConfimation();
+	void run();
+	void update();
+	void init(string id);
+	void initButton();
+	void setButtonPos();
+	void fadeObject(bool val);
+	void fadeButton(bool val);
+	void onEvent(int event, int info);
+	void updateButtonState();
+	int getButtonClicked();
+	int getSelection();
+	bool isMotion();
+	bool isConfirmed();
+};
+
+class EnquiteAgreementDialog
+{
+public:
+	int state_;
+	Parts parent_;
+	array@Parts parts_;
+	Parts partsFade_;
+	array@StyledButton btn_;
+	int result_;
+	array@string descText_;
+	int gameObjectId_;
+
+	EnquiteAgreementDialog();
+	void run();
+	int update();
+	void init();
+	void initParts();
+	void initButton();
+	void setPartsPos();
+	void setButtonPos();
+	void setPartsShow();
+	void fadeIn(bool val);
+	void fadeButton(bool val);
+	int getClickedButton();
+	void checkButtonClick();
+	int getResult();
+};
+
+class SceneGameOver
+{
+public:
+	int state_;
+	Parts parent_;
+	array@Parts parts_[2];
+
+	SceneGameOver();
+	int update();
+	void runModal();
+	void init();
+};
+
+class SceneTitle
+{
+public:
+	int state_;
+	int clicked_;
+	Parts parent_;
+	array@Parts parts_[1];
+	array@StyledButton btn_[11];
+
+	SceneTitle();
+	int update();
+	void run();
+	void fadeIn(bool val);
+	void init();
+	void setPartsShow();
+	void initButton();
+	void checkButtonClick();
+	int getClickedButton();
+	void setButtonPos();
+	void fadeButton(bool val);
+	int getClicked();
+};
+
+class SceneWarning
+{
+public:
+	int state_;
+	WarningView logo_;
+	WarningView warning_;
+
+	void run();
+	int update();
+};
+
+class WarningView
+{
+public:
+	Parts parts_;
+	int state_;
+	int gameObjectId_;
+	bool isSkipByTime_;
+	LocalTimer timer_;
+	bool isFadeOutImmediate_;
+
+	WarningView();
+	void run(string cgName, bool isSkipByTime);
+	bool isFinish();
+	void update();
+};
+
+class ThumbnailButton
+{
+public:
+	int x_;
+	int y_;
+	int z_;
+	int w_;
+	int h_;
+	bool isMouseDown_;
+	bool isEnable_;
+	bool isHover_;
+	int origin_;
+	int state_;
+	string cgThumbnail_;
+	string text_;
+	Parts parent_;
+	array@Parts parts_[4];
+	int gameObjectId_;
+
+	ThumbnailButton();
+	void init(string thumbnailCg, bool val);
+	void setParent(int parentPartsNumber);
+	void initParts();
+	void setPartsShowState();
+	void update();
+	bool isHover();
+	bool isShow();
+	bool isClick();
+	void setPos(int x, int y, int z);
+	void setShow(bool val);
+	bool isEnable();
+	bool collideWithOrigin();
+	void updateChildPartsShowState();
+	bool isMotion();
+	void runClickEffectMotion();
+};
+
+class SceneCg
+{
+public:
+	int state_;
+	int clicked_;
+	Parts parent_;
+	array@Parts parts_[1];
+	array@ThumbnailButton btnThumbnail_;
+	SwipeScroller ss_;
+	ref CgSwipeView swipeView_;
+	JumpButtonList btnJump_;
+	StyledButton btnExit_;
+
+	SceneCg();
+	int update();
+	void run();
+	void init();
+	void initButton();
+	void setPartsShow();
+	void setButtonPos();
+	void setButtonParent();
+	void checkButtonClick();
+	int getClickedButton();
+	void fadeIn(bool val);
+	void showThumbnailButton(bool val);
+	int getClicked();
+	void checkJumpButton();
+};
+
+class CgSwipeView
+{
+public:
+	int state_;
+	SwipeScroller ss_;
+	CgMoveNavigation navi_;
+	CASTimer hideTimer_;
+	array@Parts partsCg_;
+	StyledButton btnExit_;
+	int gameObjectId_;
+
+	CgSwipeView();
+	void init(array@string cgList);
+	void run();
+	void update();
+	void fadeNavi(bool val);
+	void fadeIn(bool val);
+	bool isFinish();
+	void initParts(ref array@string cgList);
+	int getClicked();
+	bool isHoverLeftSide();
+	bool isHoverRightSide();
+};
+
+class SceneReplay
+{
+public:
+	int state_;
+	int clicked_;
+	Parts parent_;
+	array@Parts parts_[1];
+	array@ThumbnailButton thumbnail_;
+	SwipeScroller ss_;
+	JumpButtonList btnJump_;
+	StyledButton btnExit_;
+
+	SceneReplay();
+	int update();
+	void run();
+	void fadeIn(bool val);
+	void init();
+	void setPartsShow();
+	void initButton();
+	void checkButtonClick();
+	int getClickedButton();
+	void setButtonPos();
+	void fadeButton(bool val);
+	int getClicked();
+	void setButtonParent();
+	void playAdv();
+	void checkJumpButton();
+	void showThumbnailButton(bool val);
+};
+
+class CgMoveNavigation
+{
+public:
+	int state_;
+	array@Parts parts_[2];
+	ref SwipeScroller ss_;
+	int gameObjectId_;
+
+	void init(ref SwipeScroller ss);
+	CgMoveNavigation();
+	void update();
+	void fadeIn(bool val);
+	bool isIgnoreFadeMotion(bool val);
+	void updatePartsShowState();
+	bool isShow();
+};
+
+class SceneSave
+{
+public:
+	int state_;
+	Parts parent_;
+	array@Parts parts_[1];
+	NewMark newMark_;
+	JumpButtonList jumpButton_;
+	StyledButton btnExit_;
+	array@StyledButton btn_[60];
+	SwipeScroller ss_;
+
+	SceneSave();
+	int update();
+	void run();
+	void init();
+	void initButton();
+	void initSaveButton();
+	void setButtonEnable();
+	void fadeIn(bool val);
+	void fadeButton(bool val);
+	int getClickedButton();
+	bool checkClick();
+	void updatePartsNewPos();
+	void checkJumpButton();
+};
+
+class SceneLoad
+{
+public:
+	int state_;
+	int clicked_;
+	Parts parent_;
+	array@Parts parts_[1];
+	NewMark newMark_;
+	JumpButtonList jumpButton_;
+	StyledButton btnExit_;
+	array@StyledButton btn_[60];
+	SwipeScroller ss_;
+
+	SceneLoad();
+	int update();
+	void run();
+	void init();
+	void initButton();
+	void setButtonEnable();
+	void fadeIn(bool val);
+	void fadeButton(bool val);
+	int getClickedButton();
+	void checkClick();
+	void checkJumpButton();
+	void updatePartsNewPos();
+};
+
+class JumpButtonList
+{
+public:
+	int gameObjectId_;
+	array@StyledButton btn_;
+
+	JumpButtonList();
+	void init(int count);
+	void initFromList(array@string cgList);
+	void fadeIn(bool val);
+	void update();
+	int getClickedButton();
+	void setSelectedButton(int index);
+};
+
+class NewMark
+{
+public:
+	int state_;
+	Parts parent_;
+	array@Parts parts_[1];
+	int gameObjectId_;
+
+	NewMark();
+	void setParent(int parentPartsNumber);
+	void initParts();
+	void update();
+	void fadeIn(bool val);
+	void setPos(int x, int y);
+	void setShow(bool val);
+};
+
+class SceneConfig
+{
+public:
+	int state_;
+	int page_;
+	Parts parent_;
+	array@Parts parts_[1];
+	array@StyledButton btnJump_[7];
+	array@StyledButton btnSystem_[3];
+	array@ConfigButton btn_;
+	array@ConfigCheckBox checkBox_;
+	array@ConfigSlider slider_;
+	array@ConfigColorSelector selector_;
+	ConfigSampleMessage sampleMessage_;
+	ConfigDescription description_;
+
+	SceneConfig();
+	int update();
+	void run();
+	void init();
+	void fadeIn(bool val);
+	void initJumpButton();
+	void initSysButton();
+	void fadeButton(bool val);
+	void resetConfigCheckBox(int page);
+	void resetConfigSlider(int page);
+	void resetConfigColorSelector(int page);
+	void resetConfigButton(int page);
+	bool isHoverSlider();
+	void checkJumpButton();
+	void changePage(int page);
+	void updateJumpButtonSelected(int n);
+	void updateManualText();
+	void initConfigDescription();
+	void initConfigSampleMessage();
+	void showSubItem(int page);
+	void checkSysButtonClick();
+};
+
+class ConfigCheckBox
+{
+public:
+	int x_;
+	int y_;
+	int z_;
+	int w_;
+	int h_;
+	bool isEnable_;
+	bool isHover_;
+	int origin_;
+	int state_;
+	string cgBase_;
+	string text_;
+	bool isHide_;
+	Parts parent_;
+	array@Parts parts_[6];
+	FuncGetCheck getCheckFunc_;
+	FuncSetCheck setCheckFunc_;
+	int manualTextId_;
+	int gameObjectId_;
+
+	ConfigCheckBox();
+	void init(string text, string setFunc, string getFunc, int manualTextId);
+	void initParts();
+	void setParent(int parentPartsNumber);
+	void setPartsShowState();
+	void update();
+	bool isHover();
+	bool isShow();
+	void fadeIn(bool val);
+	bool isClick();
+	void setPos(int x, int y, int z);
+	void setShow(bool val);
+	void setEnable(bool val);
+	bool isEnable();
+	bool collideWithOrigin();
+	void updateChildPartsShowState();
+	bool isMotion();
+	void runClickEffectMotion();
+	int getManualTextId();
+	void hideParts();
+	void showParts();
+};
+
+class ConfigSlider
+{
+public:
+	int state_;
+	int captionWidth_;
+	int gameObjectId_;
+	int rangePixel_;
+	bool isHover_;
+	FuncSetValue setFunc_;
+	FuncGetValue getFunc_;
+	Parts parent_;
+	array@Parts parts_[3];
+
+	ConfigSlider();
+	void init(string caption, int captionWidth, string baseCgName, string setFuncName, string getFuncName);
+	void initParts(string caption, string baseCgName);
+	void setParent(int number);
+	void update();
+	void updatePartsCursorPos();
+	bool isHover();
+	void fadeIn(bool val);
+	void setPos(int x, int y);
+	void setCursorPosPixel(int val);
+};
+
+class ConfigButton
+{
+public:
+	FuncConfigButton func_;
+	StyledButton btn_;
+	int gameObjectId_;
+
+	ConfigButton();
+	void init(string cgBase, string text, string funcName);
+	void update();
+	void fadeIn(bool val);
+	void setPos(int x, int y, int z);
+	void setEnable(bool val);
+	void setParent(int parentPartsNumber);
+};
+
+class ConfigSampleMessage
+{
+public:
+	Parts parent_;
+	array@Parts parts_;
+	bool last_;
+	CASTimer timer_;
+	int gameObjectId_;
+
+	ConfigSampleMessage();
+	void setPos(int x, int y);
+	void update();
+	void init();
+	void setChildPartsShowState();
+	void setParent(int parentPartsNumber);
+	void setShow(bool val);
+};
+
+class ConfigDescription
+{
+public:
+	int type_;
+	int textSize_;
+	int lineLength_;
+	int lineHeight_;
+	int spanX_;
+	int spanY_;
+	Parts parent_;
+	array@Parts parts_;
+	int gameObjectId_;
+
+	ConfigDescription();
+	void update();
+	void init(string backgroundImage, int textSize, int lineHeight, int spanX, int spanY, int lineLength);
+	void setPos(int x, int y);
+	void setPartsShow(bool val);
+	void setManualTextId(int type);
+	void updateTextParts();
+	void setParent(int parentPartsNumber);
+	void getSplitString(ref array@string result, string text);
+	void setShow(bool val);
+};
+
+class ConfigColorSelector
+{
+public:
+	Parts parent_;
+	array@Parts parts_[2];
+	string caption_;
+	FuncSetColorIndex setFunc_;
+	FuncGetColorIndex getFunc_;
+	FuncGetColor getColorFunc_;
+	array@ConfigPlaneButton btn_[13];
+	int gameObjectId_;
+
+	ConfigColorSelector();
+	void init(string caption, string setFunc, string getFunc, string colorFunc);
+	void initParts();
+	void update();
+	void updateSampleMessageColor();
+	void checkPlaneButtonClick();
+	void initButton();
+	void setPartsShow();
+	void setParent(int parentPartsNumber);
+	void setPos(int x, int y);
+	void setButtonPos(int x, int y);
+};
+
+class ConfigPlaneButton
+{
+public:
+	bool isHover_;
+	Parts parent_;
+	array@Parts parts_[3];
+	int gameObjectId_;
+
+	ConfigPlaneButton();
+	void init(int width, int height, int r, int g, int b, string text);
+	void update();
+	void setPartsShow();
+	bool isHover();
+	void setParent(int parentPartsNumber);
+	bool isClick();
+	void setPos(int x, int y);
+};
+
+class SceneEnding
+{
+public:
+	array@Parts partsDebug_;
+	EndingScrollObject scrollObject_;
+	EndingScrollText scrollText_;
+	EndingFixObject fixObject_;
+	Parts partsOverlay_;
+
+	SceneEnding();
+	void init();
+	int update();
+	void run();
+};
+
+class EndingScrollObject
+{
+public:
+	LocalTimer timer_;
+	Parts parentObj_;
+	array@Parts partsObj_;
+	int speedObj_;
+	int gameObjectId_;
+
+	EndingScrollObject();
+	void update();
+	void run();
+	void init();
+	void initScrollObjectParts();
+};
+
+class EndingScrollText
+{
+public:
+	LocalTimer timer_;
+	Parts parent_;
+	array@Parts parts_;
+	int speed_;
+	int gameObjectId_;
+
+	EndingScrollText();
+	void update();
+	void run();
+	void init();
+	void initScrollObjectParts();
+};
+
+class FixObjectInfo
+{
+public:
+	Parts parts;
+	int start;
+	int end;
+	int state;
+};
+
+class EndingFixObject
+{
+public:
+	LocalTimer timer_;
+	int lineLast_;
+	array@FixObjectInfo fixObject_;
+	int speed_;
+	int gameObjectId_;
+
+	EndingFixObject();
+	void update();
+	void run();
+	void init();
+};
+
+class SceneEnquite
+{
+public:
+	ref EnquitePage page_;
+	ref EnquiteCharacterPage pageCharacter_;
+	StyledButton btnPrev_;
+	StyledButton btnNext_;
+	StyledButton btnExit_;
+	StyledButton btnFreeInput_;
+	StyledButton btnSendEnquite_;
+	int currentPage_;
+	Parts partsBg_;
+	Parts partsCurrentPage_;
+	Parts partsMaxPage_;
+	array@string pageName_;
+	EnquiteSender sender_;
+	Parts partsSendBg_;
+	Parts partsSendCaption_;
+
+	SceneEnquite();
+	void createSendingParts(string caption);
+	void hideSendingParts();
+	void run();
+	void init();
+	int update();
+	void changePage(int page);
+	void setMoveButtonEnable();
+	void fadeButton(bool val);
+	void initPartsPage();
+	void setPageNumber(int page);
+};
+
+class EnquiteCheckBox
+{
+public:
+	Parts parent_;
+	array@Parts parts_[5];
+	bool isChecked_;
+	int gameObjectId_;
+	string caption_;
+	bool lastHover_;
+	bool isHover_;
+	bool isClick_;
+
+	EnquiteCheckBox();
+	void init(string caption);
+	void initAsImage(string image, string caption);
+	void setPartsPos();
+	void setCheckBoxCgRange();
+	void setPartsShow();
+	void update();
+	void updatePartsChecked();
+	bool isChecked();
+	void setParent(int parentPartsNumber);
+	bool isHover();
+	int getWidth();
+	int getHeight();
+	void updateHover();
+	void setPos(int x, int y);
+	void setCheck(bool val);
+	void updatePartsHover();
+	bool isClick();
+	string getCaption();
+};
+
+class EnquiteCheckBoxGroup
+{
+public:
+	Parts parent_;
+	Parts partsCaption_;
+	string caption_;
+	array@EnquiteCheckBox checkBox_;
+	int gameObjectId_;
+	bool isSingleSelect_;
+	int height_;
+
+	EnquiteCheckBoxGroup();
+	void init(string groupCaption, array@string list, bool isSingleSelect);
+	void setCheckBoxPos();
+	void update();
+	void setCheck(int index);
+	int getClickedIndex();
+	int getSelected();
+	bool isChecked(int index);
+	int getHeight();
+	void setYPos(int yPos);
+	void onUpdateCheckState();
+	void saveEnquite();
+	void revertCheckedState();
+};
+
+class EnquitePage
+{
+public:
+	array@EnquiteCheckBoxGroup group_;
+
+	EnquitePage();
+	void init(string pageName);
+	void setGroupPos();
+};
+
+class EnquiteCharacterGroup
+{
+public:
+	Parts parent_;
+	Parts partsCaption_;
+	string caption_;
+	array@EnquiteCheckBox checkBox_;
+	int gameObjectId_;
+	int height_;
+
+	EnquiteCharacterGroup();
+	void init(string groupCaption, array@string image, array@string name);
+	void setCheckBoxPos();
+	void update();
+	void setCheck(int index);
+	int getClickedIndex();
+	int getSelected();
+	bool isChecked(int index);
+	int getHeight();
+	void setYPos(int yPos);
+	void onUpdateCheckState();
+	void saveEnquite();
+	void revertCheckedState();
+};
+
+class EnquiteCharacterPage
+{
+public:
+	EnquiteCharacterGroup group_;
+
+	EnquiteCharacterPage();
+	void init();
+};
+
+class FreeInputDialog
+{
+public:
+	int state_;
+	Parts parent_;
+	array@Parts parts_[4];
+	int captionColoType_;
+	string chipId_;
+	string imageName_;
+	string caption_;
+	string result_;
+	array@string descText_;
+	int gameObjectId_;
+
+	void init();
+	void initParts();
+	void setPartsPos();
+	void setPartsShow();
+	void run();
+	int update();
+	void fadeIn(bool val);
+	void inputText();
+	void createOkButton();
+	void createCancelButton();
+	void createMultiTextBox();
+	void saveResult(string n);
+	void deleteParts();
+};
+
+class SceneMusic
+{
+public:
+	int state_;
+	int lastPlayTime_;
+	SwipeScroller ss_;
+	StyledButton btnExit_;
+	int currentIndex_;
+	array@StyledButton btnMusic_;
+	JumpButtonList btnJump_;
+	array@MusicTime musicTime_[2];
+	bool isAllPlay_;
+	Parts parent_;
+	array@Parts parts_[1];
+	CASTimer timer_;
+
+	SceneMusic();
+	int update();
+	void run();
+	void init();
+	void fadeIn(bool val);
+	void setPartsShow();
+	void initButton();
+	void setButtonPos();
+	void fadeButton(bool val);
+	void initMusicButton();
+	void checkMusicButtonClick();
+	void initSysButton();
+	void play(int index, bool immediately);
+	void checkSysButtonClick();
+	int getPrevIndex();
+	int getNextIndex();
+	bool isMusicIndexEnable(int index);
+	void setButtonSelected(int index);
+	void updatePlayTime();
+	void onLoopMusic();
+};
+
+class MusicTime
+{
+public:
+	int state_;
+	Parts parent_;
+	array@Parts parts_[3];
+	int gameObjectId_;
+
+	MusicTime();
+	void init();
+	void update();
+	void setPos(int x, int y);
+	void setShow(bool val);
+	void initParts();
+	void setPartsShow(bool val);
+	void setTime(int sec);
+	void fadeIn(bool val);
+};
+
+class SceneAward
+{
+public:
+	int state_;
+	Parts parent_;
+	array@Parts parts_[17];
+
+	SceneAward();
+	void run();
+	int update();
+	void init();
+	void initParts();
+	void initTextParts(int partsIndex, string val);
+	void setPartsPos();
+	void setPartsShow();
+	void fadeIn(bool val);
+};
+
+class SceneStatistics
+{
+public:
+	int state_;
+	array@Parts parts_;
+	SwipeScroller ss_;
+
+	SceneStatistics();
+	void run();
+	int update();
+	void init();
+	void initParts();
+	void setPartsPos();
+	void setPartsShow();
+	void fadeIn(bool val);
+};
+
+class SceneChipCollection
+{
+public:
+	SwipeScroller ss_;
+	Parts partsBg_;
+	JumpButtonList btn_;
+	array@ChipInstanceView view_;
+	array@ChipInstance inst_;
+	array@Parts partsNotGet_;
+	StyledButton btnExit_;
+	int state_;
+
+	void run();
+	void init();
+	int update();
+	void fadeIn(bool val);
+	void checkChipClicked();
+	void checkJumpButtonClicked();
+};
+
+class SceneMonsterCollection
+{
+public:
+	SwipeScroller ss_;
+	Parts partsBg_;
+	Parts partsMonster_;
+	array@StyledButton btn_;
+	JumpButtonList btnJump_;
+	StyledButton btnExit_;
+	int state_;
+
+	void run();
+	void init();
+	int update();
+	void fadeIn(bool val);
+	void checkChipClicked();
+	void checkJumpButtonClicked();
+};
+
+class TestSelection
+{
+public:
+	array@string name_;
+	array@FuncTestSelection func_;
+
+	void add(string name, FuncTestSelection func);
+	void clear();
+	bool select();
+};
+
+class ScenarioTestFunc
+{
+public:
+	string funcName;
+	array@string categoryList;
+};
+
+class AvailableBadCondition
+{
+public:
+	string id;
+	int time;
+};
+
+class Player
+{
+public:
+	int level_;
+	int maxLevel_;
+	int exp_;
+	int hp_;
+	int maxHp_;
+	int sp_;
+	int maxSp_;
+	int atk_;
+	int def_;
+	int luck_;
+	int gold_;
+	int viewAlt_;
+	array@AvailableBadCondition badCondition_;
+	string badConditionLastAdded_;
+	string badConditionLastErased_;
+	array@string skill_;
+	DG_PlayerEventHandler handler_;
+
+	Player();
+	int getLevel();
+	int getMaxLevel();
+	int getExp();
+	int getHp();
+	int getMaxHp();
+	int getLuck();
+	int getMaxChipCount();
+	int getMaxChipCountDepository();
+	int getGold();
+	int getBadCondition(string id);
+	void setLevel(int val);
+	void setMaxLevel(int val);
+	void setExp(int val);
+	void setHp(int val);
+	void setMaxHp(int val);
+	void setLuck(int val);
+	void setMaxChipCount(int val);
+	void setMaxChipCountDepository(int val);
+	void setGold(int val);
+	void setBadCondition(string id, int val);
+	void clearBadCondition(string id);
+	void decBadCondition();
+	void addLevel(int val);
+	void addExp(int val);
+	void addHp(int val);
+	void addMaxHp(int val);
+	void addLuck(int val);
+	void addGold(int val);
+	void addEventHandler(DG_PlayerEventHandler handler);
+	int getViewAlternation();
+	void setViewAlternation(int val);
+	void addSkill(string skillId);
+	void getSkillList(ref array@string result);
+	void getBadConditionList(ref array@string result);
+	bool isHaveSkill(string id);
+	string getLastAddedBadCondition();
+	string getLastErasedBadCondition();
+};
+
+class Map
+{
+public:
+	string id_;
+	string name_;
+	array@string imageName_[3];
+
+	void reload();
+	void loadValue();
+	string getId();
+	string getName();
+	string getImageName(int type);
+	void setId(string id);
+	void setName(string val);
+	void setImageName(int type, string val);
+};
+
+class Place
+{
+public:
+	string id_;
+	string mapId_;
+	string name_;
+	string eventFuncName_;
+	string imageName_;
+	int x_;
+	int y_;
+	int areaX_;
+	int areaY_;
+	array@bool selectable_[9];
+	bool isVisible_;
+	bool isOpen_;
+	int showState_;
+
+	Place();
+	void reload();
+	void loadValue();
+	string getId();
+	string getMapId();
+	string getName();
+	string getEventFuncName();
+	int getX();
+	int getY();
+	int getAreaX();
+	int getAreaY();
+	bool isShowCurrentTime(int index);
+	bool isVisible();
+	void setId(string val);
+	void setMapId(string val);
+	void setName(string val);
+	void setEventFuncName(string val);
+	void setX(int val);
+	void setY(int val);
+	void setAreaX(int val);
+	void setAreaY(int val);
+	void setVisible(bool val);
+	void setImageName(string val);
+	string getImageName();
+	bool isOpen();
+	void setOpen(bool val);
+};
+
+class Chip
+{
+public:
+	string id_;
+	string name_;
+	string imageName_;
+	string desc_;
+	int useType_;
+	int hpRecover_;
+	int spRecover_;
+	int atk_;
+	int def_;
+	int luck_;
+	int price_;
+	int useSpan_;
+	bool isDepositoryDisable_;
+	string attrId_;
+
+	Chip();
+	void reload();
+	void loadValue();
+	string getId();
+	string getName();
+	string getImageName();
+	string getDesc();
+	int getUseType();
+	int getHpRecover();
+	int getSpRecover();
+	int getAtk();
+	int getDef();
+	int getLuck();
+	int getPrice();
+	string getAttrId();
+	int getUseSpan();
+	bool isDepositoryDisable();
+	void setId(string val);
+	void setName(string val);
+	void setImageName(string val);
+	void setDesc(string val);
+	void setUseType(int val);
+	void setHpRecover(int val);
+	void setSpRecover(int val);
+	void setAtk(int val);
+	void setDef(int val);
+	void setLuck(int val);
+	void setAttrId(string val);
+	void setPrice(int val);
+	void setUseSpan(int val);
+	void setDepositoryDisable(bool val);
+	int getIndicatorType();
+};
+
+class ChipDepository
+{
+public:
+	DG_DepositoryEventHandler handler_;
+	array@ChipInstance chip_;
+	int size_;
+
+	ChipDepository();
+	void add(string id, bool isSave);
+	void erase(int index);
+	void setSize(int val);
+	int getCount();
+	ref ChipInstance getInstance(int index);
+	bool isNoMargin();
+	int getSize();
+	void addEventHandler(DG_DepositoryEventHandler handler);
+	void callEventHandler(int type, int info);
+	void clearEventHandler();
+	int getEmptyCount();
+	void sort();
+};
+
+class ChipInstance
+{
+public:
+	DG_ChipInstanceEvent handler_;
+	string id_;
+	bool isSelected_;
+	int timeRemain_;
+	bool isBet_;
+
+	ChipInstance();
+	void init(string id);
+	void setTimeRemain(int val);
+	void decTimeRemain(int val);
+	void setBet(bool val);
+	string getId();
+	int getTimeRemain();
+	void addEventHandler(DG_ChipInstanceEvent handler);
+	void callEventHandler(int type);
+	bool isBet();
+};
+
+class ShopChipStock
+{
+public:
+	array@ShopChipInstance chip_;
+
+	void add(string id, int discountPer);
+	void erase(string id);
+	int getCount();
+	ref ShopChipInstance getInstance(int index);
+	int find(string id);
+};
+
+class ShopChipInstance
+{
+public:
+	string id_;
+	int discountPer_;
+
+	void setId(string val);
+	void setDiscountPer(int val);
+	string getId();
+	int getDiscountPer();
+	int getDiscountedPrice();
+	int getPrice();
+};
+
+class Attribute
+{
+public:
+	string id_;
+	string name_;
+	string imageName_;
+
+	void reload();
+	void loadValue();
+	Attribute();
+	string getId();
+	string getName();
+	string getImageName();
+	void setImageName(string val);
+	void setId(string val);
+	void setName(string val);
+};
+
+class ChipEffectRange
+{
+public:
+	int from;
+	string imageName;
+};
+
+class AttackChipRange
+{
+public:
+	array@ChipEffectRange rangeAtk_;
+	array@ChipEffectRange rangeDef_;
+
+	string getAtkChipName(int value);
+	string getDefChipName(int value);
+	string getChipName(int value, ref array@ChipEffectRange rangeVal);
+	AttackChipRange();
+	void load();
+	void loadOne(string table, ref array@ChipEffectRange rangeVal);
+};
+
+class Monster
+{
+public:
+	string id_;
+	string imageName_;
+	string name_;
+	int hp_;
+	int maxHp_;
+	int exp_;
+	int gold_;
+	string dropChipId_;
+	string startMessage_;
+	string endMessage_;
+	int musicNumber_;
+	bool isEscapeDisable_;
+	array@MonsterAttackInfo atkInfo_[3];
+
+	void reload();
+	void loadValue();
+	string getId();
+	string getImageName();
+	string getName();
+	int getHp();
+	int getMaxHp();
+	int getExp();
+	int getGold();
+	string getDropChipId();
+	string getStartMessage();
+	string getEndMessage();
+	void setId(string val);
+	void setImageName(string val);
+	void setName(string val);
+	void setHp(int val);
+	void setMaxHp(int val);
+	void setExp(int val);
+	void setGold(int val);
+	void setDropChipId(string val);
+	void setStartMessage(string val);
+	void setEndMessage(string val);
+	int getAtk(int turn);
+	int getDef(int turn);
+	string getAttribute(int turn, int index);
+	void addHp(int val);
+	void setMusicNumber(int val);
+	int getMusicNumber();
+	void setEscapeDisable(bool val);
+	bool isEscapeDisable();
+};
+
+class MonsterAttackInfo
+{
+public:
+	int atk_;
+	int def_;
+	array@string attribute_[3];
+
+	void loadValue(string key, int turn);
+	int getAtk();
+	int getDef();
+	string getAttribute(int index);
+	void setAtk(int val);
+	void setDef(int val);
+	void setAttribute(int index, string val);
+};
+
+class BattleBonusManager
+{
+public:
+	array@BattleBonusInfomation result_;
+
+	BattleBonusManager();
+	void add(BattleBonusInfomation info);
+	void clear();
+	int getExp();
+	int getGold();
+	int getCount();
+	string getCaption(int index);
+	int getValue(int index);
+};
+
+class BattleBonusInfomation
+{
+public:
+	string caption;
+	int type;
+	int value;
+};
+
+class Dungeon
+{
+public:
+	string id_;
+	string name_;
+	string bgImageName_;
+	string battleBgImageName_;
+	string plateImageName_;
+	int view_;
+	int musicNumber_;
+	bool isReturnMapEnable_;
+	array@string randomCardId_[12];
+	array@DungeonLine lines_;
+
+	void reload();
+	void loadValue();
+	void loadLine();
+	void setRandomCard();
+	string getId();
+	string getName();
+	string getBgImageName();
+	int getView();
+	int getLineCount();
+	void setId(string val);
+	void setName(string val);
+	void setBgImageName(string val);
+	void setView(int val);
+	void setRandomCardId(int index, string val);
+	string getCardId(int line, int xPos);
+	int getCardOpenType(int line, int xPos);
+	string getBattleBgImageName();
+	void setBattleBgImageName(string val);
+	void resetRandomCard();
+	string getPlateImageName();
+	void setPlateImageName(string val);
+	void setMusicNumber(int val);
+	int getMusicNumber();
+	void setReturnMapEnable(bool val);
+	bool isReturnMapEnable();
+};
+
+class DungeonLine
+{
+public:
+	array@string randomCardId_[5];
+	array@string cardId_[5];
+	array@int cardOpenType_[5];
+
+	void loadValue(string key, int line);
+	string getCardId(int index);
+	int getCardOpenType(int index);
+	void setRandomCardId(int index, string id);
+};
+
+class Card
+{
+public:
+	string id_;
+	string imageName_;
+	string rankImageName_;
+	string name_;
+	int type_;
+
+	Card();
+	void reload();
+	void loadValue();
+	string getId();
+	string getName();
+	string getImageName();
+	int getType();
+	void setId(string val);
+	void setImageName(string val);
+	void setType(int val);
+	void setName(string val);
+	void setRankImageName(string val);
+	string getRankImageName();
+};
+
+class Skill
+{
+public:
+	string id_;
+	string name_;
+	string desc_;
+
+	Skill();
+	void reload();
+	void loadValue();
+	void setId(string val);
+	void setName(string val);
+	void setDesc(string val);
+	string getId();
+	string getName();
+	string getDesc();
+};
+
+class BadCondition
+{
+public:
+	string id_;
+	string name_;
+	string desc_;
+
+	BadCondition();
+	void reload();
+	void loadValue();
+	void setId(string val);
+	void setName(string val);
+	void setDesc(string val);
+	string getId();
+	string getName();
+	string getDesc();
+};
+
+class GameTime
+{
+public:
+	int day_;
+	int block_;
+	DG_GameTimeEvent handler_;
+
+	GameTime();
+	int getDay();
+	int getBlock();
+	void setForwardBlock();
+	void setForwardDay();
+	void setDay(int val);
+	void setBlock(int val);
+	string getTimeText();
+	void addEventHandler(DG_GameTimeEvent handler);
+};
+
+class Log
+{
+public:
+	string text_;
+	string time_;
+	int type_;
+	string callStack_;
+
+	void set(string text, int type);
+	string getTimeText();
+	string getText();
+	string getTime();
+	string getCallStack();
+	int getType();
+};
+
+class LogManager
+{
+public:
+	DG_LogEventHandler handler_;
+	int outToConsole_;
+	array@Log log_;
+	array@string stack_;
+
+	LogManager();
+	void clear();
+	void getText(ref array@string result, int count);
+	void stack(string val);
+	void flush();
+	void add(string val, int type);
+	void outToConsole(bool val);
+	void output(ref Log log);
+	string trimBack(string n, int len);
+	void addEventHandler(DG_LogEventHandler handler);
+};
+
+class KeyValuePair
+{
+public:
+	string key;
+	int type;
+	int valueInt;
+	string valueString;
+};
+
+class GameFlagMap
+{
+public:
+	array@KeyValuePair pair_;
+	bool isGlobalMode_;
+
+	GameFlagMap();
+	void setInt(string key, int value);
+	void setString(string key, string value);
+	int getInt(string key);
+	string getString(string key);
+	int find(string key);
+	void setGlobalMode(bool val);
+	void addValue(string key, int value);
+	void getKeyList(ref array@string keys);
+};
+
+class SaveObject
+{
+public:
+	int saveIndex_;
+	int year_;
+	int month_;
+	int day_;
+	int week_;
+	int hour_;
+	int min_;
+	int sec_;
+	int playTimeMinute_;
+	string timeInGame_;
+	string userComment_;
+	DG_OnSaveCallback onSave_;
+
+	void init(int saveIndex);
+	void setOnSaveCallback(DG_OnSaveCallback onSaveCallback);
+	bool save(string comment);
+	void updateInfomation();
+	void load();
+	bool isSaved();
+	string getComment();
+	string getSaveTime();
+	int getPlayTimeMinute();
+};
+
+class SaveDataManager
+{
+public:
+	array@SaveObject saveObject_[121];
+	int saveDataIndex_;
+
+	SaveDataManager();
+	void initSaveObject();
+	void saveThumbnail();
+	void setOnAutoSaveCallback(DG_OnSaveCallback callback);
+	bool save(int index);
+	void updateLatestSaveIndex(int index);
+	void load(int index);
+	void autoSave();
+	void updateLatestAutoSaveIndex(int index);
+	void copyAutoSaveData(int oldIndex, int newIndex);
+	void loadAutoSave();
+	bool replaySave();
+	void replayLoad();
+	string getSaveComment(int index);
+	bool isEnable(int index);
+	void loadLatestAutoSave();
+	int getSavedObjectCount();
+};
+
+class CgList
+{
+public:
+	string thumbnailCgName;
+	array@string cgName;
+};
+
+class CgListManager
+{
+public:
+	array@CgList cgList_;
+
+	CgListManager();
+	void getThumbnailCgList(ref array@string result);
+	void getCgList(ref array@string result, int index, bool isShownCgOnly);
+	void loadCgList();
+	int getCount();
+	bool isEnableCgMode(int index);
+};
+
+class ReplayList
+{
+public:
+	string thumbnailCgName;
+	string scenarioFuncName;
+};
+
+class ReplayListManager
+{
+public:
+	array@ReplayList replayList_;
+
+	ReplayListManager();
+	int getCount();
+	void getThumbnailCgList(ref array@string result);
+	string getScenarioFuncName(int index);
+	void loadList();
+	bool isEnableReplayMode(int index);
+};
+
+class MusicInfo
+{
+public:
+	int number;
+	string name;
+};
+
+class MusicInfoManager
+{
+public:
+	array@MusicInfo info_;
+
+	MusicInfoManager();
+	int getCount();
+	int getNumber(int index);
+	string getName(int index);
+	void loadInfo();
+	string getNameFromMusicNumber(int number);
+};
+
+class EnquiteSender
+{
+public:
+	array@string enquite_[229];
+	CASGameNetService net_;
+
+	EnquiteSender();
+	void setInt(int enquiteId, int answer);
+	void setString(int enquiteId, string answer);
+	bool createId();
+	bool send();
+	void updateValue();
+	void setGamePlayValue();
+	void setConfigValue();
+	void outputEnquiteValueToDebugWindow();
+	void outputLog(int key, string desc);
+};
+
+class ViewModeManager
+{
+public:
+	array@bool stack_;
+
+	void set(bool val);
+	void restore();
+	void innerSet(bool val);
+};
+
+class GameFlowManager
+{
+public:
+	int type_;
+	string battleBackGround_;
+	int dungeonX_;
+	int dungeonY_;
+	ref AutoSaveAlert saveAlert_;
+	string nextObjectId_;
+	string lastObjectId_;
+
+	GameFlowManager();
+	void init();
+	void onAutoSave();
+	void run();
+	void clearNextObject();
+	void setNextAdv(string func);
+	void setNextMap(string id);
+	void setNextDungeon(string id, int x, int y);
+	int getType(string n);
+	void callMapCallBack(string placeId);
+	bool isSetNextScene();
+	void onBadCondition(int type, int value);
+	string callMap(string mapId);
+	void callDungeon(string dungeonId, int x, int y);
+	string getBattleBackground();
+	string getCurrentObject();
+};
+
+functype void sys_btn_fnc_t (void);
+functype bool FTIsEnableSystemButton (void);
+functype void FTShowMessageWindowCallback (bool);
+functype void _menu_rbutton_callback_t (void);
+functype void rbutton_callback_t (void);
+functype void spacekey_callback_t (void);
+functype void escapekey_callback_t (void);
+functype void FTInputJoypadCallback (void);
+functype void FTConfigView (void);
+functype void FTPostCallUpdateView (void);
+functype void FTMessage (int, int, string);
+functype void FTMessageR (void);
+functype void FTMessageA (void);
+functype void FTMessageAA (void);
+functype void FTMessageB (void);
+functype void FTMessageC (void);
+functype void FTMessageD (void);
+functype void FTDrawMessageChar (string);
+functype void FTPARTS_WaitForClickCallback (void);
+functype void FT_PARTS_UpdateHandler (int);
+functype void FT_MouseEnterHandler (int, int, int);
+functype void FT_MouseMoveHandler (int, int, int);
+functype void FT_MouseLeaveHandler (int, int, int);
+functype void FT_MouseWheelHandler (int, int, int);
+functype void FT_MouseClickHandler (int, int, int);
+functype void FT_MouseOnHandler (int, int, int, int);
+functype void FT_KeyTriggerHandler (int, int);
+functype void FT_KeyDownHandler (int, int);
+functype void FT_KeyPressHandler (int, int);
+functype void FT_KeyUpHandler (int, int);
+functype void FT_DragBeginHandler (int);
+functype void FT_DragingHandler (int, int, int);
+functype void FT_DragEndHandler (int);
+functype void FT_DropEnterHandler (int, int);
+functype void FT_DropedHandler (int, int);
+functype void FT_DropLeaveHandler (int, int);
+functype void FT_FocusHandler (int);
+functype void FT_LostFocusHandler (int);
+functype void FT_ScrollHandler (int, int);
+functype void FT_ChangedHandler (int);
+functype void FT_CreatedHandler (int);
+functype void FT_DeletedHandler (int);
+functype void FT_SelectedHandler (int, int);
+functype void void_functype (void);
+functype void FuncOnMusicPlay (int);
+functype void FuncMapCallBack (string);
+functype int FuncCardCallBack (string);
+functype void FuncDungeonWalkCallBack (void);
+functype string FuncItemUseCallback (string);
+functype DamageInfomation FuncPlayerDamageCalcFunction (string, int);
+functype void FuncOnTurnEndCallback (void);
+functype void FuncOnBattleStartCallBack (string);
+functype bool FuncGetCheck (void);
+functype void FuncSetCheck (bool);
+functype float FuncGetValue (void);
+functype void FuncSetValue (float);
+functype void FuncConfigButton (void);
+functype void FuncSetColorIndex (int);
+functype int FuncGetColorIndex (void);
+functype void FuncGetColor (int, ref int, ref int, ref int);
+functype void FuncTestSelection (void);
+functype void AdvFunc (void);
+functype void FuncGameInitialize (void);
+functype void FuncBattleEndCallBack (string);
+functype void FuncBattleEscapeCallBack (void);
+functype void FuncGameOverCallBack (void);
+functype int FuncItemDropPercentCallBack (string);
+functype void FuncPlaceCallback (void);
+delegate void DG_PARTS_UpdateHandler (int);
+delegate void DG_MouseEnterHandler (int, int, int);
+delegate void DG_MouseMoveHandler (int, int, int);
+delegate void DG_MouseLeaveHandler (int, int, int);
+delegate void DG_MouseWheelHandler (int, int, int);
+delegate void DG_MouseClickHandler (int, int, int);
+delegate void DG_MouseOnHandler (int, int, int, int);
+delegate void DG_KeyTriggerHandler (int, int);
+delegate void DG_KeyDownHandler (int, int);
+delegate void DG_KeyPressHandler (int, int);
+delegate void DG_KeyUpHandler (int, int);
+delegate void DG_DragBeginHandler (int);
+delegate void DG_DragingHandler (int, int, int);
+delegate void DG_DragEndHandler (int);
+delegate void DG_DropEnterHandler (int, int);
+delegate void DG_DropedHandler (int, int);
+delegate void DG_DropLeaveHandler (int, int);
+delegate void DG_FocusHandler (int);
+delegate void DG_LostFocusHandler (int);
+delegate void DG_ScrollHandler (int, int);
+delegate void DG_ChangedHandler (int);
+delegate void DG_CreatedHandler (int);
+delegate void DG_DeletedHandler (int);
+delegate void DG_SelectedHandler (int, int);
+delegate void DG_ChangeTextHandler (int, string);
+delegate void DG_MoveCursor_UpdateView (void);
+delegate void DG_PartsMotionUpdateMethod (void);
+delegate void DG_SleepMethod (bool, bool);
+delegate void DG_UpdateMethod (void);
+delegate bool DG_FocusedMethod (void);
+delegate int DG_SwipeScrollerGetPage (void);
+delegate void DG_OnChangePage (int, int);
+delegate void DG_PlayerEventHandler (int, int);
+delegate void DG_DepositoryEventHandler (int, int);
+delegate void DG_ChipInstanceEvent (int);
+delegate void DG_GameTimeEvent (int, int);
+delegate void DG_LogEventHandler (string, int);
+delegate void DG_OnSaveCallback (void);
+delegate int DG_SceneUpdateMethod (void);
+delegate void DG_OnStartGetChip (void);
+delegate int DG_IsReadyOpenGetChip (void);
+delegate void DG_OnEndGetChip (void);

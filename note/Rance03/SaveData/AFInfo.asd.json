@@ -1,0 +1,25 @@
+{
+	"save_type":	"global_save",
+	"key":	"仮キー名",
+	"uk1":	1000,
+	"version":	7,
+	"uk2":	56,
+	"num_ain_globals":	263,
+	"group":	"情報集計データ",
+	"globals":	[{
+			"name":	"g_NumofOpenBacklog",
+			"value":	6
+		}, {
+			"name":	"g_NumofOpenBackScene",
+			"value":	0
+		}, {
+			"name":	"g_NumofOpenConfig",
+			"value":	2
+		}, {
+			"name":	"g_NumofOpenManual",
+			"value":	0
+		}],
+	"struct_defs":	[],
+	"encrypted":	false,
+	"compression_level":	1
+}

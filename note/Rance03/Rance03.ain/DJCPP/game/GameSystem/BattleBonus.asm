@@ -1,0 +1,37 @@
+; FUNC BattleBonus@init (0x1ccc52-0x1ccc82)
+/* 001ccc52 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001ccc54 */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 001ccc5a */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001ccc5c */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 001ccc5e */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 001ccc64 */ S_REF                                    ; stack:  3 ->  3 (0)
+/* 001ccc66 */ S_ASSIGN                                 ; stack:  3 ->  1 (-2)
+/* 001ccc68 */ S_POP                                    ; stack:  1 ->  0 (-1)
+/* 001ccc6a */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001ccc6c */ PUSH 1                                   ; stack:  1 ->  2 (+1)
+/* 001ccc72 */ PUSHLOCALPAGE                            ; stack:  2 ->  3 (+1)
+/* 001ccc74 */ PUSH 1                                   ; stack:  3 ->  4 (+1)
+/* 001ccc7a */ REF                                      ; stack:  4 ->  3 (-1)
+/* 001ccc7c */ ASSIGN                                   ; stack:  3 ->  1 (-2)
+/* 001ccc7e */ POP                                      ; stack:  1 ->  0 (-1)
+/* 001ccc80 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC BattleBonus@init
+
+; FUNC BattleBonus@getName (0x1ccc88-0x1ccc9c)
+/* 001ccc88 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001ccc8a */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 001ccc90 */ S_REF                                    ; stack:  2 ->  2 (0)
+/* 001ccc92 */ RETURN                                   ; stack:  2 ->  2 (0)
+/* 001ccc94 */ S_PUSH 0 ("")                            ; stack:  2 ->  3 (+1)
+/* 001ccc9a */ RETURN                                   ; stack:  3 ->  3 (0)
+; ENDFUNC BattleBonus@getName
+
+; FUNC BattleBonus@getValue (0x1ccca2-0x1cccb6)
+/* 001ccca2 */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 001ccca4 */ PUSH 1                                   ; stack:  1 ->  2 (+1)
+/* 001cccaa */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001cccac */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 001cccae */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 001cccb4 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC BattleBonus@getValue
+

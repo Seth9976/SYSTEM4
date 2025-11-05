@@ -1,0 +1,7 @@
+void BlendAMap(int nDest, int nDx, int nDy, int nSrc, int nSx, int nSy, int nWidth, int nHeight);
+void Fill(int nDest, int nX, int nY, int nWidth, int nHeight, int nR, int nG, int nB);
+void FillAlphaColor(int nDest, int nX, int nY, int nWidth, int nHeight, int nR, int nG, int nB, int nRate);
+void FillAMap(int nDest, int nX, int nY, int nWidth, int nHeight, int nAlpha);
+void CopyReduce(int nDest, int nDx, int nDy, int nDWidth, int nDHeight, int nSrc, int nSx, int nSy, int nSWidth, int nSHeight);
+void DrawLine(int nDest, int nX0, int nY0, int nX1, int nY1, int nR, int nG, int nB);
+void FillWithAlpha(int nDest, int nX, int nY, int nWidth, int nHeight, int nR, int nG, int nB, int nA);

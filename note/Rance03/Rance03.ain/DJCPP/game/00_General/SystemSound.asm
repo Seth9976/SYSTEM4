@@ -1,0 +1,78 @@
+; FUNC SystemSound@playLoop (0x1858f8-0x185916)
+/* 001858f8 */ PUSHLOCALPAGE                            ; stack:  0 ->  1 (+1)
+/* 001858fa */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 00185900 */ S_REF                                    ; stack:  2 ->  2 (0)
+/* 00185902 */ PUSH -1                                  ; stack:  2 ->  3 (+1)
+/* 00185908 */ PUSH -1                                  ; stack:  3 ->  4 (+1)
+/* 0018590e */ CALLFUNC Ａ＿ループ効果音１ (args: 3) ; stack:  4 ->  1 (-3)
+/* 00185914 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC SystemSound@playLoop
+
+; FUNC SystemSound@stopLoop (0x18591c-0x18592e)
+/* 0018591c */ PUSHLOCALPAGE                            ; stack:  0 ->  1 (+1)
+/* 0018591e */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 00185924 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 00185926 */ CALLFUNC Ａ＿ループ効果音停止 (args: 1) ; stack:  1 ->  0 (-1)
+/* 0018592c */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC SystemSound@stopLoop
+
+; FUNC SystemSound@play (0x185934-0x18596a)
+/* 00185934 */ PUSHLOCALPAGE                            ; stack:  0 ->  1 (+1)
+/* 00185936 */ PUSH 1                                   ; stack:  1 ->  2 (+1)
+/* 0018593c */ S_REF                                    ; stack:  2 ->  2 (0)
+/* 0018593e */ S_PUSH 0 ("")                            ; stack:  2 ->  3 (+1)
+/* 00185944 */ S_EQUALE                                 ; stack:  3 ->  2 (-1)
+/* 00185946 */ IFZ 0x18594e                             ; stack:  2 ->  1 (-1)
+/* 0018594c */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 0018594e */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 00185950 */ PUSH 1                                   ; stack:  2 ->  3 (+1)
+/* 00185956 */ S_REF                                    ; stack:  3 ->  3 (0)
+/* 00185958 */ PUSHLOCALPAGE                            ; stack:  3 ->  4 (+1)
+/* 0018595a */ PUSH 0                                   ; stack:  4 ->  5 (+1)
+/* 00185960 */ REF                                      ; stack:  5 ->  4 (-1)
+/* 00185962 */ CALLFUNC AFL_SystemSE_Play (args: 2)     ; stack:  4 ->  2 (-2)
+/* 00185968 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC SystemSound@play
+
+; FUNC SystemSound@playVoice (0x185970-0x185996)
+/* 00185970 */ S_PUSH 892 ("%05d")                      ; stack:  0 ->  1 (+1)
+/* 00185976 */ PUSHLOCALPAGE                            ; stack:  1 ->  2 (+1)
+/* 00185978 */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 0018597e */ REF                                      ; stack:  3 ->  2 (-1)
+/* 00185980 */ PUSH 2                                   ; stack:  2 ->  3 (+1)
+/* 00185986 */ (S_MOD -1)                               ; stack:  3 ->  3 (0)
+/* 00185988 */ PUSH 7                                   ; stack:  3 ->  4 (+1)
+/* 0018598e */ CALLFUNC AFL_SystemSE_Play (args: 2)     ; stack:  4 ->  2 (-2)
+/* 00185994 */ RETURN                                   ; stack:  2 ->  2 (0)
+; ENDFUNC SystemSound@playVoice
+
+; FUNC playCursor (0x18599c-0x1859ba)
+/* 0018599c */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 0018599e */ PUSH 238                                 ; stack:  1 ->  2 (+1)
+/* 001859a4 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001859a6 */ PUSH 4                                   ; stack:  1 ->  2 (+1)
+/* 001859ac */ S_PUSH 1049 ("効果音／カーソル") ; stack:  2 ->  3 (+1)
+/* 001859b2 */ CALLMETHOD 5360                          ; stack:  3 ->  1 (-2)
+/* 001859b8 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC playCursor
+
+; FUNC playClick (0x1859c6-0x1859e4)
+/* 001859c6 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 001859c8 */ PUSH 238                                 ; stack:  1 ->  2 (+1)
+/* 001859ce */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001859d0 */ PUSH 5                                   ; stack:  1 ->  2 (+1)
+/* 001859d6 */ S_PUSH 1048 ("効果音／クリック") ; stack:  2 ->  3 (+1)
+/* 001859dc */ CALLMETHOD 5360                          ; stack:  3 ->  1 (-2)
+/* 001859e2 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC playClick
+
+; FUNC playCancel (0x1859f0-0x185a0e)
+/* 001859f0 */ PUSHGLOBALPAGE                           ; stack:  0 ->  1 (+1)
+/* 001859f2 */ PUSH 238                                 ; stack:  1 ->  2 (+1)
+/* 001859f8 */ REF                                      ; stack:  2 ->  1 (-1)
+/* 001859fa */ PUSH 5                                   ; stack:  1 ->  2 (+1)
+/* 00185a00 */ S_PUSH 1153 ("効果音／キャンセル") ; stack:  2 ->  3 (+1)
+/* 00185a06 */ CALLMETHOD 5360                          ; stack:  3 ->  1 (-2)
+/* 00185a0c */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC playCancel
+

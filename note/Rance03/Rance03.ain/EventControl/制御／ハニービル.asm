@@ -1,0 +1,18 @@
+; FUNC 制御／ハニービル／入口 (0x235e56-0x235ea8)
+/* 00235e56 */ S_PUSH 4343 ("ＥＶ／ハニービル／...") ; stack:  0 ->  1 (+1)
+/* 00235e5c */ PUSH -2147483648                         ; stack:  1 ->  2 (+1)
+/* 00235e62 */ CALLFUNC EV (args: 2)                    ; stack:  2 ->  1 (-1)
+/* 00235e68 */ NOT                                      ; stack:  1 ->  1 (0)
+/* 00235e6a */ IFZ 0x235e7c                             ; stack:  1 ->  0 (-1)
+/* 00235e70 */ CALLFUNC ＥＶ／ハニービル／入口／初回 (args: 0) ; stack:  0 ->  0 (0)
+/* 00235e76 */ JUMP 0x235e82                            ; stack:  0 ->  0 (0)
+/* 00235e7c */ CALLFUNC ＥＶ／ハニービル／入口／汎用 (args: 0) ; stack:  0 ->  0 (0)
+/* 00235e82 */ PUSH 1                                   ; stack:  0 ->  1 (+1)
+/* 00235e88 */ CALLFUNC 制御／帰り木設定 (args: 1) ; stack:  1 ->  0 (-1)
+/* 00235e8e */ S_PUSH 2726 ("ハニービル1F")        ; stack:  0 ->  1 (+1)
+/* 00235e94 */ PUSH 1                                   ; stack:  1 ->  2 (+1)
+/* 00235e9a */ PUSH 0                                   ; stack:  2 ->  3 (+1)
+/* 00235ea0 */ CALLFUNC 制御／シーン設定／ダンジョン (args: 3) ; stack:  3 ->  0 (-3)
+/* 00235ea6 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC 制御／ハニービル／入口
+

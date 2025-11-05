@@ -1,0 +1,23 @@
+table ダンジョン_DUNG11 = {
+	{ string cardId1, int type1, string cardId2, int type2, string cardId3, int type3, string cardId4, int type4, string cardId5, int type5 },
+	{ "CARD001", 1, "CARD001", 1, "CARD001", 1, "CARD001", 1, "CARD737", 1 },
+	{ "CARD001", 1, "CARD001", 1, "CARD001", 1, "CARD737", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD001", 1, "CARD001", 1, "CARD737", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD001", 1, "CARD737", 1, "CARD737", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD601", 1, "CARD737", 1, "CARD737", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD202", 1, "CARD737", 1, "CARD737", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD001", 1, "CARD458", 1, "CARD737", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD501", 1, "CARD001", 1, "CARD737", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD202", 0, "CARD232", 1, "CARD001", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD457", 0, "CARD457", 0, "CARD737", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD501", 1, "CARD737", 1, "CARD737", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD261", 1, "CARD737", 1, "CARD737", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD001", 1, "CARD501", 0, "CARD737", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD737", 1, "CARD001", 1, "CARD001", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD737", 1, "CARD737", 1, "CARD459", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD737", 1, "CARD737", 1, "CARD261", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD737", 1, "CARD301", 1, "CARD001", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD001", 1, "CARD001", 0, "CARD737", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD737", 1, "CARD001", 1, "CARD001", 1, "CARD737", 1 },
+	{ "CARD737", 1, "CARD001", 1, "CARD001", 1, "CARD001", 1, "CARD737", 1 }
+};

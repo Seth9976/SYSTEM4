@@ -1,0 +1,75 @@
+; FUNC ConfigButton@0 (0x8606a-0x86096)
+/* 0008606a */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 0008606c */ CALLMETHOD 7259                          ; stack:  1 -> -1 (-2)
+/* 00086072 */ PUSHSTRUCTPAGE                           ; stack: -1 ->  0 (+1)
+/* 00086074 */ PUSH 2                                   ; stack:  0 ->  1 (+1)
+/* 0008607a */ SH_GLOBALREF g_gameObjectManager         ; stack:  1 ->  1 (0)
+/* 00086080 */ PUSHSTRUCTPAGE                           ; stack:  1 ->  2 (+1)
+/* 00086082 */ PUSH 4669                                ; stack:  2 ->  3 (+1)
+/* 00086088 */ DG_NEW_FROM_METHOD                       ; stack:  3 ->  3 (0)
+/* 0008608a */ CALLMETHOD 3610                          ; stack:  3 ->  1 (-2)
+/* 00086090 */ ASSIGN                                   ; stack:  1 -> -1 (-2)
+/* 00086092 */ POP                                      ; stack: -1 -> -2 (-1)
+/* 00086094 */ RETURN                                   ; stack: -2 -> -2 (0)
+; ENDFUNC ConfigButton@0
+
+; FUNC ConfigButton@init (0x8609c-0x860f4)
+/* 0008609c */ PUSHSTRUCTPAGE                           ; stack:  0 ->  1 (+1)
+/* 0008609e */ PUSH 0                                   ; stack:  1 ->  2 (+1)
+/* 000860a4 */ (SH_LOCAL_S_REF 2)                       ; stack:  2 ->  2 (0)
+/* 000860aa */ PUSH 56                                  ; stack:  2 ->  3 (+1)
+/* 000860b0 */ FT_ASSIGNS                               ; stack:  3 ->  3 (0)
+/* 000860b2 */ S_POP                                    ; stack:  3 ->  2 (-1)
+/* 000860b4 */ (SH_IF_STRUCTREF_NE_IMM (0, 0l, 549076)) ; stack:  2 ->  2 (0)
+/* 000860c2 */ (SH_LOCAL_S_REF 2)                       ; stack:  2 ->  2 (0)
+/* 000860c8 */ CALLFUNC dlogF (args: 1)                 ; stack:  2 ->  1 (-1)
+/* 000860ce */ JUMP 0x860d4                             ; stack:  1 ->  1 (0)
+/* 000860d4 */ SH_STRUCTREF ConfigButton.btn_           ; stack:  1 ->  1 (0)
+/* 000860da */ (SH_LOCAL_S_REF 0)                       ; stack:  1 ->  1 (0)
+/* 000860e0 */ (SH_LOCAL_S_REF 1)                       ; stack:  1 ->  1 (0)
+/* 000860e6 */ PUSH -1                                  ; stack:  1 ->  2 (+1)
+/* 000860ec */ CALLMETHOD 3828                          ; stack:  2 ->  0 (-2)
+/* 000860f2 */ RETURN                                   ; stack:  0 ->  0 (0)
+; ENDFUNC ConfigButton@init
+
+; FUNC ConfigButton@update (0x860fa-0x86122)
+/* 000860fa */ SH_STRUCTREF ConfigButton.btn_           ; stack:  0 ->  0 (0)
+/* 00086100 */ CALLMETHOD 3834                          ; stack:  0 -> -2 (-2)
+/* 00086106 */ IFZ 0x86120                              ; stack: -2 -> -3 (-1)
+/* 0008610c */ SH_STRUCTREF ConfigButton.func_          ; stack: -3 -> -3 (0)
+/* 00086112 */ PUSH 56                                  ; stack: -3 -> -2 (+1)
+/* 00086118 */ CALLFUNC2                                ; stack: -2 -> -2 (0)
+/* 0008611a */ JUMP 0x86120                             ; stack: -2 -> -2 (0)
+/* 00086120 */ RETURN                                   ; stack: -2 -> -2 (0)
+; ENDFUNC ConfigButton@update
+
+; FUNC ConfigButton@fadeIn (0x86128-0x8613c)
+/* 00086128 */ SH_STRUCTREF ConfigButton.btn_           ; stack:  0 ->  0 (0)
+/* 0008612e */ SH_LOCALREF val                          ; stack:  0 ->  0 (0)
+/* 00086134 */ CALLMETHOD 3831                          ; stack:  0 -> -2 (-2)
+/* 0008613a */ RETURN                                   ; stack: -2 -> -2 (0)
+; ENDFUNC ConfigButton@fadeIn
+
+; FUNC ConfigButton@setPos (0x86142-0x86162)
+/* 00086142 */ SH_STRUCTREF ConfigButton.btn_           ; stack:  0 ->  0 (0)
+/* 00086148 */ SH_LOCALREF x                            ; stack:  0 ->  0 (0)
+/* 0008614e */ SH_LOCALREF y                            ; stack:  0 ->  0 (0)
+/* 00086154 */ SH_LOCALREF z                            ; stack:  0 ->  0 (0)
+/* 0008615a */ CALLMETHOD 3835                          ; stack:  0 -> -2 (-2)
+/* 00086160 */ RETURN                                   ; stack: -2 -> -2 (0)
+; ENDFUNC ConfigButton@setPos
+
+; FUNC ConfigButton@setEnable (0x86168-0x8617c)
+/* 00086168 */ SH_STRUCTREF ConfigButton.btn_           ; stack:  0 ->  0 (0)
+/* 0008616e */ SH_LOCALREF val                          ; stack:  0 ->  0 (0)
+/* 00086174 */ CALLMETHOD 3839                          ; stack:  0 -> -2 (-2)
+/* 0008617a */ RETURN                                   ; stack: -2 -> -2 (0)
+; ENDFUNC ConfigButton@setEnable
+
+; FUNC ConfigButton@setParent (0x86182-0x86196)
+/* 00086182 */ SH_STRUCTREF ConfigButton.btn_           ; stack:  0 ->  0 (0)
+/* 00086188 */ SH_LOCALREF parentPartsNumber            ; stack:  0 ->  0 (0)
+/* 0008618e */ CALLMETHOD 3836                          ; stack:  0 -> -2 (-2)
+/* 00086194 */ RETURN                                   ; stack: -2 -> -2 (0)
+; ENDFUNC ConfigButton@setParent
+

@@ -1,0 +1,2 @@
+void SetFlag(int nMsgNum);
+int GetFlag(int nMsgNum);

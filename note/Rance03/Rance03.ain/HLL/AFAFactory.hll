@@ -1,0 +1,9 @@
+bool IsExistArchive(string ArchiveName);
+bool LoadArchive(int Type, string ArchiveName);
+int GetCountOfData(int Type);
+void GetTitleByIndex(int Type, int Index, ref string Name);
+int SearchTitle(int Type, string Name);
+int PrefixSearchTitle(int Type, string Name);
+int SuffixSearchTitle(int Type, string Name);
+int GetCountOfSearchData(int Type);
+void GetSearchTitleByIndex(int Type, int Index, ref string Name);

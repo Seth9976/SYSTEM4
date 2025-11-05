@@ -1,0 +1,17 @@
+; FUNC 制御／時間経過 (0xbc8e8-0xbc934)
+/* 000bc8e8 */ CALLFUNC 制御／時間確認 (args: 0) ; stack:  0 ->  1 (+1)
+/* 000bc8ee */ (SWITCH 224)                             ; stack:  1 ->  1 (0)
+/* 000bc8f4 */ JUMP 0xbc930                             ; stack:  1 ->  1 (0)
+/* 000bc8fa */ PUSH 2                                   ; stack:  1 ->  2 (+1)
+/* 000bc900 */ CALLFUNC 制御／時間設定 (args: 1) ; stack:  2 ->  1 (-1)
+/* 000bc906 */ JUMP 0xbc930                             ; stack:  1 ->  1 (0)
+/* 000bc90c */ PUSH 5                                   ; stack:  1 ->  2 (+1)
+/* 000bc912 */ CALLFUNC 制御／時間設定 (args: 1) ; stack:  2 ->  1 (-1)
+/* 000bc918 */ JUMP 0xbc930                             ; stack:  1 ->  1 (0)
+/* 000bc91e */ PUSH 7                                   ; stack:  1 ->  2 (+1)
+/* 000bc924 */ CALLFUNC 制御／時間設定 (args: 1) ; stack:  2 ->  1 (-1)
+/* 000bc92a */ JUMP 0xbc930                             ; stack:  1 ->  1 (0)
+/* 000bc930 */ RETURN                                   ; stack:  1 ->  1 (0)
+/* 000bc932 */ RETURN                                   ; stack:  1 ->  1 (0)
+; ENDFUNC 制御／時間経過
+
